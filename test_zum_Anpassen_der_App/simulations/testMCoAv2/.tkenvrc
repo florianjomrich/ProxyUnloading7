@@ -1,0 +1,3 @@
+# Partial Tkenv config file -- see $HOME/.tkenvrc as well
+inspector "VoIPMCoAMulti" "VoIPMCoAMulti" "2" "1190x816+0+52:normal"
+
