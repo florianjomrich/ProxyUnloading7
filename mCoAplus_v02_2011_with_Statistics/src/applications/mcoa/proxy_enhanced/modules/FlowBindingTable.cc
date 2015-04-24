@@ -50,7 +50,7 @@ void FlowBindingTable::initialize() {
         initialAddresses.push_back((addressOfMN_AP_2.str()));
 
         std::stringstream addressOfCorrespondingCN;
-        addressOfCorrespondingCN << "2001:db8::33a1:cc0"<<(((k+1)%amountOfCareOfNodes)+1);
+        addressOfCorrespondingCN << "2001:db8::33a1:cc0"<<((k%amountOfCareOfNodes)+1);
         initialAddresses.push_back((addressOfCorrespondingCN.str()));
 
 
