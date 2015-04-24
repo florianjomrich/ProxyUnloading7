@@ -1,0 +1,84 @@
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+
+#ifndef FLOWBINDINGTABLE_H_
+#define FLOWBINDINGTABLE_H_
+
+#include <csimplemodule.h>
+#include <omnetpp.h>
+#include <map>
+#include <set>
+#include <FlowBindingEntry.h>
+#include <RequetConnectionToLegacyServer_m.h>
+#include <FlowBindingUpdate_m.h>
+#include <SetAddressActive_m.h>
+#include <SetChannelActive_m.h>
+// alternative #include <string.h>
+
+class FlowBindingTable: public cSimpleModule {
+public:
+
+    std::map<const char*, int> srcPorts; //use the flow-source-adress-string as Key for every Map
+    std::map<const char*, int> destPorts;
+    std::map<const char*, std::set<const char*> > srcAdresses;
+    std::map<const char*, std::set<const char*> > destAdresses;
+
+    std::vector<FlowBindingEntry> existingFlowBindingEntries;
+
+    std::vector<std::string> initialAddresses;
+
+    int localHostCounter = 0;
+
+    //Parameters:
+    int amountOfMobileNodes;
+    int amountOfCareOfNodes;
+
+
+
+
+    FlowBindingTable();
+    virtual ~FlowBindingTable();
+    virtual void initialize();
+    virtual void handleMessage(cMessage *msg);
+
+    virtual void insertNewFlowBindingEntry(RequetConnectionToLegacyServer *newFlowBindingEntry);
+
+    virtual const char* getCorrectDestinationAddressForConnection(int& dport,int& sport, const char* destAddress,const char* sourceAddress);
+
+    virtual bool entryAlreadyExistsInTable(int& dport,int& sport, const char* destAddress,const char* sourceAddress);
+    virtual bool entryAlreadyExistsInTableForMobileNode(int& dport,int& sport, const char* destAddress);//since the source address my have variation ->
+
+    virtual bool cnOfConnectionIsNotCapable(const char* destAddress);
+
+
+    virtual void updateExistingFlowBindingEntry(FlowBindingUpdate* update);
+
+    virtual void updateEntriesWithNewCapableCN(const char* addressOfCN);
+
+    virtual void setEntryActive(const char* ipAddressThatShouldBeActive);
+
+    virtual std::vector<FlowBindingEntry> getCNsToBeInformed(FlowBindingUpdate* receivedFlowBindingUpdate);
+
+    virtual void printoutContentOftable();
+
+    virtual void setIPAddressActive(SetAddressActive* fromHA);
+
+    virtual int getTheNeededChannelNumber(const char* NewCoAdress);
+
+    virtual void setChannelActive(SetChannelActive* fromHA);
+
+};
+
+#endif /* FLOWBINDINGTABLE_H_ */

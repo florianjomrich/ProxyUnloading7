@@ -21,7 +21,8 @@ package inet.applications.mcoa.proxy_enhanced.modules;
 simple FlowBindingTable 
 {
     parameters:
-     //   bool isCNandNotCapable; //to decide wether to send only to the home address or not !!! on IPv6 Layer (deep down on network layer - so that MCoA does not interfere)
-        
+        int amountOfMobileNodes;
+        int amountOfCareOfNodes;
+       
     gates:    
 }

@@ -66,6 +66,7 @@ protected:
     bool isCN;
     bool isCapableCN;
     const char* humanReadableName;
+    int amountOfCareOfNodes;
 
     double greatestReceivedSignalStrengthSoFar;
     const char* AccessPointWithGreatestReceivedSignalStrengthSoFar;

@@ -52,7 +52,7 @@ simple Proxy_Enhanced_MCoAVideoCli like MCoAUDPBase
     	
     	int mobileNodeNumber;
     	
-    	int amountOfMobileNodes;
+    	int amountOfCareOfNodes;
     
     	
     gates:

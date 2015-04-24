@@ -14,7 +14,7 @@
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/rtg"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/results" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/results"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/NOT CAPABLE"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Messreihe 800s Laufzeit"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Messreihe 800s Laufzeit/NOT CAPABLE 800s Laufzeit"/>

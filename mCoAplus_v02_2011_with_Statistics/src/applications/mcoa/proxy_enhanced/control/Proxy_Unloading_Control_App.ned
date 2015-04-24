@@ -47,6 +47,7 @@ simple Proxy_Unloading_Control_App like MCoAUDPBase
         bool isCN;//is Correspondent Node
         bool isCapableCN;//to set whether the current CN is capable of dealing with the protocol or not
         string humanReadableName;
+        int amountOfCareOfNodes;
        	volatile double setActiveIPAddressTimeOut @unit("s");
         volatile double requestForConnectionTimeOut @unit("s");
         volatile double flowBindingUpdateTimeOut @unit("s");

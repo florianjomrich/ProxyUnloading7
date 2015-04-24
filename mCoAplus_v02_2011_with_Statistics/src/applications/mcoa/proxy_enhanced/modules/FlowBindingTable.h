@@ -36,9 +36,16 @@ public:
     std::map<const char*, std::set<const char*> > destAdresses;
 
     std::vector<FlowBindingEntry> existingFlowBindingEntries;
+    std::vector<std::string> initialAddresses;
+
 
     int localHostCounter = 0;
-   // bool isCNandNotCapable;
+
+    //Parameters:
+    int amountOfMobileNodes;
+    int amountOfCareOfNodes;
+
+
 
 
     FlowBindingTable();

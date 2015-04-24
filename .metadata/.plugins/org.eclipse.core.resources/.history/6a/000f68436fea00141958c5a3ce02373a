@@ -1,0 +1,27 @@
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+
+package inet.applications.mcoa.proxy_enhanced.modules;
+
+//
+// TODO auto-generated type
+//
+simple FlowBindingTable 
+{
+    parameters:
+     //   bool isCNandNotCapable; //to decide wether to send only to the home address or not !!! on IPv6 Layer (deep down on network layer - so that MCoA does not interfere)
+        
+    gates:    
+}

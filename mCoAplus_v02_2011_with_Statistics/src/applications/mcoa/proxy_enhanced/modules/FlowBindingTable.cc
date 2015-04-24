@@ -22,30 +22,67 @@ using std::cout;
 
 FlowBindingTable::FlowBindingTable() {
     // TODO Auto-generated constructor stub
+}
 
+void FlowBindingTable::initialize() {
     //initailize all possible values hard:
 //FlowBindingEntry(int srcPort, int destPort,const char* srcAddress,
 //const char* destAddress,int localHostIdentifier, bool isActive,bool forThisConncectionCNisCapable,int channelNumber)
+    amountOfMobileNodes = par("amountOfMobileNodes");
+    amountOfCareOfNodes = par("amountOfCareOfNodes");
+
+
+
+    for (int k = 0; k < amountOfMobileNodes; k++) {
+
+        std::stringstream addressOfMN_AP_HA;
+
+        addressOfMN_AP_HA << "2001:db8::2aa:" << k+1 << "01";
+        initialAddresses.push_back((addressOfMN_AP_HA.str()));
+
+
+        std::stringstream addressOfMN_AP_1;
+        addressOfMN_AP_1 << "2001:db8::299:" << k+1 << "02";
+        initialAddresses.push_back((addressOfMN_AP_1.str()));
+
+        std::stringstream addressOfMN_AP_2;
+        addressOfMN_AP_2 << "2001:db8::199:" << k+1 << "03";
+        initialAddresses.push_back((addressOfMN_AP_2.str()));
+
+        std::stringstream addressOfCorrespondingCN;
+        addressOfCorrespondingCN << "2001:db8::33a1:cc0"<<(((k+1)%amountOfCareOfNodes)+1);
+        initialAddresses.push_back((addressOfCorrespondingCN.str()));
+
+
+
+        FlowBindingEntry newEntryToInsert = FlowBindingEntry(1000, 1000,
+                initialAddresses.at(k*4).c_str(), initialAddresses.at(k*4+3).c_str(), k, 1, 0,
+                1);
+        existingFlowBindingEntries.push_back(newEntryToInsert);
+        newEntryToInsert = FlowBindingEntry(1000, 1000,
+                initialAddresses.at(k*4+1).c_str(), initialAddresses.at(k*4+3).c_str(), k, 0, 0,
+                2);
+        existingFlowBindingEntries.push_back(newEntryToInsert);
+        newEntryToInsert = FlowBindingEntry(1000, 1000,
+                initialAddresses.at(k*4+2).c_str(), initialAddresses.at(k*4+3).c_str(), k, 0, 0,
+                3);
+        existingFlowBindingEntries.push_back(newEntryToInsert);
+
+
+
+
+    }
 
     //CN0 verwaltet: -> MN[0],MN[3],MN[5]
-    FlowBindingEntry newEntryToInsert = FlowBindingEntry(1000, 1000,
-            "2001:db8::2aa:101", "2001:db8::33a1:cc01", 0, 1, 0, 1);
-    existingFlowBindingEntries.push_back(newEntryToInsert);
-    newEntryToInsert = FlowBindingEntry(1000, 1000, "2001:db8::299:102",
-            "2001:db8::33a1:cc01", 0, 0, 0, 2);
-    existingFlowBindingEntries.push_back(newEntryToInsert);
-    newEntryToInsert = FlowBindingEntry(1000, 1000, "2001:db8::199:103",
-            "2001:db8::33a1:cc01", 0, 0, 0, 3);
-    existingFlowBindingEntries.push_back(newEntryToInsert);
 
-    newEntryToInsert = FlowBindingEntry(1000, 1000, "2001:db8::2aa:301",
+/*    newEntryToInsert = FlowBindingEntry(1000, 1000, "2001:db8::2aa:301",
             "2001:db8::33a1:cc01", 2, 1, 0, 1);
     existingFlowBindingEntries.push_back(newEntryToInsert);
     newEntryToInsert = FlowBindingEntry(1000, 1000, "2001:db8::299:302",
             "2001:db8::33a1:cc01", 2, 0, 0, 2);
     existingFlowBindingEntries.push_back(newEntryToInsert);
     newEntryToInsert = FlowBindingEntry(1000, 1000, "2001:db8::199:303",
-            "2001:db8::33a1:cc01", 2,0, 0, 3);
+            "2001:db8::33a1:cc01", 2, 0, 0, 3);
     existingFlowBindingEntries.push_back(newEntryToInsert);
 
     newEntryToInsert = FlowBindingEntry(1000, 1000, "2001:db8::2aa:501",
@@ -57,7 +94,6 @@ FlowBindingTable::FlowBindingTable() {
     newEntryToInsert = FlowBindingEntry(1000, 1000, "2001:db8::199:503",
             "2001:db8::33a1:cc01", 4, 0, 0, 3);
     existingFlowBindingEntries.push_back(newEntryToInsert);
-
 
     //CN1 verwaltet: -> MN[2],MN[4]
     newEntryToInsert = FlowBindingEntry(1000, 1000, "2001:db8::2aa:201",
@@ -79,15 +115,11 @@ FlowBindingTable::FlowBindingTable() {
     newEntryToInsert = FlowBindingEntry(1000, 1000, "2001:db8::199:403",
             "2001:db8::33a1:cc02", 3, 0, 0, 3);
     existingFlowBindingEntries.push_back(newEntryToInsert);
-
+*/
 }
 
 FlowBindingTable::~FlowBindingTable() {
     // TODO Auto-generated destructor stub
-}
-
-void FlowBindingTable::initialize() {
-    // isCNandNotCapable = par("isCNandNotCapable");
 }
 
 void FlowBindingTable::handleMessage(cMessage* msg) {
@@ -206,10 +238,10 @@ const char* FlowBindingTable::getCorrectDestinationAddressForConnection(
                 && !strcmp(it->destAddress, sourceAddress)
                 && !strcmp(it->srcAddress, destAddress)) {
             cout << "GetCorrectDestination-Function:\n  DestinationAddress: "
-            << it->destAddress << " SourceAddress: " << it->srcAddress
-            << "Local Host Identifier: " << it->localHostIdentifier
-            << "  DPort: " << it->destPort << " SPort: " << it->srcPort
-            << "\n\n" << endl;
+                    << it->destAddress << " SourceAddress: " << it->srcAddress
+                    << "Local Host Identifier: " << it->localHostIdentifier
+                    << "  DPort: " << it->destPort << " SPort: " << it->srcPort
+                    << "\n\n" << endl;
 
             localHostIdentifier = it->localHostIdentifier;
 
@@ -265,10 +297,10 @@ void FlowBindingTable::updateExistingFlowBindingEntry(
             it < existingFlowBindingEntries.end(); it++) {
         if (!strcmp(update->getHomeAddress(), it->srcAddress)) {
             cout << "Übereinstimmung gefunden" << " destPort: " << it->destPort
-            << " srcPort: " << it->srcPort << " Src-Address: "
-            << it->srcAddress << " DestAddress: " << it->destAddress
-            << " CN is capable: " << it->forThisConncectionCNisCapable
-            << endl;
+                    << " srcPort: " << it->srcPort << " Src-Address: "
+                    << it->srcAddress << " DestAddress: " << it->destAddress
+                    << " CN is capable: " << it->forThisConncectionCNisCapable
+                    << endl;
             newEntryToInsert = FlowBindingEntry();
             newEntryToInsert.setDestAddress(it->getDestAddress());
             newEntryToInsert.setSrcAddress(update->getNewCoAdress());
@@ -281,12 +313,13 @@ void FlowBindingTable::updateExistingFlowBindingEntry(
             newEntryToInsert.setIsActive(true);
 
             //set the channel Number
-            newEntryToInsert.setChannelNumber(getTheNeededChannelNumber(update->getNewCoAdress()));
+            newEntryToInsert.setChannelNumber(
+                    getTheNeededChannelNumber(update->getNewCoAdress()));
 
             //no duplicates are handled
             if (entryAlreadyExistsInTable(newEntryToInsert.destPort,
-                            newEntryToInsert.srcPort, newEntryToInsert.destAddress,
-                            newEntryToInsert.srcAddress)) {
+                    newEntryToInsert.srcPort, newEntryToInsert.destAddress,
+                    newEntryToInsert.srcAddress)) {
                 break;
             } else { //add the new entry:
                 updatedEntries.push_back(newEntryToInsert);
@@ -430,11 +463,12 @@ void FlowBindingTable::printoutContentOftable() {
     for (it = existingFlowBindingEntries.begin();
             it < existingFlowBindingEntries.end(); it++) {
         cout << "MN[" << it->localHostIdentifier
-        << "] Tabelleneintrag  DestAddress:" << it->destAddress
-        << " SrcAddress: " << it->srcAddress << "  DPort: "
-        << it->destPort << " SPort: " << it->srcPort << " isActive: "
-        << it->isActive << " CN is capable: "
-        << it->forThisConncectionCNisCapable <<" channel Number: "<<it->channelNumber<< endl;
+                << "] Tabelleneintrag  DestAddress:" << it->destAddress
+                << " SrcAddress: " << it->srcAddress << "  DPort: "
+                << it->destPort << " SPort: " << it->srcPort << " isActive: "
+                << it->isActive << " CN is capable: "
+                << it->forThisConncectionCNisCapable << " channel Number: "
+                << it->channelNumber << endl;
 
     }
 }
@@ -485,7 +519,8 @@ void FlowBindingTable::setChannelActive(SetChannelActive* fromHA) {
 
     }
 
-    cout << "Signal-Strength-Update for HoA: "<<fromHA->getHomeAddressOfMN()<<" with channel: "<<fromHA->getChannelNumber() << endl;
+    cout << "Signal-Strength-Update for HoA: " << fromHA->getHomeAddressOfMN()
+            << " with channel: " << fromHA->getChannelNumber() << endl;
 
     //activate the wanted channel
     bool channelActivated = false;
@@ -495,7 +530,7 @@ void FlowBindingTable::setChannelActive(SetChannelActive* fromHA) {
                 && (it->channelNumber == fromHA->getChannelNumber())) {
             it->setIsActive(true);
             channelActivated = true;
-            cout<<"BLABLABLA"<<endl;
+
         }
     }
 
