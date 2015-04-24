@@ -51,6 +51,8 @@ simple Proxy_Enhanced_MCoAVideoCli like MCoAUDPBase
     	string humanReadableName;
     	
     	int mobileNodeNumber;
+    	
+    	int amountOfMobileNodes;
     
     	
     gates:

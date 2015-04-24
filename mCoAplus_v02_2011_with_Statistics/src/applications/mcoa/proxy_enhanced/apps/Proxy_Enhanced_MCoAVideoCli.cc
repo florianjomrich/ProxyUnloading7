@@ -42,6 +42,7 @@ void Proxy_Enhanced_MCoAVideoCli::initialize() {
     seq_number_counter = 0;
     waitInterval = &par("waitInterval");
     mobileNodeNumber = par("mobileNodeNumber");
+    amountOfMobileNodes = par("amountOfMobileNodes");
 
     //for evaluation:
     fileWriter = MyFileWriter();
@@ -158,11 +159,17 @@ void Proxy_Enhanced_MCoAVideoCli::handleMessage(cMessage* msg) {
 void Proxy_Enhanced_MCoAVideoCli::sendControlData(cMessage* msg) {
 
     //choose one of the available CNs as a communication entity
+    //MNs are distributed evenly over all the available CNs
     IPvXAddress cn;
+    int addressNumber = mobileNodeNumber % amountOfMobileNodes;
+
+    std::stringstream address;
+    address << "CN[" << (mobileNodeNumber % amountOfMobileNodes) << "]";
+
     if ((mobileNodeNumber % 2) == 0) {
-        cn = IPAddressResolver().resolve("CN[0]");
+        cn = IPAddressResolver().resolve(address.str().c_str());
     } else {
-        cn = IPAddressResolver().resolve("CN[1]");
+        cn = IPAddressResolver().resolve(address.str().c_str());
     }
 
     RequestVideoStream* requestVideoStream = new RequestVideoStream();

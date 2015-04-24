@@ -63,6 +63,7 @@ class INET_API Proxy_Enhanced_MCoAVideoCli : public MCoAUDPBase
      int seq_number_counter;
      cPar *waitInterval;
      int mobileNodeNumber;
+     int amountOfMobileNodes;
 
      //for evlauation:
      MyFileWriter fileWriter ;
