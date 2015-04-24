@@ -1,4 +1,4 @@
-11:25:54 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+11:33:44 **** Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && make
 make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
@@ -14,11 +14,8 @@ applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc: In member 
 applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:200:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
              packagesReceivedCounter, simTime().str().c_str());
                                                              ^
-applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:164:9: warning: unused variable ‘addressNumber’ [-Wunused-variable]
-     int addressNumber = mobileNodeNumber % amountOfMobileNodes;
-         ^
 Creating shared library: ../out/gcc-debug/src/libinet.so
 make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
 
-11:26:03 Build Finished (took 9s.378ms)
+11:33:48 Build Finished (took 4s.597ms)
 

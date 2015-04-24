@@ -12353,3 +12353,6 @@ Binding(CTRL+SHIFT+H,
 
 !ENTRY org.omnetpp.launch 4 133 2015-04-24 11:26:37.418
 !MESSAGE Run #0: Finished with Error
+
+!ENTRY org.omnetpp.launch 4 133 2015-04-24 11:34:12.514
+!MESSAGE Run #0: Finished with Error
