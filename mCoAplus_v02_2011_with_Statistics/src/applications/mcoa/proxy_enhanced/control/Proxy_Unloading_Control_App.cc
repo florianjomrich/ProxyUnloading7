@@ -305,8 +305,14 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
                 }
 
                 RoutingTable6* rt6 = RoutingTable6Access().get();
+
+
+                //HIER GGF. ÄNDERN !!!!!
+                //IF ABFRAGE IST GEWÜNSCHTE MODIFIKATION VON TOBIAS !!!
+                if(newChannelToSetActive->getChannelNumber()!=1){
                 sendToUDPMCOA(newChannelToSetActive->dup(), localPort,
                         rt6->getHomeNetHA_adr(), 2000, true);
+                }
 
                 cout << humanReadableName
                         << ": sends new Strongest Signal Info For the HA and the CN to update their Flow Binding Tables."

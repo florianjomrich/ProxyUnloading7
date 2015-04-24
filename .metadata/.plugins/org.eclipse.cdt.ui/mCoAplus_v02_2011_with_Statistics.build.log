@@ -1,14 +1,8 @@
-18:07:03 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+18:40:06 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && make
 make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
-applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc
-In file included from applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:16:0:
-applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
-     int localHostCounter = 0;
-                            ^
-Creating shared library: ../out/gcc-debug/src/libinet.so
 make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
 
-18:07:07 Build Finished (took 3s.472ms)
+18:40:06 Build Finished (took 118ms)
 
