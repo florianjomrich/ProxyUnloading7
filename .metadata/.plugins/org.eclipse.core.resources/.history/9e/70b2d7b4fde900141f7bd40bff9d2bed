@@ -1,0 +1,623 @@
+
+
+[General]
+
+network = VoIPMCoAMulti
+
+sim-time-limit = 800s
+warnings = true
+num-rngs = 8
+rng-class = "cMersenneTwister"
+total-stack = 2048KiB # 2MByte, increase if necessary
+
+cmdenv-express-mode = false
+cmdenv-output-file = logfile-${configname}-${runnumber}.log
+
+debug-on-errors=true
+**.coreDebug=true
+
+#disable the vector and scalar recording otherwise the simulation will run out of disk space !!!
+**.vector-recording = false
+**.scalar-recording = false
+
+#amount of Mobile Nodes and Correspondent Nodes
+*.total_mn= 5 #2
+*.total_cn = 2
+
+#amount of radios per Mobile Node
+**.MN[*].numRadios = 3
+
+
+# tkenv-default-run=1
+**.neighbourDiscovery.minIntervalBetweenRAs = 0.03s
+**.neighbourDiscovery.maxIntervalBetweenRAs = 0.07s
+**.max_ha_binding_lifetime = 3600
+**.max_rr_binding_lifetime = 3600
+
+*.playgroundSizeX = 850
+*.playgroundSizeY = 560
+#**.AP*.mobility.x = -1
+#**.AP*.mobility.y = -1
+*.channelcontrol.carrierFrequency = 2.4GHz
+*.channelcontrol.pMax = 2.0mW#2.0mW
+*.channelcontrol.sat = -85dBm
+*.channelcontrol.alpha = 1 #2 #0.5
+*.channelcontrol.numChannels = 6
+
+# access point
+
+**.MN*.**.mgmt.accessPointAddress = "10:AA:00:00:00:01"  
+**.wlan.mgmt.numAuthSteps = 4
+**.mgmt.frameCapacity = 500
+
+# ALL APs common parameters
+**.AP*.wlan.mgmt.beaconInterval = 0.1s
+
+# Access Point AP_Home ; AP_1 ; AP_2 ; AP_3 Parameters for EtherMAC
+**.AP_HA.wlan.mgmt.ssid = "HOME"
+**.AP_HA.wlan.mac.address = "10:AA:00:00:00:01"
+
+**.AP_HA.eth[0].address = "10:AE:00:00:00:02"
+**.AP_HA.eth[0].txrate = 100Mbps
+**.AP_HA.eth[0].duplexEnabled = true
+**.AP_HA.eth[0].*.scalar-recording = false
+
+**.AP_1.wlan.mgmt.ssid = "AP1"
+**.AP_1.wlan.mac.address = "10:AA:00:00:A1:01"
+**.AP_1.eth[0].address = "10:AE:00:00:A1:02"
+**.AP_1.eth[0].txrate = 100Mbps
+**.AP_1.eth[0].duplexEnabled = true
+**.AP_1.eth[0].*.scalar-recording = false
+
+**.AP_2.wlan.mgmt.ssid = "AP2"
+**.AP_2.wlan.mac.address = "10:AA:00:00:A2:01"
+**.AP_2.eth[0].address = "10:AE:00:00:A2:02"
+**.AP_2.eth[0].txrate = 100Mbps
+**.AP_2.eth[0].duplexEnabled = true
+**.AP_2.eth[0].*.scalar-recording = false
+
+
+
+**.HA.eth[0].mac.address = "10:AA:00:00:01:A1"
+**.HA.eth[1].mac.address = "10:AA:00:00:01:A2"
+
+**.R1.eth[0].mac.address = "10:AA:00:00:02:B1"
+**.R1.eth[1].mac.address = "10:AA:00:00:02:B2"
+**.R1.eth[2].mac.address = "10:AA:00:00:02:B3"
+
+**.R2.eth[0].mac.address = "10:AA:00:00:03:B1"
+**.R2.eth[1].mac.address = "10:AA:00:00:03:B2"
+**.R2.eth[2].mac.address = "10:AA:00:00:03:B3"
+
+
+**.Ra.eth[0].mac.address = "10:AA:00:00:03:C2"
+**.Ra.eth[1].mac.address = "10:AA:00:00:03:C3"
+**.Ra.eth[2].mac.address = "10:AA:00:00:03:C4"
+#**.Ra.eth[3].mac.address = "10:AA:00:00:03:C5"
+#**.Ra.eth[4].mac.address = "10:AA:00:00:03:C6"
+
+**.Rb.eth[0].mac.address = "10:AA:00:00:05:D1"
+**.Rb.eth[1].mac.address = "10:AA:00:00:05:D2"
+**.Rb.eth[2].mac.address = "10:AA:00:00:05:D3"
+
+
+########################################################################
+
+#PROXY ENHANCED
+**.HA.numTcpApps = 0
+**.HA.numUdpApps = 1
+**.HA.tcpAppType = ""
+**.HA.udpAppType = "Proxy_Enhanced_MCoAVideoProxy"
+**.HA.udpApp[0].destPort=1000
+**.HA.udpApp[0].localPort=1000
+**.HA.udpApp[0].useMode=""
+**.HA.udpApp[0].useMCoA=true
+
+
+**.MN[*].proxyUnloadingControlApp.destPort = 2000
+**.MN[*].proxyUnloadingControlApp.localPort = 2000
+**.MN[*].proxyUnloadingControlApp.useMode=""
+**.MN[*].proxyUnloadingControlApp.useMCoA = true
+
+**.MN[*].networkLayer.ipv6.isMN = true
+**.MN[*].networkLayer.ipv6.isHA = false
+**.MN[*].networkLayer.ipv6.isCN = false
+
+**.CN[*].proxyUnloadingControlApp.destPort = 2000
+**.CN[*].proxyUnloadingControlApp.localPort = 2000
+**.CN[*].proxyUnloadingControlApp.useMode=""
+**.CN[*].proxyUnloadingControlApp.useMCoA = true
+
+**.CN[*].networkLayer.ipv6.isMN = false
+**.CN[*].networkLayer.ipv6.isHA = false
+**.CN[*].networkLayer.ipv6.isCN = true
+
+**.HA.proxyUnloadingControlApp.destPort = 2000
+**.HA.proxyUnloadingControlApp.localPort = 2000
+**.HA.proxyUnloadingControlApp.useMode=""
+**.HA.proxyUnloadingControlApp.useMCoA = true
+
+**.HA.networkLayer.ipv6.isMN = false
+**.HA.networkLayer.ipv6.isHA = true
+**.HA.networkLayer.ipv6.isCN = false
+
+**.Ra.networkLayer.ipv6.isMN = false
+**.Ra.networkLayer.ipv6.isHA = false
+**.Ra.networkLayer.ipv6.isCN = false
+
+**.Rb.networkLayer.ipv6.isMN = false
+**.Rb.networkLayer.ipv6.isHA = false
+**.Rb.networkLayer.ipv6.isCN = false
+
+**.R1.networkLayer.ipv6.isMN = false
+**.R1.networkLayer.ipv6.isHA = false
+**.R1.networkLayer.ipv6.isCN = false
+
+#next is need for automatic adding of the source adresse for mobile nodes - if their ip adress might be unspecified in a upd packet - that flow source works
+#i am not sure but it might be an initialisation problem related to the time - maybe a first binding update has to happen to make it work
+
+**.MN[*].udpApp[*].startTime = 10 #important otherwise the SRC and DEST Adresses might not be available - for 10s automatic adding has to be done - for 100s it seems to work without
+
+# =============================================================================================
+
+#Configs that have to be set for each Node individually: 
+
+**.Ra.networkLayer.ipv6.humanReadableNameForAutomaticAdding ="Ra"
+**.Rb.networkLayer.ipv6.humanReadableNameForAutomaticAdding ="Rb"
+**.R1.networkLayer.ipv6.humanReadableNameForAutomaticAdding ="R1"
+**.HA.networkLayer.ipv6.humanReadableNameForAutomaticAdding ="HA"
+
+**.HA.networkLayer.xMobileIPv6.humanReadableName ="HA"
+
+**.HA.proxyUnloadingControlApp.humanReadableName ="HA"
+
+**.MN[4].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="MN[4]"
+**.MN[3].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="MN[3]"
+**.MN[2].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="MN[2]"
+**.MN[0].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="MN[0]"
+**.MN[1].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="MN[1]"
+**.CN[0].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[0]"
+**.CN[1].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[1]"
+
+
+**.MN[4].networkLayer.xMobileIPv6.humanReadableName ="MN[4]"
+**.MN[3].networkLayer.xMobileIPv6.humanReadableName ="MN[3]"
+**.MN[2].networkLayer.xMobileIPv6.humanReadableName ="MN[2]"
+**.MN[0].networkLayer.xMobileIPv6.humanReadableName ="MN[0]"
+**.MN[1].networkLayer.xMobileIPv6.humanReadableName ="MN[1]"
+**.CN[0].networkLayer.xMobileIPv6.humanReadableName ="CN[0]"
+**.CN[1].networkLayer.xMobileIPv6.humanReadableName ="CN[1]"
+
+
+**.MN[4].proxyUnloadingControlApp.humanReadableName ="MN[4]"
+**.MN[3].proxyUnloadingControlApp.humanReadableName ="MN[3]"
+**.MN[2].proxyUnloadingControlApp.humanReadableName ="MN[2]"
+**.MN[0].proxyUnloadingControlApp.humanReadableName ="MN[0]"
+**.MN[1].proxyUnloadingControlApp.humanReadableName ="MN[1]"
+**.CN[0].proxyUnloadingControlApp.humanReadableName ="CN[0]"
+**.CN[1].proxyUnloadingControlApp.humanReadableName ="CN[1]"
+
+
+**.MN[4].udpApp[0].mobileNodeNumber = 4
+**.MN[3].udpApp[0].mobileNodeNumber = 3
+**.MN[2].udpApp[0].mobileNodeNumber = 2
+**.MN[1].udpApp[0].mobileNodeNumber = 1
+**.MN[0].udpApp[0].mobileNodeNumber = 0
+
+**.CN[1].udpApp[0].correspondentNodeNumber = 1
+**.CN[0].udpApp[0].correspondentNodeNumber = 0
+
+**.MN[4].udpApp[*].humanReadableName ="MN[4]"
+**.MN[3].udpApp[*].humanReadableName ="MN[3]"
+**.MN[2].udpApp[*].humanReadableName ="MN[2]"
+**.MN[0].udpApp[*].humanReadableName ="MN[0]"
+**.MN[1].udpApp[*].humanReadableName ="MN[1]"
+**.CN[0].udpApp[*].humanReadableName ="CN[0]"
+**.CN[1].udpApp[*].humanReadableName ="CN[1]"
+**.HA.udpApp[*].humanReadableName ="HA"
+
+#FÜr JEDEN Mobile Node !!!
+**.MN[4].wlan[0].mac.address= "20:00:00:00:05:01"
+**.MN[4].wlan[1].mac.address= "20:00:00:00:05:02"
+**.MN[4].wlan[2].mac.address= "20:00:00:00:05:03"
+
+# =============================================================================================
+
+#TIMEOUTS:
+
+**.MN[*].proxyUnloadingControlApp.requestForConnectionTimeOut = 0.3s
+**.CN[*].proxyUnloadingControlApp.requestForConnectionTimeOut = 0.3s 
+**.HA.proxyUnloadingControlApp.requestForConnectionTimeOut = 0.3s
+
+**.MN[*].proxyUnloadingControlApp.flowBindingUpdateTimeOut = 0.4s 
+**.CN[*].proxyUnloadingControlApp.flowBindingUpdateTimeOut = 0.4s 
+**.HA.proxyUnloadingControlApp.flowBindingUpdateTimeOut = 0.4s
+
+**.MN[*].proxyUnloadingControlApp.setActiveIPAddressTimeOut = 0.5s 
+**.CN[*].proxyUnloadingControlApp.setActiveIPAddressTimeOut = 0.5s 
+**.HA.proxyUnloadingControlApp.setActiveIPAddressTimeOut = 0.5s
+
+**.MN[*].proxyUnloadingControlApp.signalUpdateTimeOut = 0.4s  #5.1s 
+**.CN[*].proxyUnloadingControlApp.signalUpdateTimeOut = 0.4s 
+**.HA.proxyUnloadingControlApp.signalUpdateTimeOut = 0.4s
+
+
+
+
+# =============================================================================================
+#for Debugging of MCOA
+**.MN[*].udpApp[*].isCN = false
+**.MN[*].udpApp[*].isMN = true
+**.MN[*].udpApp[*].isHA = false
+
+
+**.CN[*].udpApp[*].isCN = true
+**.CN[*].udpApp[*].isHA = false
+**.CN[*].udpApp[*].isMN = false
+
+**.HA.udpApp[*].isCN = false
+**.HA.udpApp[*].isHA = true
+**.HA.udpApp[*].isMN = false
+
+# =============================================================================================
+
+
+
+#next is set to control whether the certain CN can deal with the Proxy Unloading Protocol or not
+
+**.MN[*].proxyUnloadingControlApp.isCapableCN = false #do not change
+**.HA.proxyUnloadingControlApp.isCapableCN = false #do not change
+
+**.Ra.networkLayer.ipv6.isCapableCN = false# do not change
+**.Rb.networkLayer.ipv6.isCapableCN = false# do not change
+**.R1.networkLayer.ipv6.isCapableCN = false# do not change
+**.MN[*].networkLayer.ipv6.isCapableCN = false# do not change
+**.HA.networkLayer.ipv6.isCapableCN = false# do not change
+
+#important configuration parameter:
+#parameters MUST be changed for each CN[x] together with the same x
+**.CN[0].proxyUnloadingControlApp.isCapableCN = true #CHANGE
+**.CN[0].networkLayer.ipv6.isCapableCN = true # CHANGE -> if false ->CN does no Flow Control
+
+**.CN[1].proxyUnloadingControlApp.isCapableCN = true #CHANGE
+**.CN[1].networkLayer.ipv6.isCapableCN = true # CHANGE -> if false ->CN does no Flow Control
+
+# =============================================================================================
+
+
+
+**.routingTableFile = xmldoc("rtg/VoIPMCoARouting.xml")
+
+
+# = ============================================================================================
+
+# wireless channels
+**.AP_HA.wlan.radio.channelNumber = 1
+**.AP_1.wlan.radio.channelNumber = 2
+**.AP_2.wlan.radio.channelNumber = 3
+#**.AP_3.wlan.radio.channelNumber = 4
+
+
+
+# wireless configuration
+**.MN[*].wlan[0].agent.default_ssid = "HOME"
+**.MN[*].wlan[0].agent.channelsToScan = "1"
+
+#**.MN.wlan[0].radio.channelNumber = 1 
+**.MN[*].wlan[1].agent.default_ssid = "AP1"
+**.MN[*].wlan[1].agent.channelsToScan = "2"
+
+#**.MN.wlan[1].radio.channelNumber = 2
+**.MN[4].wlan[2].agent.default_ssid = "AP2"
+**.MN[4].wlan[2].agent.channelsToScan = "3"
+
+#**.MN.wlan[2].radio.channelNumber = 3
+
+**.MN[4].wlan*.agent.activeScan = true
+
+
+#**.MN.**.numRadios=3
+# wireless configuration
+**.MN[3].wlan[0].agent.default_ssid = "HOME"
+**.MN[3].wlan[0].agent.channelsToScan = "1"
+**.MN[3].wlan[0].mac.address= "20:00:00:00:04:01"
+#**.MN.wlan[0].radio.channelNumber = 1 
+**.MN[3].wlan[1].agent.default_ssid = "AP1"
+**.MN[3].wlan[1].agent.channelsToScan = "2"
+**.MN[3].wlan[1].mac.address= "20:00:00:00:04:02"
+#**.MN.wlan[1].radio.channelNumber = 2
+**.MN[3].wlan[2].agent.default_ssid = "AP2"
+**.MN[3].wlan[2].agent.channelsToScan = "3"
+**.MN[3].wlan[2].mac.address= "20:00:00:00:04:03"
+#**.MN.wlan[2].radio.channelNumber = 3
+
+**.MN[3].wlan*.agent.activeScan = true
+
+#**.MN.**.numRadios=3
+# wireless configuration
+**.MN[2].wlan[0].agent.default_ssid = "HOME"
+**.MN[2].wlan[0].agent.channelsToScan = "1"
+**.MN[2].wlan[0].mac.address= "20:00:00:00:03:01"
+#**.MN.wlan[0].radio.channelNumber = 1 
+**.MN[2].wlan[1].agent.default_ssid = "AP1"
+**.MN[2].wlan[1].agent.channelsToScan = "2"
+**.MN[2].wlan[1].mac.address= "20:00:00:00:03:02"
+#**.MN.wlan[1].radio.channelNumber = 2
+**.MN[2].wlan[2].agent.default_ssid = "AP2"
+**.MN[2].wlan[2].agent.channelsToScan = "3"
+**.MN[2].wlan[2].mac.address= "20:00:00:00:03:03"
+#**.MN.wlan[2].radio.channelNumber = 3
+
+**.MN[2].wlan*.agent.activeScan = true
+
+
+#MN1
+**.MN[1].wlan[0].agent.default_ssid = "HOME"
+**.MN[1].wlan[0].agent.channelsToScan = "1"
+**.MN[1].wlan[0].mac.address= "20:00:00:00:02:01"
+#
+**.MN[1].wlan[1].agent.default_ssid = "AP1"
+**.MN[1].wlan[1].agent.channelsToScan = "2"
+**.MN[1].wlan[1].mac.address= "20:00:00:00:02:02"
+#**.MN.wlan[1].radio.channelNumber = 2
+**.MN[1].wlan[2].agent.default_ssid = "AP2"
+**.MN[1].wlan[2].agent.channelsToScan = "3"
+**.MN[1].wlan[2].mac.address= "20:00:00:00:02:03"
+
+**.MN[1].wlan*.agent.activeScan = true
+
+
+
+#**.MN.**.numRadios=3
+# wireless configuration
+**.MN[0].wlan[0].agent.default_ssid = "HOME"
+**.MN[0].wlan[0].agent.channelsToScan = "1"
+**.MN[0].wlan[0].mac.address= "20:00:00:00:01:01"
+#**.MN.wlan[0].radio.channelNumber = 1 
+**.MN[0].wlan[1].agent.default_ssid = "AP1"
+**.MN[0].wlan[1].agent.channelsToScan = "2"
+**.MN[0].wlan[1].mac.address= "20:00:00:00:01:02"
+#**.MN.wlan[1].radio.channelNumber = 2
+**.MN[0].wlan[2].agent.default_ssid = "AP2"
+**.MN[0].wlan[2].agent.channelsToScan = "3"
+**.MN[0].wlan[2].mac.address= "20:00:00:00:01:03"
+#**.MN.wlan[2].radio.channelNumber = 3
+
+**.MN[0].wlan*.agent.activeScan = true
+
+
+
+
+
+
+
+#**.wlan.agent.channelsToScan = "1 2 3"
+#**.wlan.agent.probeDelay = 0.1s
+#**.wlan.agent.minChannelTime = 0.15s
+#**.wlan.agent.maxChannelTime = 0.3s
+**.wlan.agent.authenticationTimeout = 15s
+**.wlan.agent.associationTimeout = 15s
+
+# nic settings
+#**.mac.address = "auto"
+**.mac.maxQueueSize = 14
+**.mac.rtsThresholdBytes = 4000B
+**.mac.bitrate = 11Mbps
+**.wlan.mac.retryLimit = 7
+**.wlan.mac.cwMinData = 7
+**.wlan.mac.cwMinBroadcast = 31
+
+**.radio.bitrate = 11Mbps
+**.radio.transmitterPower = 2.0mW#2.0mW # 3.01dBm
+**.radio.carrierFrequency = 2.4GHz
+**.radio.thermalNoise = -110dBm
+**.radio.sensitivity = -85dBm # in reality this seems in dBm
+**.radio.pathLossAlpha = 1 #2 #0.5#
+**.radio.snirThreshold = 4dB
+
+# relay unit configuration
+**.relayUnitType = "MACRelayUnitPP"
+**.relayUnit.addressTableSize = 100
+**.relayUnit.agingTime = 120s
+**.relayUnit.bufferSize = 1MiB
+**.relayUnit.highWatermark = 512KiB
+**.relayUnit.pauseUnits = 300  # pause for 300*512 bit (19200 byte) time
+**.relayUnit.addressTableFile = ""
+**.relayUnit.numCPUs = 2
+**.relayUnit.processingTime = 2us
+**.relayUnit.*.scalar-recording = false
+
+
+
+
+
+#VOIP
+**.writeTracesToDisk=true
+#**.traceFileName="TraceVoIP" 
+
+#[Config config1]
+# udp app
+**.MN[*].numTcpApps = 0
+**.MN[*].tcpAppType = ""
+**.MN[*].numUdpApps = 1
+**.MN[*].udpAppType = "Proxy_Enhanced_MCoAVideoCli"
+**.MN[*].udpApp[0].waitInterval = 1.1s  #0.5s
+**.MN[*].udpApp[0].localPort = 1000
+**.MN[*].udpApp[0].destPort = 1000
+**.MN[*].udpApp[0].isDestiny = false #gibt an ob der Knoten auch Single-Homed sein kann. Das ist bei "false" der Fall. Das möchten wir ja
+
+**.CN[*].numTcpApps = 0
+**.CN[*].tcpAppType = ""
+**.CN[*].numUdpApps = 1
+**.CN[*].udpAppType = "Proxy_Enhanced_MCoAVideoSrv"
+**.CN[*].udpApp[0].waitInterval = 0.1s  #0.5s
+**.CN[*].udpApp[0].packetLen = 400B
+**.CN[*].udpApp[0].videoSize = 80000B
+
+
+
+**.udpApp[0].sample_fmt= 1
+**.udpApp[0].nchannels = 1
+
+**.CN[*].udpApp[0].localPort = 1000
+**.CN[*].udpApp[0].destPort = 1000
+**.CN[*].udpApp[0].srcAddress = ""
+**.CN[*].udpApp[0].destAddresses = "2001:db8::02AA:101" 
+**.CN[*].udpApp[0].isDestiny = false
+
+
+
+
+
+
+
+# Mobility
+# RWP_vel_03km
+**.MN[*].mobilityType = "RandomWPMobility" #mal Moblitiy abstellen !! "NullMobility" #
+**.MN[*].mobility.debug = false
+**.MN[*].mobility.x = 80#80
+**.MN[*].mobility.y = 80 #80
+**.MN[*].mobility.speed = 10mps
+**.MN[*].mobility.updateInterval = 0.1s
+**.MN[*].mobility.waitTime = 0.1s
+**.MN[*].ipv6.procDelay = 100 us
+
+**.MN[4].wlan.mac.address = "BB:BB:BB:BB:BB:05" 
+**.MN[3].wlan.mac.address = "BB:BB:BB:BB:BB:04" 
+**.MN[2].wlan.mac.address = "BB:BB:BB:BB:BB:03"
+**.MN[1].wlan.mac.address = "BB:BB:BB:BB:BB:02"  
+**.MN[0].wlan.mac.address = "BB:BB:BB:BB:BB:01" 
+
+**.CN[0].eth[0].mac.address = "CC:CC:CC:CC:CC:01" 
+**.CN[1].eth[0].mac.address = "CC:CC:CC:CC:CC:02" 
+
+
+
+
+
+
+
+
+
+
+# tcp settings
+**.tcp.mss = 1024
+**.tcp.advertisedWindow = 14336  # 14*mss
+**.tcp.recordStats = true
+
+# ip settings
+**.ip.procDelay = 10us
+**.routingFile = ""
+**.IPForward = false  # Router's is hardwired "true"
+
+# hook names
+**.qosBehaviorClass = "EnqueueWithoutQoS"
+**.ip.*.procDelay = 0
+
+# ARP configuration
+**.arp.retryTimeout = 1s
+**.arp.retryCount = 3
+**.arp.cacheTimeout = 100s
+**.networkLayer.proxyARP = true  # Host's is hardwired "false"
+
+# Ethernet NIC configuration
+**.eth[*].encap.writeScalars = false
+**.eth[*].mac.promiscuous = false
+#**.eth[*].mac.address = "auto"
+**.eth[*].mac.txrate = 10e6bps
+**.eth[*].mac.duplexEnabled = true
+**.eth[*].mac.writeScalars = false
+
+
+
+
+# Queues
+**.ppp[*].queueType = "DropTailQueue"
+**.ppp[*].queue.frameCapacity = 200
+**.eth[*].queueType = "DropTailQueue"
+**.eth[*].queue.frameCapacity = 200
+
+# nam trace
+**.nam.logfile = "trace.nam"
+**.nam.prolog = ""
+**.namid = -1  # auto
+
+# Ethernet switch
+**.switch*.relayUnitType = "MACRelayUnitNP"
+**.relayUnit.addressTableSize = 100
+**.relayUnit.agingTime = 120s
+**.relayUnit.bufferSize = 1048576B  # 1Mb
+**.relayUnit.highWatermark = 524288B  # 512K
+**.relayUnit.pauseUnits = 300  # pause for 300*512 bit (19200 byte) time
+**.relayUnit.addressTableFile = ""
+**.relayUnit.numCPUs = 2
+**.relayUnit.processingTime = 2us
+**.relayUnit.writeScalars = true
+
+
+
+# Failures 
+**.ScenMana.script = xmldoc("rtg/Failures.xml")
+
+
+[Config MCoA_ALL]
+#
+# MCoA Configuration
+#
+**.mCoA.m_prohibited = false
+**.mCoA.m_bulk_reg_prohibited = false
+**.mCoA.mc_sim_home_and_foreign_prohibited = true
+**.mCoA.deregisterALL = 0 # ALL
+**.mCoA.TypeUseMCoA = "ALL"
+#**.mCoA.deregisterALL = 1 # one by one the default
+
+**.MN[*].udpApp[0].useMCoA = true # ÄNDERN WIEDER !!!!
+**.MN[*].udpApp[0].useMode = "ALL"
+
+
+**.CN[*].udpApp[0].useMCoA = true
+**.CN[*].udpApp[0].useMode = "ALL"
+
+
+
+
+
+[Config MIPv6]
+#
+# MCoA Configuration
+#
+**.mCoA.m_prohibited = true
+**.mCoA.m_bulk_reg_prohibited = false
+**.mCoA.mc_sim_home_and_foreign_prohibited = true
+**.mCoA.deregisterALL = 0 # ALL
+**.mCoA.TypeUseMCoA = "ALL"
+#**.mCoA.deregisterALL = 1 # one by one the default
+
+**.MN[*].udpApp[0].useMCoA = false
+**.MN[*].udpApp[0].useMode = "ALL"
+
+**.CN[*].udpApp[0].useMCoA = false
+**.CN[*].udpApp[0].useMode = "ALL"
+
+
+
+[Config MCoA_SINGLEFIRST]
+**.mCoA.m_prohibited = false
+**.mCoA.m_bulk_reg_prohibited = false
+**.mCoA.mc_sim_home_and_foreign_prohibited = true
+**.mCoA.TypeUseMCoA = "SINGLEFIRST"
+**.mCoA.deregisterALL = 1
+
+**.MN[*].udpApp[0].useMCoA = true
+**.MN[*].udpApp[0].useMode = "SINGLEFIRST"
+
+**.CN[*].udpApp[0].useMCoA = true
+**.CN[*].udpApp[0].useMode = "SINGLEFIRST"
+
+
+
+
+
+
+
+
