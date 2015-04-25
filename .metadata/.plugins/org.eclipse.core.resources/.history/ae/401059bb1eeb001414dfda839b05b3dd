@@ -4,7 +4,7 @@
 
 network = VoIPMCoAMulti
 
-sim-time-limit = 200s
+sim-time-limit = 800s
 warnings = true
 num-rngs = 8
 rng-class = "cMersenneTwister"
@@ -41,17 +41,12 @@ debug-on-errors=true
 
 
 #important configuration parameter:
-#Set CN capable of supporting our protocol or not !!!
-#parameters MUST be changed for each CN[x] together with the same value (true or false - no mixing in an individuall CN)
-**.CN[*].proxyUnloadingControlApp.isCapableCN = true #CHANGE
-**.CN[*].networkLayer.ipv6.isCapableCN = true # CHANGE -> if false ->CN does no Flow Control
+#parameters MUST be changed for each CN[x] together with the same x
+**.CN[0].proxyUnloadingControlApp.isCapableCN = false #CHANGE
+**.CN[0].networkLayer.ipv6.isCapableCN = false # CHANGE -> if false ->CN does no Flow Control
 
-#can be also set individually:
-
-#**.CN[0].proxyUnloadingControlApp.isCapableCN = false #CHANGE
-#**.CN[0].networkLayer.ipv6.isCapableCN = false # CHANGE -> if false ->CN does no Flow Control
-#**.CN[1].proxyUnloadingControlApp.isCapableCN = false #CHANGE
-#**.CN[1].networkLayer.ipv6.isCapableCN = false # CHANGE -> if false ->CN does no Flow Control
+**.CN[1].proxyUnloadingControlApp.isCapableCN = false #CHANGE
+**.CN[1].networkLayer.ipv6.isCapableCN = false # CHANGE -> if false ->CN does no Flow Control
 
 ########################################################################
 
@@ -293,21 +288,6 @@ debug-on-errors=true
 **.CN[2].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[2]"
 **.CN[3].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[3]"
 **.CN[4].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[4]"
-**.CN[5].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[5]"
-**.CN[6].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[6]"
-**.CN[7].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[7]"
-**.CN[8].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[8]"
-**.CN[9].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[9]"
-**.CN[10].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[10]"
-**.CN[11].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[11]"
-**.CN[12].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[12]"
-**.CN[13].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[13]"
-**.CN[14].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[14]"
-**.CN[15].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[15]"
-**.CN[16].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[16]"
-**.CN[17].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[17]"
-**.CN[18].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[18]"
-**.CN[19].networkLayer.ipv6.humanReadableNameForAutomaticAdding ="CN[19]"
 
 **.HA.networkLayer.xMobileIPv6.humanReadableName ="HA"
 **.MN[0].networkLayer.xMobileIPv6.humanReadableName ="MN[0]"
@@ -405,21 +385,6 @@ debug-on-errors=true
 **.CN[2].networkLayer.xMobileIPv6.humanReadableName ="CN[2]"
 **.CN[3].networkLayer.xMobileIPv6.humanReadableName ="CN[3]"
 **.CN[4].networkLayer.xMobileIPv6.humanReadableName ="CN[4]"
-**.CN[5].networkLayer.xMobileIPv6.humanReadableName ="CN[5]"
-**.CN[6].networkLayer.xMobileIPv6.humanReadableName ="CN[6]"
-**.CN[7].networkLayer.xMobileIPv6.humanReadableName ="CN[7]"
-**.CN[8].networkLayer.xMobileIPv6.humanReadableName ="CN[8]"
-**.CN[9].networkLayer.xMobileIPv6.humanReadableName ="CN[9]"
-**.CN[10].networkLayer.xMobileIPv6.humanReadableName ="CN[10]"
-**.CN[11].networkLayer.xMobileIPv6.humanReadableName ="CN[11]"
-**.CN[12].networkLayer.xMobileIPv6.humanReadableName ="CN[12]"
-**.CN[13].networkLayer.xMobileIPv6.humanReadableName ="CN[13]"
-**.CN[14].networkLayer.xMobileIPv6.humanReadableName ="CN[14]"
-**.CN[15].networkLayer.xMobileIPv6.humanReadableName ="CN[15]"
-**.CN[16].networkLayer.xMobileIPv6.humanReadableName ="CN[16]"
-**.CN[17].networkLayer.xMobileIPv6.humanReadableName ="CN[17]"
-**.CN[18].networkLayer.xMobileIPv6.humanReadableName ="CN[18]"
-**.CN[19].networkLayer.xMobileIPv6.humanReadableName ="CN[19]"
 
 **.HA.proxyUnloadingControlApp.humanReadableName ="HA"
 **.MN[0].proxyUnloadingControlApp.humanReadableName ="MN[0]"
@@ -517,21 +482,6 @@ debug-on-errors=true
 **.CN[2].proxyUnloadingControlApp.humanReadableName ="CN[2]"
 **.CN[3].proxyUnloadingControlApp.humanReadableName ="CN[3]"
 **.CN[4].proxyUnloadingControlApp.humanReadableName ="CN[4]"
-**.CN[5].proxyUnloadingControlApp.humanReadableName ="CN[5]"
-**.CN[6].proxyUnloadingControlApp.humanReadableName ="CN[6]"
-**.CN[7].proxyUnloadingControlApp.humanReadableName ="CN[7]"
-**.CN[8].proxyUnloadingControlApp.humanReadableName ="CN[8]"
-**.CN[9].proxyUnloadingControlApp.humanReadableName ="CN[9]"
-**.CN[10].proxyUnloadingControlApp.humanReadableName ="CN[10]"
-**.CN[11].proxyUnloadingControlApp.humanReadableName ="CN[11]"
-**.CN[12].proxyUnloadingControlApp.humanReadableName ="CN[12]"
-**.CN[13].proxyUnloadingControlApp.humanReadableName ="CN[13]"
-**.CN[14].proxyUnloadingControlApp.humanReadableName ="CN[14]"
-**.CN[15].proxyUnloadingControlApp.humanReadableName ="CN[15]"
-**.CN[16].proxyUnloadingControlApp.humanReadableName ="CN[16]"
-**.CN[17].proxyUnloadingControlApp.humanReadableName ="CN[17]"
-**.CN[18].proxyUnloadingControlApp.humanReadableName ="CN[18]"
-**.CN[19].proxyUnloadingControlApp.humanReadableName ="CN[19]"
 
 **.MN[0].udpApp[0].mobileNodeNumber = 0
 **.MN[1].udpApp[0].mobileNodeNumber = 1
@@ -628,21 +578,6 @@ debug-on-errors=true
 **.CN[2].udpApp[0].correspondentNodeNumber = 2
 **.CN[3].udpApp[0].correspondentNodeNumber = 3
 **.CN[4].udpApp[0].correspondentNodeNumber = 4
-**.CN[5].udpApp[0].correspondentNodeNumber = 5
-**.CN[6].udpApp[0].correspondentNodeNumber = 6
-**.CN[7].udpApp[0].correspondentNodeNumber = 7
-**.CN[8].udpApp[0].correspondentNodeNumber = 8
-**.CN[9].udpApp[0].correspondentNodeNumber = 9
-**.CN[10].udpApp[0].correspondentNodeNumber = 10
-**.CN[11].udpApp[0].correspondentNodeNumber = 11
-**.CN[12].udpApp[0].correspondentNodeNumber = 12
-**.CN[13].udpApp[0].correspondentNodeNumber = 13
-**.CN[14].udpApp[0].correspondentNodeNumber = 14
-**.CN[15].udpApp[0].correspondentNodeNumber = 15
-**.CN[16].udpApp[0].correspondentNodeNumber = 16
-**.CN[17].udpApp[0].correspondentNodeNumber = 17
-**.CN[18].udpApp[0].correspondentNodeNumber = 18
-**.CN[19].udpApp[0].correspondentNodeNumber = 19
 
 **.HA.udpApp[*].humanReadableName ="HA"
 **.MN[0].udpApp[*].humanReadableName ="MN[0]"
@@ -740,21 +675,6 @@ debug-on-errors=true
 **.CN[2].udpApp[*].humanReadableName ="CN[2]"
 **.CN[3].udpApp[*].humanReadableName ="CN[3]"
 **.CN[4].udpApp[*].humanReadableName ="CN[4]"
-**.CN[5].udpApp[*].humanReadableName ="CN[5]"
-**.CN[6].udpApp[*].humanReadableName ="CN[6]"
-**.CN[7].udpApp[*].humanReadableName ="CN[7]"
-**.CN[8].udpApp[*].humanReadableName ="CN[8]"
-**.CN[9].udpApp[*].humanReadableName ="CN[9]"
-**.CN[10].udpApp[*].humanReadableName ="CN[10]"
-**.CN[11].udpApp[*].humanReadableName ="CN[11]"
-**.CN[12].udpApp[*].humanReadableName ="CN[12]"
-**.CN[13].udpApp[*].humanReadableName ="CN[13]"
-**.CN[14].udpApp[*].humanReadableName ="CN[14]"
-**.CN[15].udpApp[*].humanReadableName ="CN[15]"
-**.CN[16].udpApp[*].humanReadableName ="CN[16]"
-**.CN[17].udpApp[*].humanReadableName ="CN[17]"
-**.CN[18].udpApp[*].humanReadableName ="CN[18]"
-**.CN[19].udpApp[*].humanReadableName ="CN[19]"
 
 #Mac Addresses for Mobile Nodes:
 **.MN[0].wlan[0].mac.address= "20:00:00:00:01:01"
@@ -1028,27 +948,6 @@ debug-on-errors=true
 **.MN[89].wlan[1].mac.address= "20:00:00:00:90:02"
 **.MN[89].wlan[2].mac.address= "20:00:00:00:90:03"
 
-**.CN[0].eth[0].mac.address = "CC:CC:CC:CC:CC:01"
-**.CN[1].eth[0].mac.address = "CC:CC:CC:CC:CC:02"
-**.CN[2].eth[0].mac.address = "CC:CC:CC:CC:CC:03"
-**.CN[3].eth[0].mac.address = "CC:CC:CC:CC:CC:04"
-**.CN[4].eth[0].mac.address = "CC:CC:CC:CC:CC:05"
-**.CN[5].eth[0].mac.address = "CC:CC:CC:CC:CC:06"
-**.CN[6].eth[0].mac.address = "CC:CC:CC:CC:CC:07"
-**.CN[7].eth[0].mac.address = "CC:CC:CC:CC:CC:08"
-**.CN[8].eth[0].mac.address = "CC:CC:CC:CC:CC:09"
-**.CN[9].eth[0].mac.address = "CC:CC:CC:CC:CC:10"
-**.CN[10].eth[0].mac.address = "CC:CC:CC:CC:CC:11"
-**.CN[11].eth[0].mac.address = "CC:CC:CC:CC:CC:12"
-**.CN[12].eth[0].mac.address = "CC:CC:CC:CC:CC:13"
-**.CN[13].eth[0].mac.address = "CC:CC:CC:CC:CC:14"
-**.CN[14].eth[0].mac.address = "CC:CC:CC:CC:CC:15"
-**.CN[15].eth[0].mac.address = "CC:CC:CC:CC:CC:16"
-**.CN[16].eth[0].mac.address = "CC:CC:CC:CC:CC:17"
-**.CN[17].eth[0].mac.address = "CC:CC:CC:CC:CC:18"
-**.CN[18].eth[0].mac.address = "CC:CC:CC:CC:CC:19"
-**.CN[19].eth[0].mac.address = "CC:CC:CC:CC:CC:20"
-
 
 
 # =============================================================================================
@@ -1229,9 +1128,14 @@ debug-on-errors=true
 **.MN[*].mobility.waitTime = 0.1s
 **.MN[*].ipv6.procDelay = 100 us
 
- 
+**.MN[4].wlan.mac.address = "BB:BB:BB:BB:BB:05" 
+**.MN[3].wlan.mac.address = "BB:BB:BB:BB:BB:04" 
+**.MN[2].wlan.mac.address = "BB:BB:BB:BB:BB:03"
+**.MN[1].wlan.mac.address = "BB:BB:BB:BB:BB:02"  
+**.MN[0].wlan.mac.address = "BB:BB:BB:BB:BB:01" 
 
-
+**.CN[0].eth[0].mac.address = "CC:CC:CC:CC:CC:01" 
+**.CN[1].eth[0].mac.address = "CC:CC:CC:CC:CC:015" 
 
 
 

@@ -323,6 +323,10 @@
 <includePath path="/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/_scripts"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/_scripts/xsd2html"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/_scripts/xmlschema"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. AP_HA wird nicht mehr empfohlen"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. AP_HA wird nicht mehr empfohlen/Energie Nachführung 5MN - 2 CN - alle capable"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. AP_HA wird nicht mehr empfohlen/Energie Nachführung 5MN - 2 CN - alle NOT capable"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. jetzt mit 5 MNs 5CNs - NOT"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>

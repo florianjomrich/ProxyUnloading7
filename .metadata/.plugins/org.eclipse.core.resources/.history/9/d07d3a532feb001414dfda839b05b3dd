@@ -41,8 +41,7 @@ debug-on-errors=true
 
 
 #important configuration parameter:
-#Set CN capable of supporting our protocol or not !!!
-#parameters MUST be changed for each CN[x] together with the same value (true or false - no mixing in an individuall CN)
+#parameters MUST be changed for each CN[x] together with the same x
 **.CN[*].proxyUnloadingControlApp.isCapableCN = true #CHANGE
 **.CN[*].networkLayer.ipv6.isCapableCN = true # CHANGE -> if false ->CN does no Flow Control
 
