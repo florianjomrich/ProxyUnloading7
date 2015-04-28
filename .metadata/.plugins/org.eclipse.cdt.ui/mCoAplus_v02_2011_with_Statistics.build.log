@@ -1,8 +1,8 @@
-11:44:50 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+15:16:11 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && make
 make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
 make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
 
-11:44:50 Build Finished (took 135ms)
+15:16:12 Build Finished (took 113ms)
 

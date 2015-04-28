@@ -439,7 +439,6 @@ OBJS = \
     $O/networklayer/ted/TED.o \
     $O/networklayer/ted/LinkStateRouting.o \
     $O/networklayer/xmipv6/ProxyUnloadingxMIPv6.o \
-    $O/networklayer/xmipv6/BindingUpdateInformationtoAPPmessageCN.o \
     $O/networklayer/xmipv6/xMIPv6.o \
     $O/networklayer/xmipv6/BindingUpdateList.o \
     $O/networklayer/xmipv6/ProxyEnhancedxMIPv6ForMobileNode.o \
@@ -1137,7 +1136,6 @@ $O/applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoSrv.o: applicat
 	networklayer/contract/IPvXAddress.h \
 	networklayer/mcoa/IPv6PrefAdr.h \
 	networklayer/mcoa/IPv6TunAdr.h \
-	networklayer/xmipv6/BindingUpdateInformationtoAPPmessageCN.h \
 	transport/contract/UDPControlInfo_m.h
 $O/applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.o: applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc \
 	applications/mcoa/Video/MCoAVideoStreaming_m.h \
@@ -8195,10 +8193,6 @@ $O/networklayer/xmipv6/BindingCache.o: networklayer/xmipv6/BindingCache.cc \
 	networklayer/xmipv6/BindingCache.h \
 	networklayer/xmipv6/MobilityHeader_m.h \
 	util/opp_utils.h
-$O/networklayer/xmipv6/BindingUpdateInformationtoAPPmessageCN.o: networklayer/xmipv6/BindingUpdateInformationtoAPPmessageCN.cc \
-	base/INETDefs.h \
-	networklayer/contract/IPv6Address.h \
-	networklayer/xmipv6/BindingUpdateInformationtoAPPmessageCN.h
 $O/networklayer/xmipv6/BindingUpdateList.o: networklayer/xmipv6/BindingUpdateList.cc \
 	base/INETDefs.h \
 	base/INotifiable.h \

@@ -18,7 +18,6 @@
 #include "Proxy_Enhanced_MCoAVideoSrv.h"
 #include "UDPControlInfo_m.h"
 #include "IPAddressResolver.h"
-#include "BindingUpdateInformationtoAPPmessageCN.h"
 #include "RequestVideoStream_m.h"
 #include "VideoMessage_m.h"
 

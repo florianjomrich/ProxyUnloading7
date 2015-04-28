@@ -135,7 +135,7 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
 
     if (msg->isSelfMessage()) {
 
-//################ peridocially check RequestFor Connection Vector #####OK####
+//################ periodically check RequestFor Connection Vector #####OK####
         if (msg == requestForConnectionTimeOutMessage) {
 
             if (!requestForConnectionToSend.empty() && isMN) {
@@ -646,7 +646,7 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
         }
 
         //**********************************************************************
-        //Signal Update received from radio -> store for later perodic updating of the activ address
+        //Signal Update received from radio -> store for later peroidic updating of the activ address
         if (dynamic_cast<SignalUpdate*>(msg)) {
             if (isMN) {
                 SignalUpdate* signalUpdate = check_and_cast<SignalUpdate*>(msg);

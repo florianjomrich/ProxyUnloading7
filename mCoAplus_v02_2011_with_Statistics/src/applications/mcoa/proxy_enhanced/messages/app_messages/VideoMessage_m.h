@@ -20,22 +20,13 @@
  * <pre>
  * packet VideoMessage {
  *     int sequenceNumber;
- *     int someField;
- *     string anotherField;
- *     double arrayField1[];
- *     double arrayField2[10];
- * }
+ *  }
  * </pre>
  */
 class VideoMessage : public ::cPacket
 {
   protected:
     int sequenceNumber_var;
-    int someField_var;
-    opp_string anotherField_var;
-    double *arrayField1_var; // array ptr
-    unsigned int arrayField1_arraysize;
-    double arrayField2_var[10];
 
   private:
     void copy(const VideoMessage& other);
@@ -56,17 +47,6 @@ class VideoMessage : public ::cPacket
     // field getter/setter methods
     virtual int getSequenceNumber() const;
     virtual void setSequenceNumber(int sequenceNumber);
-    virtual int getSomeField() const;
-    virtual void setSomeField(int someField);
-    virtual const char * getAnotherField() const;
-    virtual void setAnotherField(const char * anotherField);
-    virtual void setArrayField1ArraySize(unsigned int size);
-    virtual unsigned int getArrayField1ArraySize() const;
-    virtual double getArrayField1(unsigned int k) const;
-    virtual void setArrayField1(unsigned int k, double arrayField1);
-    virtual unsigned int getArrayField2ArraySize() const;
-    virtual double getArrayField2(unsigned int k) const;
-    virtual void setArrayField2(unsigned int k, double arrayField2);
 };
 
 inline void doPacking(cCommBuffer *b, VideoMessage& obj) {obj.parsimPack(b);}

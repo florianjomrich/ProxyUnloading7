@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/mCoAplus_v02_2011_with_Statistics/src/networklayer/xmipv6/BindingUpdateInformationtoAPPmessageCN.cc" element2="/mCoAplus_v02_2011_with_Statistics/src/networklayer/xmipv6/BindingUpdateInformationtoAPPmessageCN.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1430141987459"/>
+</session>

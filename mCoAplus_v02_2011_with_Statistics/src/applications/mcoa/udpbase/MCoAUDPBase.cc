@@ -185,18 +185,18 @@ void MCoAUDPBase::sendToUDPMCOA(cPacket *msg, int srcPort, const IPvXAddress& de
     	  //  cout<<"ICH WAR HIER !!!"<<endl; //ALL = DIESE OPTION HIER AUSGEWÄHLT
     		std::vector<AdrInfo>::iterator it;
 
-			for (it=adrsAvailable.begin(); it < adrsAvailable.end(); it++){
-
+			//for (it=adrsAvailable.begin(); it < adrsAvailable.end(); it++){
+    		    it=adrsAvailable.begin();
 			    //cout<<"isMN/isCN"<<isMN<<isCN<<" Dest Adresse: "<<it->mDest<<" Source Adresse: "<<it->mSrc<<endl;//TEST
 
 
-				if (it->deleted) {
+				//if (it->deleted) {
 					//cout << "MCoAUDPBase Socket id  " << it->sockID << " with pairs (" << it->mSrc  << "," << it->mDest << ") is marked has deleted, deleting message." << endl;
 
 				    //cancelAndDelete(msg);
 					//delete(msg);
-					continue;
-				}else {
+					//continue;
+				//}else {
 					if (it->mDest == destAddr){
 						cPacket *msg1 = msg->dup();
 						//cout << "MCoAUDPBase duplicating message for adr " << it->mSrc << endl;
@@ -221,8 +221,8 @@ void MCoAUDPBase::sendToUDPMCOA(cPacket *msg, int srcPort, const IPvXAddress& de
 						}
 						    sentMsg= true;
 					//	}
-					}
-				}
+					//}
+				//}
 
 			}
 			if (!sentMsg){

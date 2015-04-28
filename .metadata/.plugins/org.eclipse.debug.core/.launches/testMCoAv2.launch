@@ -10,7 +10,6 @@
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="/home/ubuntu/ProxyUnloading7/output.txt"/>
 <stringAttribute key="org.omnetpp.launch.ADDITIONAL_ARG" value=""/>
 <stringAttribute key="org.omnetpp.launch.CONFIG_NAME" value=""/>
 <stringAttribute key="org.omnetpp.launch.DEBUG_ON_ERRORS" value=""/>
