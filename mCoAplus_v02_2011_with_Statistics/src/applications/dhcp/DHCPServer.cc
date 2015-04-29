@@ -84,7 +84,7 @@ void DHCPServer::handleIncommingPacket(cPacket *pkt)
     cMessage* proc_delay_timer = new cMessage("PROC_DELAY",PROC_DELAY);
     proc_delay_timer->addPar("incomming_packet") = pkt;
     scheduleAt(simTime()+this->proc_delay,proc_delay_timer);
-    std::cout << "scheduling process" << endl;
+    //std:: cout << "scheduling process" << endl;
 }
 
 void DHCPServer::handleTimer(cMessage *msg)

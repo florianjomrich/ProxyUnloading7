@@ -180,12 +180,12 @@ void SCTP::handleMessage(cMessage *msg)
         {
             if (par("udpEncapsEnabled"))
             {
-                std::cout<<"Laenge SCTPMSG="<<sctpmsg->getByteLength()<<"\n";
+                std::cout <<" Laenge SCTPMSG="<<sctpmsg->getByteLength()<<"\n";
                 UDPControlInfo *ctrl = check_and_cast<UDPControlInfo *>(msg->removeControlInfo());
                 srcAddr = ctrl->getSrcAddr();
                 destAddr = ctrl->getDestAddr();
-                std::cout<<"controlInfo srcAddr="<<srcAddr<<"  destAddr="<<destAddr<<"\n";
-                std::cout<<"VTag="<<sctpmsg->getTag()<<"\n";
+                std::cout <<" controlInfo srcAddr="<<srcAddr<<"  destAddr="<<destAddr<<"\n";
+                std::cout <<" VTag="<<sctpmsg->getTag()<<"\n";
             }
             else
             {
@@ -347,7 +347,7 @@ void SCTP::sendAbortFromMain(SCTPMessage* sctpmsg, IPvXAddress srcAddr, IPvXAddr
     if ((bool)par("udpEncapsEnabled"))
     {
         msg->setKind(UDP_C_DATA);
-        std::cout<<"VTag="<<msg->getTag()<<"\n";
+        std::cout <<" VTag="<<msg->getTag()<<"\n";
         UDPControlInfo *ctrl = new UDPControlInfo();
         ctrl->setSrcPort(9899);
         ctrl->setDestAddr(destAddr.get4());

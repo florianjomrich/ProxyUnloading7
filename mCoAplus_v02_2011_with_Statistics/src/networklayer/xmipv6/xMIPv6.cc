@@ -109,7 +109,7 @@ void xMIPv6::initialize(int stage)
 	if (stage == 0)
 	{
     	EV << "Initializing xMIPv6 module" << endl;
-    	cout << "Initializing xMIPv6 module" << endl;//FJ
+    	 //cout << "Initializing xMIPv6 module" << endl;//FJ
 		nb = NotificationBoardAccess().get();
 
 		//Bruno Sousa
@@ -202,10 +202,10 @@ void xMIPv6::initialize(int stage)
 		// FJ
 		//Initialisierungs-Phase sollte hier abgeschlossen sein !!!. Daher ein möglicher Einstigspunkt für Das senden von Nachrichten:
 		//cout<< "Home Adresse des Nodes:" <<  this->rt6->getHomeAddress().getSuffix(7).str() <<endl;
-		//cout << "Home Agent? " << rt6->isHomeAgent() <<endl;
+		// //cout << "Home Agent? " << rt6->isHomeAgent() <<endl;
 
 		//IPv6Address homeAddress = rt6->getHomeAddress();
-		//cout << "Home Agent Adresse" << homeAddress << endl;
+		// //cout << "Home Agent Adresse" << homeAddress << endl;
      }
 }
 
@@ -296,10 +296,10 @@ void xMIPv6::processMobilityMessage(MobilityHeader* mipv6Msg, IPv6ControlInfo* c
 	        IPvXAddress mn1 = IPAddressResolver().resolve("MN[1]");
 	         IPvXAddress ha = IPAddressResolver().resolve("HA");
 	         IPvXAddress cn = IPAddressResolver().resolve("CN[0]");
-	     cout<<"MN0 - after Binding Update 2:"<<mn0 <<endl;
-	     cout<<"MN1 - after Binding Update 2:"<<mn1 <<endl;
-	     cout<<"HA - after Binding Update 2:"<<ha<<endl;
-	     cout<<"CN - after Binding Update 2:"<<cn<<endl; */
+	      //cout <<" MN0 - after Binding Update 2:"<<mn0 <<endl;
+	      //cout <<" MN1 - after Binding Update 2:"<<mn1 <<endl;
+	      //cout <<" HA - after Binding Update 2:"<<ha<<endl;
+	      //cout <<" CN - after Binding Update 2:"<<cn<<endl; */
 
 		BindingUpdate *bu = (BindingUpdate*) mipv6Msg;
 		processBUMessage(bu, ctrlInfo);
@@ -362,14 +362,14 @@ void xMIPv6::initiateMIPv6Protocol(InterfaceEntry *ie, IPv6Address& CoA)
 
 			//################################################### FJ
 			//wieso wird das Ganze nur einmal initialisiert?
-			cout << "Initiating Mobile IPv6 protocol ..  for " << CoA << " with interface " << ie->getInterfaceId() << endl;
+			 //cout << "Initiating Mobile IPv6 protocol ..  for " << CoA << " with interface " << ie->getInterfaceId() << endl;
 			//#####################################################
 
 			// The MN is supposed to send a BU to the HA after forming a CoA
 			//IPv6Address haDest = ie->ipv6Data()->getHomeAgentAddress(); // HA address for use in the BU for Home Registration
 			IPv6Address haDest = rt6->getHomeNetHA_adr(); //MCoA2
 			//#####################################################
-			cout << "MIPv6 getting HA adr" << haDest << endl;
+			 //cout << "MIPv6 getting HA adr" << haDest << endl;
 			//#####################################################
 
 			if (!mCoA->getProhibited()){
@@ -402,7 +402,7 @@ void xMIPv6::initiateMIPv6Protocol(InterfaceEntry *ie, IPv6Address& CoA)
 			// RO with CNs is triggered after receiving a valid BA from the HA
 		}
 
-		cout<<"A MOVEMENT OCCURED"<<endl;
+		 //cout <<" A MOVEMENT OCCURED"<<endl;
 		// A MOVMENT OCCURED -> BUL entries for CNs not valid anymore
 		//IPv6Address HoA = ie->ipv6Data()->getMNHomeAddress();
 		IPv6Address HoA = rt6->getHomeNetHoA_adr();//MCoA2
@@ -415,7 +415,7 @@ void xMIPv6::initiateMIPv6Protocol(InterfaceEntry *ie, IPv6Address& CoA)
 
 			//IPv6Address cn = *(itCNList);
 			IPv6Address cn = (*it).first;
-			cout<<"CN-Adresses Test?: "<<cn<<endl;
+			 //cout <<" CN-Adresses Test?: "<<cn<<endl;
 			std::vector<int> aBIDs = (*it).second;
 			std::vector<int>::iterator bit;
 
@@ -430,8 +430,8 @@ void xMIPv6::initiateMIPv6Protocol(InterfaceEntry *ie, IPv6Address& CoA)
 				 * for standard MIPv6 the vector should only have one BID.
 				 */
 				IPv6Address auxCoA = get_adr_from_bid(auxBID);
-				cout<<"itCoA: "<<itCoA->first<<endl;
-				cout<<"aux CoA: "<<auxCoA<<endl;
+				 //cout <<" itCoA: "<<itCoA->first<<endl;
+				 //cout <<" aux CoA: "<<auxCoA<<endl;
 
 				KeyMCoABind keyM;
 				if (!mCoA->getProhibited()){
@@ -460,14 +460,14 @@ void xMIPv6::initiateMIPv6Protocol(InterfaceEntry *ie, IPv6Address& CoA)
 		//ie->ipv6Data()->setReturningHome(false);
 
 	}else {
-		cout <<  "MIPv6 has already been triggered, sorry... ignoring new CoA event " << CoA << endl;
+		 //cout <<  "MIPv6 has already been triggered, sorry... ignoring new CoA event " << CoA << endl;
 
 		// Register only in the HA???
 		if (!mCoA->getProhibited() && mCoA->getTypeUseMCoA() != MCOA_TUN_SINGLE_ADR_SINGLE){
 
 
 
-			cout << "Initiating Mobile IPv6 protocol on a second(or more) try  for " << CoA << endl;
+			 //cout << "Initiating Mobile IPv6 protocol on a second(or more) try  for " << CoA << endl;
 
 			// The MN is supposed to send a BU to the HA after forming a CoA
 			//IPv6Address haDest = ie->ipv6Data()->getHomeAgentAddress(); // HA address for use in the BU for Home Registration
@@ -487,9 +487,9 @@ void xMIPv6::initiateMIPv6Protocol(InterfaceEntry *ie, IPv6Address& CoA)
 						//send
 						KeyMCoABind keyAux1 =  KeyMCoABind(auxAdr,get_and_calcBID(auxAdr, ie), haDest );
 						MCoAcreateBUTimer(keyAux1, haDest, ie, false); //register all the CoA
-						cout << "MIPv6 Procedure starting for address " << auxAdr << endl;
+						 //cout << "MIPv6 Procedure starting for address " << auxAdr << endl;
 					}else {
-						cout << "MIPv6 Procedure already started for address " << auxAdr << endl;
+						 //cout << "MIPv6 Procedure already started for address " << auxAdr << endl;
 						// assume it was already sent.
 					}
 				}
@@ -725,12 +725,12 @@ void xMIPv6::MCoAcreateBUTimer(KeyMCoABind &keyMCoA, const IPv6Address& buDest,I
 			aux.setBID(it->second);
 			aux.setDestBID(buDest);
 
-			cout << "[MCoA]-MCoAcreateBUTimer creating BU Timer for all CoAs --> " << aux << " just created! " << endl;
+			 //cout << "[MCoA]-MCoAcreateBUTimer creating BU Timer for all CoAs --> " << aux << " just created! " << endl;
 			createBUTimer(aux, buDest, ie);
 		}
 
 	}else {
-		cout << "[MCoA]-MCoAcreateBUTimer creating BU Timer for only one CoA --> " << keyMCoA << " just created! " << endl;
+		 //cout << "[MCoA]-MCoAcreateBUTimer creating BU Timer for only one CoA --> " << keyMCoA << " just created! " << endl;
 		createBUTimer(keyMCoA, buDest, ie);
 
 	}
@@ -740,13 +740,13 @@ void xMIPv6::MCoAcreateBUTimer(KeyMCoABind &keyMCoA, const IPv6Address& buDest,I
 
 void xMIPv6::createBUTimer( KeyMCoABind &keyMCoA, const IPv6Address& buDest, InterfaceEntry* ie)
 {
-	//cout << "[MCOA] BUTimer Bu Timer for " << keyMCoA.getDestBID() << ", BID:" << keyMCoA.getBID() << " with CoA =" << keyMCoA.getAddr() << "?=" << buDest << endl;
+	// //cout << "[MCOA] BUTimer Bu Timer for " << keyMCoA.getDestBID() << ", BID:" << keyMCoA.getBID() << " with CoA =" << keyMCoA.getAddr() << "?=" << buDest << endl;
 
 
 	//if (keyMCoA.getAddr() == ie->ipv6Data()->getMNHomeAddress()){
 	if (keyMCoA.getAddr() == rt6->getHomeNetHoA_adr()){//MCoA2.0
 
-		cout << "Trying to set HOa as a CoA  " << keyMCoA.getAddr() << endl;
+		 //cout << "Trying to set HOa as a CoA  " << keyMCoA.getAddr() << endl;
 		eraseBID(keyMCoA.getAddr());
 		return ;
 	}
@@ -776,9 +776,9 @@ void xMIPv6::createBUTimer( KeyMCoABind &keyMCoA, const IPv6Address& buDest, Int
 
 	if ( bulEntry != NULL && bulEntry->state == BindingUpdateList::DEREGISTER ) {// Bruno Sousa
 		createDeregisterBUTimer(keyMCoA, buDest, ie);
-		cout << "[MCOA] sending Deregistration  " << keyMCoA << endl;
+		 //cout << "[MCOA] sending Deregistration  " << keyMCoA << endl;
 	}else{
-		cout << "Creating BU " << keyMCoA << endl;
+		 //cout << "Creating BU " << keyMCoA << endl;
 		createBUTimer(keyMCoA, buDest, ie, lifetimebind, hflag);
 	}
 
@@ -870,9 +870,9 @@ void xMIPv6::createBUTimer( KeyMCoABind &keyMCoA, const IPv6Address& buDest, Int
 
 
 
-	cout << "DBGTimer BU Timer created for " << keyMCoA.getDestBID() << " , " << buIfEntry->BID << " dest " << buIfEntry->dest << "  with CoA " << keyMCoA.getAddr()
-	   << " at simtime " << simTime() << " with lifetime " << lifeTime  << " and in BuIfEntry " << buIfEntry->lifeTime
-	   << " with sequenceNumber " << buIfEntry->buSequenceNumber << endl;
+	 //cout << "DBGTimer BU Timer created for " << keyMCoA.getDestBID() << " , " << buIfEntry->BID << " dest " << buIfEntry->dest << "  with CoA " << keyMCoA.getAddr()
+	  // << " at simtime " << simTime() << " with lifetime " << lifeTime  << " and in BuIfEntry " << buIfEntry->lifeTime
+	  // << " with sequenceNumber " << buIfEntry->buSequenceNumber << endl;
 
 
 
@@ -907,14 +907,14 @@ void xMIPv6::sendPeriodicBU(cMessage *msg)
 
 	    //BUL is updated by the MN -> use as entrance point for Flow-Binding-Updates
 	    //send only ONCE to the HA - to not increase the traffic over the air gap !!!!
-	    cout<<"Adresse des Home Agents laut rt6: "<< rt6->getHomeNetHA_adr().str().c_str()<<endl;
+	     //cout <<" Adresse des Home Agents laut rt6: "<< rt6->getHomeNetHA_adr().str().c_str()<<endl;
 
-	   cout<<"Flowbinding Vergleich: last:"<<this->lastSendToFlowBindingAddress<<" new:"<<buAdrCoA.str().c_str()<<endl;
+	    //cout <<" Flowbinding Vergleich: last:"<<this->lastSendToFlowBindingAddress<<" new:"<<buAdrCoA.str().c_str()<<endl;
 
 	   // if(strcmp(this->lastSendToFlowBindingAddress.c_str(),CoA.str().c_str())){//if it is not the same - send new binding Update message - strcmp returns 0 when the same
 	    //if(!strcmp(ha.str().c_str(),dest.str().c_str())){
-	        cout<<"FLOW BINDING UPDATE !!!"<<endl;
-	        cout<<"MN sendet eine einzelne FlowBindingUpdate Nachricht an den HA"<<endl;
+	         //cout <<" FLOW BINDING UPDATE !!!"<<endl;
+	         //cout <<" MN sendet eine einzelne FlowBindingUpdate Nachricht an den HA"<<endl;
 
 	        FlowBindingUpdate* newFlowBindingUpdateToSend = new FlowBindingUpdate();
 	        newFlowBindingUpdateToSend->setHomeAddress(rt6->getHomeNetHoA_adr().str().c_str());
@@ -922,7 +922,7 @@ void xMIPv6::sendPeriodicBU(cMessage *msg)
 	        newFlowBindingUpdateToSend->setDestAddress(buDest.str().c_str());
 	        newFlowBindingUpdateToSend->setWasSendFromHA(false);//for avoiding infinite loop at HomeAgent
 
-	        cout<<"Flow-Binding-Update für HomeAdresse:"<<newFlowBindingUpdateToSend->getHomeAddress()<<" neue CoA: "<<newFlowBindingUpdateToSend->getNewCoAdress()<<endl;//<<" mit DestA: "<<dest<<endl;
+	         //cout <<" Flow-Binding-Update für HomeAdresse:"<<newFlowBindingUpdateToSend->getHomeAddress()<<" neue CoA: "<<newFlowBindingUpdateToSend->getNewCoAdress()<<endl;//<<" mit DestA: "<<dest<<endl;
 	        newFlowBindingUpdateToSend->setName("Flow Binding Update");
 
 	        //update the last transmited flow binding value - so that it is not send again.
@@ -934,7 +934,7 @@ void xMIPv6::sendPeriodicBU(cMessage *msg)
 
 
 
-	   cout<<"BINDING UPDATE!!!"<<endl;
+	    //cout <<" BINDING UPDATE!!!"<<endl;
 
 	   // **********************************************************
 
@@ -966,7 +966,7 @@ void xMIPv6::sendPeriodicBU(cMessage *msg)
 	// Added by CB, 28.08.07
 	if ( !buIfEntry->homeRegistration ) // this BU goes to a CN
 	{
-		//cout << "SEARCHING FOR COA in KEY " << keyMCoA << endl;
+		// //cout << "SEARCHING FOR COA in KEY " << keyMCoA << endl;
 		//IPv6Address CoA = ie->ipv6()->globalAddress();
 		//prtTimers();
 		IPv6Address CoA = bul->getCoA(keyMCoA); // 24.9.07 - CB
@@ -1072,7 +1072,7 @@ void xMIPv6::sendPeriodicBU(cMessage *msg)
 		//scheduleAt(buIfEntry->nextScheduledTime, msg);
 	}
 	//EV << "DBGTimer Present Sent Time: " << buIfEntry->presentSentTimeBU <<", Present TimeOut: " << buIfEntry->ackTimeout <<  "  lifetime: "<< buIfEntry->lifeTime << endl;
-	cout << "Next Sent Time: " << buIfEntry->nextScheduledTime << endl;//<<" Next TimeOut: "<<buIfEntry->nextBindAckTimeout<<endl;
+	 //cout << "Next Sent Time: " << buIfEntry->nextScheduledTime << endl;//<<" Next TimeOut: "<<buIfEntry->nextBindAckTimeout<<endl;
 	scheduleAt(buIfEntry->nextScheduledTime, msg);
 }
 
@@ -1444,8 +1444,8 @@ void xMIPv6::createAndSendBUMessage(const IPv6Address& dest, InterfaceEntry* ie,
 				sizeOpts+= aBIDmob->getMobOpts(ci).getPayloadLength();
 
 
-				cout<<"\n\n[MCOA] >>>>> send [in BU message] BU with dest " << keyMCoA.getDestBID() << "  and  BID " << keyMCoA.getBID()
-						<< " for CoA "<< keyMCoA.getAddr() << " and sequenceNumber " << bu->getSequence()   <<  endl;
+				 //cout <<" \n\n[MCOA] >>>>> send [in BU message] BU with dest " << keyMCoA.getDestBID() << "  and  BID " << keyMCoA.getBID()
+					//	<< " for CoA "<< keyMCoA.getAddr() << " and sequenceNumber " << bu->getSequence()   <<  endl;
 
 				/*11.7.1
 				  When sending a Binding Update to its home agent, the mobile node MUST
@@ -1455,7 +1455,7 @@ void xMIPv6::createAndSendBUMessage(const IPv6Address& dest, InterfaceEntry* ie,
 
 				ci_mob++;
 			}else {
-				cout<<"[MCOA] >>>>>ignore Option with addr " << adrCoA  <<endl;
+				 //cout <<" [MCOA] >>>>>ignore Option with addr " << adrCoA  <<endl;
 			}
 		}
 
@@ -1524,7 +1524,7 @@ void xMIPv6::createAndSendBUMessage(const IPv6Address& dest, InterfaceEntry* ie,
 	     address of the correspondent node.*/
 
 	 IPvXAddress mn0 = IPAddressResolver().resolve("MN[0]");
-	 cout<<"MN0 - after Binding Update:"<<mn0 <<endl;
+	  //cout <<" MN0 - after Binding Update:"<<mn0 <<endl;
 
 	sendMobilityMessageToIPv6Module(bu, dest, CoA, ie->getInterfaceId());
 
@@ -1643,7 +1643,7 @@ void xMIPv6::processBUMessage(BindingUpdate* bu, IPv6ControlInfo* ctrlInfo)
 	{
 		EV << "Wrong Node: not HA or CN" << endl;
 
-		cout << "Wrong Node: not HA or CN" << endl;//FJ
+		 //cout << "Wrong Node: not HA or CN" << endl;//FJ
 
 		if ( ev.isGUI() )
 			bubble("Wrong Node: not HA or CN");
@@ -1686,8 +1686,8 @@ void xMIPv6::processBUMessage(BindingUpdate* bu, IPv6ControlInfo* ctrlInfo)
 			if(rt6->isHomeAgent()){
 			    cout<< "BU von HA empfangen." << endl; //FJ
 				}
-			if(!rt6->isHomeAgent() && !rt6->isMobileNode() && !rt6->isRouter()) cout << "BU von CN empfangen"  <<endl;
-			//cout<<"Home-Agent-Address:"<< MNHoA <<endl;
+			if(!rt6->isHomeAgent() && !rt6->isMobileNode() && !rt6->isRouter())  //cout << "BU von CN empfangen"  <<endl;
+			// //cout <<" Home-Agent-Address:"<< MNHoA <<endl;
 
 
 			//update the flow Binding Table also directly from the BU messages!!
@@ -1700,7 +1700,7 @@ void xMIPv6::processBUMessage(BindingUpdate* bu, IPv6ControlInfo* ctrlInfo)
 			                    newFlowBindingUpdateToSend->setDestAddress(destAddress.str().c_str());
 			                    newFlowBindingUpdateToSend->setWasSendFromHA(true);//for avoiding infinite loop at HomeAgent
 
-			                    cout<<"Flow-Binding-Update für HomeAdresse:"<<newFlowBindingUpdateToSend->getHomeAddress()<<" neue CoA: "<<newFlowBindingUpdateToSend->getNewCoAdress()<<endl;//<<" mit DestA: "<<dest<<endl;
+			                     //cout <<" Flow-Binding-Update für HomeAdresse:"<<newFlowBindingUpdateToSend->getHomeAddress()<<" neue CoA: "<<newFlowBindingUpdateToSend->getNewCoAdress()<<endl;//<<" mit DestA: "<<dest<<endl;
 			                    newFlowBindingUpdateToSend->setName("Flow Binding Update");
 
 			                    //update the last transmited flow binding value - so that it is not send again.
@@ -1734,9 +1734,9 @@ void xMIPv6::processBUMessage(BindingUpdate* bu, IPv6ControlInfo* ctrlInfo)
 			if (buLifetime==0 && mCoA->getDeregisterALL()==MCoA::DEREGISTER_ALL_SIMULTANEOUSLY) {
 
 				if ( rt6->isHomeAgent()) {
-					cout << "[MCOA] HA Receiving BU with lifetime = 0 ... processing " << endl;
+					 //cout << "[MCOA] HA Receiving BU with lifetime = 0 ... processing " << endl;
 				}else {
-					cout << "[MCOA] CN Receiving BU with lifetime = 0 ... processing " << endl;
+					 //cout << "[MCOA] CN Receiving BU with lifetime = 0 ... processing " << endl;
 				}
 
 				if (bc->deleteALLEntries() ) {mcoaDeregistered= true; }
@@ -1780,7 +1780,7 @@ void xMIPv6::processBUMessage(BindingUpdate* bu, IPv6ControlInfo* ctrlInfo)
 					 */
 					if (buLifetime == 0){
 						if( rt6->isHomeAgent()){
-							cout << "[MCOA] HA Receiving BU with lifetime = 0 ... processing " << keyBID.getAddr() << endl;
+							 //cout << "[MCOA] HA Receiving BU with lifetime = 0 ... processing " << keyBID.getAddr() << endl;
 
 							cancelTimerIfEntry(keyBID.getAddr(), interfaceID, KEY_BC_EXP, keyBID.getBID());
 
@@ -2006,7 +2006,7 @@ void xMIPv6::processBUMessage(BindingUpdate* bu, IPv6ControlInfo* ctrlInfo)
 				uint lifeTime = buLifetime;
 				EV << "[MCOA-BA] Sending BA msg to " <<  destAddress << " CoA " << CoA  << " and lifetime " << buLifetime << endl;
 
-				cout <<  "[MCOA-BA] Sending BA msg to " <<  destAddress << " CoA " << CoA  << " and lifetime " << buLifetime << endl;
+				 //cout <<  "[MCOA-BA] Sending BA msg to " <<  destAddress << " CoA " << CoA  << " and lifetime " << buLifetime << endl;
 
 				createAndSendBAMessage(destAddress, CoA, ctrlInfo, status, baSeqNumber,
 						bu->getBindingAuthorizationData(), lifeTime,

@@ -35,7 +35,7 @@ MyFileWriter::~MyFileWriter() {
 
 void MyFileWriter::printOutStringToFile(const char* name,char* explanationText, int seqNumber, const char* simTime ){
 
- //cout<<"Print to file: "<<name<<" "<<explanationText<<"Sequenz-Nummer: "<<seqNumber<<" SimTime: "<<simTime<<endl;
+ // //cout <<" Print to file: "<<name<<" "<<explanationText<<"Sequenz-Nummer: "<<seqNumber<<" SimTime: "<<simTime<<endl;
 
     /*
  std::ofstream myfile;
@@ -58,7 +58,7 @@ void MyFileWriter::printOutStringToFile(const char* name,char* explanationText, 
 
 void MyFileWriter::printOutPackageLossCounter(const char* name,char* explanationText,int packagesSentCounter, int packagesReceivedCounter, const char* simTime ){
 
- //cout<<"Print to file: "<<name<<" "<<explanationText<<"Sequenz-Nummer: "<<seqNumber<<" SimTime: "<<simTime<<endl;
+ // //cout <<" Print to file: "<<name<<" "<<explanationText<<"Sequenz-Nummer: "<<seqNumber<<" SimTime: "<<simTime<<endl;
 
     /*
  std::ofstream myfile;
@@ -84,7 +84,7 @@ void MyFileWriter::printOutPackageLossCounter(const char* name,char* explanation
 
 void MyFileWriter::printOutFBUs(const char* CoA, const char* simTime ){
 
- //cout<<"Print to file: "<<name<<" "<<explanationText<<"Sequenz-Nummer: "<<seqNumber<<" SimTime: "<<simTime<<endl;
+ // //cout <<" Print to file: "<<name<<" "<<explanationText<<"Sequenz-Nummer: "<<seqNumber<<" SimTime: "<<simTime<<endl;
 
  /*std::ofstream myfile;
  std::string sname = "FBUs.csv";
@@ -96,7 +96,7 @@ void MyFileWriter::printOutFBUs(const char* CoA, const char* simTime ){
 
 void MyFileWriter::printOutBindingUpdates(const char* HoAofMN,const char* newCoA ,const char* destAddress , const char* simTime ){
 
-    //cout<<"Print to file: "<<name<<" "<<explanationText<<"Sequenz-Nummer: "<<seqNumber<<" SimTime: "<<simTime<<endl;
+    // //cout <<" Print to file: "<<name<<" "<<explanationText<<"Sequenz-Nummer: "<<seqNumber<<" SimTime: "<<simTime<<endl;
 
     /*std::ofstream myfile;
     std::string sname = "ClassicBindingUpdates.csv";

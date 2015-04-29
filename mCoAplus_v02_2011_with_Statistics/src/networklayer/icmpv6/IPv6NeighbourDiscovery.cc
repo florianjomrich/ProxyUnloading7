@@ -915,7 +915,7 @@ void IPv6NeighbourDiscovery::processDADTimeout(cMessage *msg)
         keyDAD.setAdr(tentativeAddr);
         keyDAD.setIe(ie);
 
-        std::cout << "DAD searching for " << tentativeAddr  << " from interface ID " << ie->getInterfaceId() << endl;
+        std:: cout << "DAD searching for " << tentativeAddr  << " from interface ID " << ie->getInterfaceId() << endl;
         std::cout.flush();
 
         DADGlobalList::iterator it = dadGlobalList.find(keyDAD);

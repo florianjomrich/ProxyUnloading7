@@ -6333,3 +6333,2711 @@ cd src && make
 make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
 Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
 make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:23:21 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/ethernet/EtherAppCli.cc
+applications/ethernet/EtherAppSrv.cc
+applications/mcoa/Video/MCoAVideoStreamServer.cc
+applications/mcoa/Video/MCoAVideoStreamServer.cc: In member function ‘virtual void MCoAVideoStreamServer::initialize()’:
+applications/mcoa/Video/MCoAVideoStreamServer.cc:47:9: warning: unused variable ‘destPort’ [-Wunused-variable]
+     int destPort = par("destPort");
+         ^
+applications/mcoa/Video/MCoAVideoStreamCli.cc
+applications/mcoa/Video/MCoAVideoStreamCli.cc: In member function ‘virtual void MCoAVideoStreamCli::receiveStream(cPacket*)’:
+applications/mcoa/Video/MCoAVideoStreamCli.cc:98:37: warning: statement has no effect [-Wunused-value]
+     nLost < 0 ? nLost * (-1) : nLost;
+                                     ^
+applications/mcoa/Video/MCoAVideoCli.cc
+applications/mcoa/Video/MCoAVideoCli.cc: In member function ‘virtual void MCoAVideoCli::receiveStream(cPacket*)’:
+applications/mcoa/Video/MCoAVideoCli.cc:78:37: warning: statement has no effect [-Wunused-value]
+     nLost < 0 ? nLost * (-1) : nLost;
+                                     ^
+applications/mcoa/Video/MCoAVideoSrv.cc
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoProxy.cc
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc: In member function ‘virtual void Proxy_Enhanced_MCoAVideoCli::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:125:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                         difference.str().c_str());
+                                                 ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:138:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                         simTime().str().c_str());
+                                                ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc: In member function ‘virtual void Proxy_Enhanced_MCoAVideoCli::sendControlData(cMessage*)’:
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:197:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             packagesReceivedCounter, simTime().str().c_str());
+                                                             ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoSrv.cc
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoSrv.cc: In member function ‘virtual void Proxy_Enhanced_MCoAVideoSrv::initialize()’:
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoSrv.cc:59:9: warning: unused variable ‘correspondentNodeNumber’ [-Wunused-variable]
+     int correspondentNodeNumber = par("correspondentNodeNumber");
+         ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoSrv.cc:61:15: warning: variable ‘startTime’ set but not used [-Wunused-but-set-variable]
+     simtime_t startTime = par("startTime");
+               ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:623:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+                                       ^
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc
+In file included from applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:16:0:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+applications/mcoa/udpbase/MCoAUDPBase.cc
+applications/mcoa/udpbase/MCoAUDPBase.cc:233:7: warning: "/*" within comment [-Wcomment]
+       /*
+ ^
+applications/mcoa/udpbase/MCoAUDPBase.cc:244:6: warning: "/*" within comment [-Wcomment]
+      /*
+ ^
+applications/mcoa/udpbase/MCoAUDPBase.cc:254:8: warning: "/*" within comment [-Wcomment]
+        /*
+ ^
+applications/mcoa/udpbase/MCoAUDPBase.cc: In member function ‘virtual void MCoAUDPBase::sendToUDPMCOA(cPacket*, int, const IPvXAddress&, int, bool)’:
+applications/mcoa/udpbase/MCoAUDPBase.cc:210:17: warning: unused variable ‘msg1’ [-Wunused-variable]
+        cPacket *msg1 = msg->dup();
+                 ^
+applications/pingapp/Proxyunloading_PingApp.cc
+applications/pingapp/PingApp.cc
+applications/pingapp/PingApp.cc: In member function ‘virtual void PingApp::processPingResponse(PingPayload*)’:
+applications/pingapp/PingApp.cc:183:9: warning: variable ‘msgHopCount’ set but not used [-Wunused-but-set-variable]
+     int msgHopCount = -1;
+         ^
+applications/sctpapp/SCTPClient.cc
+applications/sctpapp/SCTPServer.cc
+applications/sctpapp/SCTPPeer.cc
+applications/udpapp/UDPVideoStreamCli.cc
+battery/InetSimpleBattery.cc
+linklayer/ethernet/EtherMACBase.cc
+linklayer/ethernet/EtherMAC.cc
+linklayer/ethernet/EtherMAC2.cc
+linklayer/ethernet/EtherEncap.cc
+linklayer/etherswitch/MACRelayUnitPP.cc
+linklayer/etherswitch/MACRelayUnitNP.cc
+linklayer/ieee80211/mac/Ieee80211eMac.cc
+linklayer/ieee80211/mac/Ieee80211egMac.cc
+linklayer/ieee80211/mac/Ieee80211gMac.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from linklayer/ieee80211/mac/Ieee80211gMac.cc:26:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/ieee80211/mac/Ieee80211aMac.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from linklayer/ieee80211/mac/Ieee80211aMac.cc:25:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/ieee80211/mac/Ieee80211NewMac.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from linklayer/ieee80211/mac/Ieee80211NewMac.cc:25:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/ieee80211/mac/Ieee80211NewMac.cc: In member function ‘virtual double Ieee80211NewMac::computeFrameDuration(int, double)’:
+linklayer/ieee80211/mac/Ieee80211NewMac.cc:2087:20: warning: variable ‘modType’ set but not used [-Wunused-but-set-variable]
+     ModulationType modType = WifyModulationType::getMode80211g(bitrate);
+                    ^
+linklayer/ieee80211/mac/Ieee80211NewMac.cc: In member function ‘ModulationType Ieee80211NewMac::getControlAnswerMode(ModulationType)’:
+linklayer/ieee80211/mac/Ieee80211NewMac.cc:2617:48: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (uint32_t idx = 0; idx < getMaxBitrate(); idx++)
+                                                ^
+linklayer/ieee80211/mac/Ieee80211Mac.cc
+linklayer/ieee80211/mgmt/Ieee80211MgmtSTA.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelControl.h:25,
+                 from linklayer/ieee80211/mgmt/Ieee80211MgmtSTA.cc:24:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/ieee80211/mgmt/Ieee80211MgmtSTASimplified.cc
+linklayer/ieee80211/mgmt/Ieee80211MgmtAPSimplified.cc
+linklayer/ieee80211/mgmt/Ieee80211MgmtAP.cc
+linklayer/ieee80211/mgmt/Ieee80211MgmtBase.cc
+linklayer/ieee80211/mgmt/Ieee80211MgmtAdhoc.cc
+linklayer/ieee80211/mgmt/Ieee80211MgmtAPBase.cc
+linklayer/ppp/ThruputMeter.cc
+linklayer/radio/Ieee80211Radio.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelAccess.h:26,
+                 from linklayer/radio/AbstractRadio.h:22,
+                 from linklayer/radio/Ieee80211Radio.h:22,
+                 from linklayer/radio/Ieee80211Radio.cc:19:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/radio/Ieee80211aRadio.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelAccess.h:26,
+                 from linklayer/radio/AbstractRadio.h:22,
+                 from linklayer/radio/Ieee80211aRadio.h:23,
+                 from linklayer/radio/Ieee80211aRadio.cc:20:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/radio/AbstractRadioExtended.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelAccessExtended.h:26,
+                 from linklayer/radio/AbstractRadioExtended.h:22,
+                 from linklayer/radio/AbstractRadioExtended.cc:22:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/radio/GenericRadio.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelAccess.h:26,
+                 from linklayer/radio/AbstractRadio.h:22,
+                 from linklayer/radio/GenericRadio.h:21,
+                 from linklayer/radio/GenericRadio.cc:18:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/radio/AbstractRadio.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelAccess.h:26,
+                 from linklayer/radio/AbstractRadio.h:22,
+                 from linklayer/radio/AbstractRadio.cc:20:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/radio/Ieee80211gRadioModel.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from linklayer/radio/IRadioModel.h:22,
+                 from linklayer/radio/Ieee80211gRadioModel.h:23,
+                 from linklayer/radio/Ieee80211gRadioModel.cc:23:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/radio/Ieee80211aRadioModel.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from linklayer/radio/IRadioModel.h:22,
+                 from linklayer/radio/Ieee80211aRadioModel.h:25,
+                 from linklayer/radio/Ieee80211aRadioModel.cc:21:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/radio/Ieee80211NewRadio.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelAccess.h:26,
+                 from linklayer/radio/AbstractRadio.h:22,
+                 from linklayer/radio/Ieee80211NewRadio.h:22,
+                 from linklayer/radio/Ieee80211NewRadio.cc:19:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/radio/Ieee80211NewRadioModel.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from linklayer/radio/IRadioModel.h:22,
+                 from linklayer/radio/Ieee80211NewRadioModel.h:23,
+                 from linklayer/radio/Ieee80211NewRadioModel.cc:21:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/radio/Ieee80211gRadio.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelAccess.h:26,
+                 from linklayer/radio/AbstractRadio.h:22,
+                 from linklayer/radio/Ieee80211gRadio.h:23,
+                 from linklayer/radio/Ieee80211gRadio.cc:20:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+mobility/RandomWPMobilityTrace.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelControl.h:25,
+                 from mobility/BasicMobility.h:29,
+                 from mobility/LineSegmentsMobilityBase.h:22,
+                 from mobility/RandomWPMobility.h:22,
+                 from mobility/RandomWPMobilityTrace.h:13,
+                 from mobility/RandomWPMobilityTrace.cc:1:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+mobility/traci/TraCIMobility.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelControl.h:25,
+                 from mobility/BasicMobility.h:29,
+                 from ./mobility/traci/TraCIMobility.h:30,
+                 from mobility/traci/TraCIMobility.cc:24:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+networklayer/autorouting/MCoANetConf6.cc
+networklayer/autorouting/FlatNetworkConfigurator6.cc
+networklayer/common/InterfaceEntry.cc
+networklayer/common/InterfaceEntry.cc: In member function ‘virtual bool InterfaceEntry::setEstimateCostProcess(int, MacEstimateCostProcess*)’:
+networklayer/common/InterfaceEntry.cc:165:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(estimateCostProcessArray.size()<=position)
+                                      ^
+networklayer/common/InterfaceEntry.cc: In member function ‘virtual MacEstimateCostProcess* InterfaceEntry::getEstimateCostProcess(int)’:
+networklayer/common/InterfaceEntry.cc:177:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if(position <estimateCostProcessArray.size())
+                                             ^
+networklayer/contract/IPAddressResolver.cc
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc
+In file included from networklayer/xmipv6/xMIPv6Access.h:29:0,
+                 from networklayer/icmpv6/IPv6NeighbourDiscovery.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘const MACAddress& IPv6NeighbourDiscovery::resolveNeighbour_MCoA(const IPv6Address&, int)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:370:13: warning: reference to local variable ‘nce’ returned [-Wreturn-local-addr]
+   Neighbour nce = it->second;
+             ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processARTimeout(cMessage*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:739:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (nce->numOfARNSSent < ie->ipv6Data()->_getMaxMulticastSolicit())
+                                                                      ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRDTimeout(cMessage*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1213:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (rdEntry->numRSSent < ie->ipv6Data()->_getMaxRtrSolicitations())
+                                                                      ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1219:75: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if (rdEntry->numRSSent == ie->ipv6Data()->_getMaxRtrSolicitations())
+                                                                           ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRSPacket(IPv6RouterSolicitation*, IPv6ControlInfo*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1262:20: warning: variable ‘macAddr’ set but not used [-Wunused-but-set-variable]
+         MACAddress macAddr = rs->getSourceLinkLayerAddress();
+                    ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRAPacket(IPv6RouterAdvertisement*, IPv6ControlInfo*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1502:20: warning: variable ‘macAddress’ set but not used [-Wunused-but-set-variable]
+         MACAddress macAddress = ra->getSourceLinkLayerAddress();
+                    ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1503:14: warning: unused variable ‘mtu’ [-Wunused-variable]
+         uint mtu = ra->getMTU();
+              ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRAPrefixInfo(IPv6RouterAdvertisement*, InterfaceEntry*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1766:14: warning: unused variable ‘preferredLifetime’ [-Wunused-variable]
+         uint preferredLifetime = prefixInfo.getPreferredLifetime();
+              ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::sendPeriodicRA(cMessage*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2031:81: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if(advIfEntry->numRASent <= ie->ipv6Data()->_getMaxInitialRtrAdvertisements())
+                                                                                 ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processNSForNonTentativeAddress(IPv6NeighbourSolicitation*, IPv6ControlInfo*, InterfaceEntry*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2264:16: warning: variable ‘nsMacAddr’ set but not used [-Wunused-but-set-variable]
+     MACAddress nsMacAddr = ns->getSourceLinkLayerAddress();
+                ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2266:9: warning: unused variable ‘ifID’ [-Wunused-variable]
+     int ifID = ie->getInterfaceId();
+         ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRedirectPacket(IPv6Redirect*, IPv6ControlInfo*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2747:17: warning: variable ‘targetAddr’ set but not used [-Wunused-but-set-variable]
+     IPv6Address targetAddr = redirect->getTargetAddress();//Addressed to me
+                 ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2748:17: warning: variable ‘destAddr’ set but not used [-Wunused-but-set-variable]
+     IPv6Address destAddr = redirect->getDestinationAddress();//new dest addr
+                 ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2751:16: warning: variable ‘macAddr’ set but not used [-Wunused-but-set-variable]
+     MACAddress macAddr = redirect->getTargetLinkLayerAddress();
+                ^
+networklayer/ipv6/IPv6Tunneling.cc
+In file included from networklayer/xmipv6/xMIPv6Access.h:29:0,
+                 from networklayer/ipv6/IPv6Tunneling.cc:46:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+In file included from networklayer/ipv6/IPv6Tunneling.cc:41:0:
+networklayer/ipv6/IPv6Tunneling.h: In constructor ‘IPv6Tunneling::Tunnel::Tunnel(const IPv6Address&, const IPv6Address&, const IPv6Address&)’:
+networklayer/ipv6/IPv6Tunneling.h:110:16: warning: ‘IPv6Tunneling::Tunnel::destTrigger’ will be initialized after [-Wreorder]
+    IPv6Address destTrigger;
+                ^
+networklayer/ipv6/IPv6Tunneling.h:104:15: warning:   ‘IPv6Tunneling::TunnelType IPv6Tunneling::Tunnel::tunnelType’ [-Wreorder]
+    TunnelType tunnelType;
+               ^
+networklayer/ipv6/IPv6Tunneling.cc:103:1: warning:   when initialized here [-Wreorder]
+ IPv6Tunneling::Tunnel::Tunnel(const IPv6Address& _entry, const IPv6Address& _exit, const IPv6Address& _destTrigger)
+ ^
+In file included from networklayer/ipv6/IPv6Tunneling.cc:41:0:
+networklayer/ipv6/IPv6Tunneling.h:104:15: warning: ‘IPv6Tunneling::Tunnel::tunnelType’ will be initialized after [-Wreorder]
+    TunnelType tunnelType;
+               ^
+networklayer/ipv6/IPv6Tunneling.h:95:8: warning:   ‘int IPv6Tunneling::Tunnel::tunnelMTU’ [-Wreorder]
+    int tunnelMTU;
+        ^
+networklayer/ipv6/IPv6Tunneling.cc:103:1: warning:   when initialized here [-Wreorder]
+ IPv6Tunneling::Tunnel::Tunnel(const IPv6Address& _entry, const IPv6Address& _exit, const IPv6Address& _destTrigger)
+ ^
+networklayer/ipv6/IPv6Tunneling.cc: In member function ‘void IPv6Tunneling::encapsulateDatagram(IPv6Datagram*)’:
+networklayer/ipv6/IPv6Tunneling.cc:443:16: warning: variable ‘nextHop’ set but not used [-Wunused-but-set-variable]
+    IPv6Address nextHop = rt->lookupDestCache(dest, interfaceId);
+                ^
+networklayer/ipv6/IPv6.cc
+In file included from networklayer/ipv6/IPv6.h:38:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTableAccess.h:23:16: warning: extra tokens at end of #ifndef directive [enabled by default]
+ #ifndef __FLOW BINDING TABLE ACCESS_H__
+                ^
+In file included from networklayer/ipv6/IPv6.h:31:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+In file included from networklayer/ipv6/IPv6.h:37:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+networklayer/ipv6/RoutingTable6.cc
+networklayer/ipv6/RoutingTable6.cc: In member function ‘virtual void RoutingTable6::updateDisplayString()’:
+networklayer/ipv6/RoutingTable6.cc:188:85: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘std::map<IPv6Address, RoutingTable6::DestCacheEntry>::size_type {aka long unsigned int}’ [-Wformat=]
+     sprintf(buf, "%d routes\n%d destcache entries", getNumRoutes(), destCache.size());
+                                                                                     ^
+networklayer/ipv6/IPv6InterfaceData.cc
+In file included from /home/ubuntu/omnetpp-4.4.1/include/cownedobject.h:23:0,
+                 from /home/ubuntu/omnetpp-4.4.1/include/carray.h:23,
+                 from /home/ubuntu/omnetpp-4.4.1/include/omnetpp.h:21,
+                 from networklayer/ipv6/IPv6InterfaceData.h:25,
+                 from networklayer/ipv6/IPv6InterfaceData.cc:21:
+networklayer/ipv6/IPv6InterfaceData.cc: In member function ‘IPv6InterfaceData::AddressType IPv6InterfaceData::getAddressType(int) const’:
+networklayer/ipv6/IPv6InterfaceData.cc:245:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     ASSERT(i>=0 && i<addresses.size());
+                                     ^
+/home/ubuntu/omnetpp-4.4.1/include/simkerneldefs.h:63:13: note: in definition of macro ‘ASSERT’
+   ((void) ((expr) ? 0 : (opp_error("ASSERT: condition %s false in function %s, %s line %d", \
+             ^
+networklayer/ipv6/IPv6InterfaceData.cc: In member function ‘void IPv6InterfaceData::tentativelyAssign(int)’:
+networklayer/ipv6/IPv6InterfaceData.cc:286:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  ASSERT(i>=0 && i<addresses.size());
+                                  ^
+/home/ubuntu/omnetpp-4.4.1/include/simkerneldefs.h:63:13: note: in definition of macro ‘ASSERT’
+   ((void) ((expr) ? 0 : (opp_error("ASSERT: condition %s false in function %s, %s line %d", \
+             ^
+networklayer/manetrouting/dymo_fau/DYMO_RoutingEntry.cc
+networklayer/manetrouting/dymo_fau/DYMO_RoutingTable.cc
+networklayer/manetrouting/dymo_fau/DYMO.cc
+networklayer/queue/REDQueue.cc
+networklayer/queue/DropTailQueue.cc
+networklayer/xmipv6/ProxyUnloadingxMIPv6.cc
+In file included from networklayer/xmipv6/ProxyUnloadingxMIPv6.h:19:0,
+                 from networklayer/xmipv6/ProxyUnloadingxMIPv6.cc:16:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/xMIPv6.cc
+In file included from networklayer/xmipv6/xMIPv6.cc:23:0:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘virtual void xMIPv6::processBUMessage(BindingUpdate*, IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:1720:8: warning: variable ‘buBID’ set but not used [-Wunused-but-set-variable]
+    int buBID;
+        ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateBUMessage(BindingUpdate*, IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:2398:10: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+      NULL);
+          ^
+networklayer/xmipv6/xMIPv6.cc:2476:12: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+       NULL );
+            ^
+networklayer/xmipv6/xMIPv6.cc:2512:10: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+     NULL );
+          ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateBAck(const BindingAcknowledgement&, const IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:3192:14: warning: variable ‘destAddress’ set but not used [-Wunused-but-set-variable]
+  IPv6Address destAddress  = ctrlInfo->getDestAddr();
+              ^
+networklayer/xmipv6/xMIPv6.cc:3193:18: warning: unused variable ‘ie’ [-Wunused-variable]
+  InterfaceEntry *ie = ift->getInterfaceById( ctrlInfo->getInterfaceId() );
+                  ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateHoTMessage(const HomeTest&, const IPv6ControlInfo*, InterfaceEntry*)’:
+networklayer/xmipv6/xMIPv6.cc:4325:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if ( bulEntry->cookieHoTI != HoT.getHomeInitCookie() )
+                                                     ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::cancelTimerIfEntry2(std::map<xMIPv6::KeyTimer, xMIPv6::TimerIfEntry*>::iterator&)’:
+networklayer/xmipv6/xMIPv6.cc:4823:24: warning: unused variable ‘buIfEntry’ [-Wunused-variable]
+     BUTransmitIfEntry *buIfEntry = (BUTransmitIfEntry*) entry;
+                        ^
+networklayer/xmipv6/xMIPv6.cc:4828:25: warning: unused variable ‘tokEntry’ [-Wunused-variable]
+     TokenExpiryIfEntry *tokEntry = (TokenExpiryIfEntry*) entry;
+                         ^
+networklayer/xmipv6/xMIPv6.cc:4817:13: warning: variable ‘key’ set but not used [-Wunused-but-set-variable]
+    KeyTimer key = pos->first;
+             ^
+networklayer/xmipv6/xMIPv6.cc:4819:14: warning: unused variable ‘aux’ [-Wunused-variable]
+    cMessage* aux = cancelEvent(entry->timer);
+              ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘void xMIPv6::cancelEntries(int, IPv6Address&, int)’:
+networklayer/xmipv6/xMIPv6.cc:5149:18: warning: unused variable ‘ie’ [-Wunused-variable]
+  InterfaceEntry* ie = ift->getInterfaceById(interfaceId);
+                  ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘std::map<xMIPv6::KeyTimer, xMIPv6::TimerIfEntry*>::iterator xMIPv6::ftimer(xMIPv6::KeyTimer)’:
+networklayer/xmipv6/xMIPv6.cc:6177:10: warning: statement has no effect [-Wunused-value]
+  for (pos; pos != transmitIfList.end(); pos++){
+          ^
+networklayer/xmipv6/BindingUpdateList.cc
+networklayer/xmipv6/BindingUpdateList.cc: In member function ‘virtual BindingUpdateList::BindingUpdateListEntry* BindingUpdateList::lookup2(const KeyMCoABind&)’:
+networklayer/xmipv6/BindingUpdateList.cc:284:8: warning: statement has no effect [-Wunused-value]
+  for (i; i!=bindingUpdateList.end(); i++ ){
+        ^
+networklayer/xmipv6/BindingUpdateList.cc: In member function ‘virtual bool BindingUpdateList::removeBinding(const KeyMCoABind&)’:
+networklayer/xmipv6/BindingUpdateList.cc:526:9: warning: statement has no effect [-Wunused-value]
+  for (it; it!=bindingUpdateList.end(); it++ ){
+         ^
+networklayer/xmipv6/ProxyEnhancedxMIPv6ForMobileNode.cc
+In file included from networklayer/xmipv6/ProxyEnhancedxMIPv6ForMobileNode.h:19:0,
+                 from networklayer/xmipv6/ProxyEnhancedxMIPv6ForMobileNode.cc:16:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/ProxyEnhancedxMIPv6.cc
+In file included from networklayer/xmipv6/ProxyEnhancedxMIPv6.h:19:0,
+                 from networklayer/xmipv6/ProxyEnhancedxMIPv6.cc:16:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/BindingCache.cc
+networklayer/xmipv6/BindingCache.cc: In member function ‘uint BindingCache::readBCSequenceNumberOnlyAddr(const IPv6Address&, uint)’:
+networklayer/xmipv6/BindingCache.cc:101:11: warning: statement has no effect [-Wunused-value]
+  for (pos ; pos != bindingCache.rend();pos++){
+           ^
+networklayer/xmipv6/BindingCache.cc: In member function ‘bool BindingCache::isInBindingCacheOnlyBID(uint)’:
+networklayer/xmipv6/BindingCache.cc:134:10: warning: statement has no effect [-Wunused-value]
+  for (pos; pos != bindingCache.end();pos++){
+          ^
+networklayer/xmipv6/BindingCache.cc: In member function ‘bool BindingCache::deleteALLEntries()’:
+networklayer/xmipv6/BindingCache.cc:165:12: warning: statement has no effect [-Wunused-value]
+  for ( pos ; pos != bindingCache.end(); pos++ ){
+            ^
+networklayer/xmipv6/BindingCache.cc: In member function ‘bool BindingCache::getHomeRegistrationOnlyAddr(const IPv6Address&, uint)’:
+networklayer/xmipv6/BindingCache.cc:193:11: warning: statement has no effect [-Wunused-value]
+  for (pos ; pos != bindingCache.rend();pos++){
+           ^
+networklayer/xmipv6/ProxyEnhancedxMIPv6ForHomeAgent.cc
+In file included from networklayer/xmipv6/ProxyEnhancedxMIPv6ForHomeAgent.h:19:0,
+                 from networklayer/xmipv6/ProxyEnhancedxMIPv6ForHomeAgent.cc:16:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/ProxyEnhancedxMIPv6ForCorrespondentNode.cc
+In file included from networklayer/xmipv6/ProxyEnhancedxMIPv6ForCorrespondentNode.h:19:0,
+                 from networklayer/xmipv6/ProxyEnhancedxMIPv6ForCorrespondentNode.cc:16:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+transport/contract/SCTPSocket.cc
+transport/rtp/RTCP.cc
+transport/rtp/RTCP.cc: In member function ‘virtual void RTCP::calculateAveragePacketSize(int)’:
+transport/rtp/RTCP.cc:535:136: warning: operation on ‘((RTCP*)this)->RTCP::_packetsCalculated’ may be undefined [-Wsequence-point]
+     _averagePacketSize = ((double)(_packetsCalculated) * _averagePacketSize + (double)(size + 20 + 8)) / (double)(++_packetsCalculated);
+                                                                                                                                        ^
+transport/rtp/RTPReceiverInfo.cc
+transport/rtp/RTPProfile.cc
+transport/rtp/RTPPayloadReceiver.cc
+transport/rtp/profiles/avprofile/RTPAVProfilePayload32Receiver.cc
+transport/sctp/SCTPReceiveStream.cc
+transport/sctp/SCTPSendStream.cc
+transport/sctp/SCTPCCFunctions.cc
+transport/sctp/SCTPAssociationBase.cc
+transport/sctp/SCTPMessage.cc
+transport/sctp/SCTPAssociationRcvMessage.cc
+transport/sctp/SCTPAssociationRcvMessage.cc: In member function ‘bool SCTPAssociation::process_RCV_Message(SCTPMessage*, const IPvXAddress&, const IPvXAddress&)’:
+transport/sctp/SCTPAssociationRcvMessage.cc:86:10: warning: variable ‘dataChunkDelivered’ set but not used [-Wunused-but-set-variable]
+     bool dataChunkDelivered = false;
+          ^
+transport/sctp/SCTPAssociationRcvMessage.cc: In member function ‘SCTPEventCode SCTPAssociation::processSackArrived(SCTPSackChunk*)’:
+transport/sctp/SCTPAssociationRcvMessage.cc:712:30: warning: variable ‘ctsnaAdvanced’ set but not used [-Wunused-but-set-variable]
+     bool                     ctsnaAdvanced            = false;
+                              ^
+transport/sctp/SCTPAssociationEventProc.cc
+transport/sctp/SCTPAssociationSendAll.cc
+transport/sctp/SCTPAssociationSendAll.cc: In member function ‘void SCTPAssociation::sendOnPath(SCTPPathVariables*, bool)’:
+transport/sctp/SCTPAssociationSendAll.cc:325:10: warning: variable ‘rtxActive’ set but not used [-Wunused-but-set-variable]
+     bool rtxActive              = false;
+          ^
+transport/sctp/SCTP.cc
+transport/sctp/SCTPSSFunctions.cc
+transport/sctp/SCTPAssociationUtil.cc
+transport/sctp/SCTPAssociationUtil.cc: In member function ‘bool SCTPAssociation::makeRoomForTsn(uint32_t, uint32_t, bool)’:
+transport/sctp/SCTPAssociationUtil.cc:1210:14: warning: variable ‘delQ’ set but not used [-Wunused-but-set-variable]
+     bool     delQ = false;
+              ^
+transport/sctp/SCTPQueue.cc
+transport/sctp/SCTPAlg.cc
+transport/tcp/TCPConnectionEventProc.cc
+transport/tcp/TCPConnectionRcvSegment.cc
+transport/tcp/TCPSACKRexmitQueue.cc
+transport/tcp/TCPConnectionBase.cc
+transport/tcp/TCPConnectionUtil.cc
+transport/tcp/TCP.cc
+transport/tcp/flavours/TCPBaseAlg.cc
+transport/tcp/flavours/TCPNewReno.cc
+transport/tcp/flavours/TCPReno.cc
+transport/tcp/flavours/TCPNoCongestionControl.cc
+transport/tcp/flavours/TCPTahoeRenoFamily.cc
+transport/tcp/flavours/DumbTCP.cc
+transport/tcp/flavours/TCPTahoe.cc
+transport/tcp/queues/TCPVirtualDataRcvQueue.cc
+transport/tcp/queues/TCPVirtualDataSendQueue.cc
+transport/tcp/queues/TCPMsgBasedSendQueue.cc
+transport/tcp/queues/TCPMsgBasedRcvQueue.cc
+transport/tcp/queues/TCPMsgBasedRcvQueue.cc: In member function ‘virtual std::string TCPMsgBasedRcvQueue::info() const’:
+transport/tcp/queues/TCPMsgBasedRcvQueue.cc:49:47: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘std::map<unsigned int, cPacket*>::size_type {aka long unsigned int}’ [-Wformat=]
+     sprintf(buf, "%u msgs", payloadList.size());
+                                               ^
+transport/udp/UDP.cc
+util/TCPDump.cc
+util/TCPDump.cc: In member function ‘void TCPDumper::sctpDump(const char*, SCTPMessage*, const string&, const string&, const char*)’:
+util/TCPDump.cc:302:34: warning: variable ‘parameterType’ set but not used [-Wunused-but-set-variable]
+                           uint32 parameterType;
+                                  ^
+util/headerserializers/SCTPSerializer.cc
+util/headerserializers/SCTPSerializer.cc: In member function ‘void SCTPSerializer::parse(const uint8_t*, uint32_t, SCTPMessage*)’:
+util/headerserializers/SCTPSerializer.cc:998:43: warning: variable ‘error’ set but not used [-Wunused-but-set-variable]
+                 const struct error_chunk *error;
+                                           ^
+world/traci/TraCIScenarioManager.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelControl.h:25,
+                 from ./world/traci/TraCIScenarioManager.h:32,
+                 from world/traci/TraCIScenarioManager.cc:37:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+transport/contract/SCTPCommand_m.cc
+Creating shared library: ../out/gcc-debug/src/libinet.so
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+11:24:40 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:24:41 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:25:50 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/dhcp/DHCPServer.cc
+applications/dhcp/DHCPServer.cc: In member function ‘virtual void DHCPServer::handleIncommingPacket(cPacket*)’:
+applications/dhcp/DHCPServer.cc:88:1: error: expected unqualified-id before ‘}’ token
+ }
+ ^
+applications/dhcp/DHCPServer.cc:88:1: error: expected ‘;’ before ‘}’ token
+make[1]: *** [../out/gcc-debug/src/applications/dhcp/DHCPServer.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:25:51 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:25:51 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+opp_makedep: warning: no input files
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:26:09 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/dhcp/DHCPServer.cc
+applications/dhcp/DHCPClient.cc
+applications/dhcp/DHCPClient.cc: In member function ‘virtual void DHCPClient::changeFSMState(DHCPClient::CLIENT_STATE)’:
+applications/dhcp/DHCPClient.cc:141:9: error: expected unqualified-id before ‘if’
+         if (!this->irt->findRoute(IPAddress(),IPAddress(),lease->gateway,0,(char*)(this->ie->getName())))
+         ^
+applications/dhcp/DHCPClient.cc:141:9: error: expected ‘;’ before ‘if’
+make[1]: *** [../out/gcc-debug/src/applications/dhcp/DHCPClient.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:26:10 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:26:11 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:26:23 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/dhcp/DHCPClient.cc
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc: In member function ‘virtual void Proxy_Enhanced_MCoAVideoCli::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:104:21: error: expected primary-expression before ‘<<’ token
+                     << ": Video Message from Server ist eingegangen mit sequence number: "
+                     ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:111:21: error: expected primary-expression before ‘<<’ token
+                     << endl;
+                     ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:125:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                         difference.str().c_str());
+                                                 ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:138:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                         simTime().str().c_str());
+                                                ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:153:21: error: expected primary-expression before ‘<<’ token
+                     << " received unkown message: " << msg->getName() << endl;
+                     ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc: In member function ‘virtual void Proxy_Enhanced_MCoAVideoCli::sendControlData(cMessage*)’:
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:197:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             packagesReceivedCounter, simTime().str().c_str());
+                                                             ^
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make[1]: *** [../out/gcc-debug/src/applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.o] Fehler 1
+make: *** [all] Fehler 2
+11:26:25 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:26:25 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:26:50 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc: In member function ‘virtual void Proxy_Enhanced_MCoAVideoCli::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:125:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                         difference.str().c_str());
+                                                 ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:138:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                         simTime().str().c_str());
+                                                ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc: In member function ‘virtual void Proxy_Enhanced_MCoAVideoCli::sendControlData(cMessage*)’:
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:197:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             packagesReceivedCounter, simTime().str().c_str());
+                                                             ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:147:25: error: expected primary-expression before ‘<<’ token
+                         << ": RequetConnectionToLegacyServer Liste war nicht leer - zu sendender Request an: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:178:29: error: expected primary-expression before ‘<<’ token
+                             << ": FlowBindingUpdate Liste war nicht leer - zu sendende CoA:"
+                             ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:193:29: error: expected primary-expression before ‘<<’ token
+                             << ": FlowBindingUpdate Liste war nicht leer - zu sendende CoA:"
+                             ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:219:25: error: expected primary-expression before ‘<<’ token
+                         << ": new SetAddressActive Message to be scheduled."
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:253:29: error: expected primary-expression before ‘<<’ token
+                             << humanReadableName << " zur Zeit: " << simTime()
+                             ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:318:25: error: expected primary-expression before ‘<<’ token
+                         << ": sends new Strongest Signal Info For the HA and the CN to update their Flow Binding Tables."
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:342:25: error: expected primary-expression before ‘<<’ token
+                         << " meldet ein Paket, dessen Server noch nicht auf ProxyUnloading-Funktionalität hin überprüft wurde"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:382:25: error: expected primary-expression before ‘<<’ token
+                         << " mit der Adresse: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:387:25: error: expected primary-expression before ‘<<’ token
+                         << messageFromHA->getSrcAddress() << endl;
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:424:25: error: expected primary-expression before ‘<<’ token
+                         << " hat ein ACK_Request empfangen vom CN mit Absender Addresse: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:453:25: error: expected primary-expression before ‘<<’ token
+                         << " hat sein FlowBindingUpdate bestätigt bekommen von: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:466:25: error: expected primary-expression before ‘<<’ token
+                         << " hat sein FlowBindingUpdate bestätigt bekommen von: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:479:25: error: expected primary-expression before ‘<<’ token
+                         << " sends " << "FlowBindingUpdate to HA" << endl;
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:553:25: error: expected primary-expression before ‘<<’ token
+                         << " hat nun auch das Flow-Binding-Update bekommen und aktualisiert damit seine Tabelle"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:601:25: error: expected primary-expression before ‘<<’ token
+                         << humanReadableName << " eingegangen. Absender war: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:626:25: error: expected primary-expression before ‘<<’ token
+                         << " hat seine SetAddressActive Nachricht acknowledget bekommen vom HA"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:623:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+                                       ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:639:25: error: expected primary-expression before ‘<<’ token
+                         << " hat seine SetAddressActive Nachricht acknowledget bekommen vom "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:673:25: error: expected primary-expression before ‘<<’ token
+                         << " hat Signalstärke Update erhalten und aktualisiert sich selbst: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:698:25: error: expected primary-expression before ‘<<’ token
+                         << " hat Signalstärke update erhalten und aktualisiert sich selbst"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:710:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:716:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:720:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::sendChangeDataFlowMessage(int)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:742:13: error: expected primary-expression before ‘<<’ token
+             << " zur Zeit: " << simTime() << endl;
+             ^
+make[1]: *** [../out/gcc-debug/src/applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.o] Fehler 1
+make: *** [all] Fehler 2
+11:26:51 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:26:51 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:27:13 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:219:25: error: expected primary-expression before ‘<<’ token
+                         << ": new SetAddressActive Message to be scheduled."
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:253:29: error: expected primary-expression before ‘<<’ token
+                             << humanReadableName << " zur Zeit: " << simTime()
+                             ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:318:25: error: expected primary-expression before ‘<<’ token
+                         << ": sends new Strongest Signal Info For the HA and the CN to update their Flow Binding Tables."
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:342:25: error: expected primary-expression before ‘<<’ token
+                         << " meldet ein Paket, dessen Server noch nicht auf ProxyUnloading-Funktionalität hin überprüft wurde"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:382:25: error: expected primary-expression before ‘<<’ token
+                         << " mit der Adresse: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:387:25: error: expected primary-expression before ‘<<’ token
+                         << messageFromHA->getSrcAddress() << endl;
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:424:25: error: expected primary-expression before ‘<<’ token
+                         << " hat ein ACK_Request empfangen vom CN mit Absender Addresse: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:453:25: error: expected primary-expression before ‘<<’ token
+                         << " hat sein FlowBindingUpdate bestätigt bekommen von: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:466:25: error: expected primary-expression before ‘<<’ token
+                         << " hat sein FlowBindingUpdate bestätigt bekommen von: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:479:25: error: expected primary-expression before ‘<<’ token
+                         << " sends " << "FlowBindingUpdate to HA" << endl;
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:553:25: error: expected primary-expression before ‘<<’ token
+                         << " hat nun auch das Flow-Binding-Update bekommen und aktualisiert damit seine Tabelle"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:601:25: error: expected primary-expression before ‘<<’ token
+                         << humanReadableName << " eingegangen. Absender war: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:626:25: error: expected primary-expression before ‘<<’ token
+                         << " hat seine SetAddressActive Nachricht acknowledget bekommen vom HA"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:623:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+                                       ^
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:639:25: error: expected primary-expression before ‘<<’ token
+                         << " hat seine SetAddressActive Nachricht acknowledget bekommen vom "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:673:25: error: expected primary-expression before ‘<<’ token
+                         << " hat Signalstärke Update erhalten und aktualisiert sich selbst: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:698:25: error: expected primary-expression before ‘<<’ token
+                         << " hat Signalstärke update erhalten und aktualisiert sich selbst"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:710:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:716:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:720:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::sendChangeDataFlowMessage(int)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:742:13: error: expected primary-expression before ‘<<’ token
+             << " zur Zeit: " << simTime() << endl;
+             ^
+make[1]: *** [../out/gcc-debug/src/applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.o] Fehler 1
+make: *** [all] Fehler 2
+11:27:14 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:27:14 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:27:51 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:382:25: error: expected primary-expression before ‘<<’ token
+                         << " mit der Adresse: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:387:25: error: expected primary-expression before ‘<<’ token
+                         << messageFromHA->getSrcAddress() << endl;
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:424:25: error: expected primary-expression before ‘<<’ token
+                         << " hat ein ACK_Request empfangen vom CN mit Absender Addresse: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:453:25: error: expected primary-expression before ‘<<’ token
+                         << " hat sein FlowBindingUpdate bestätigt bekommen von: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:466:25: error: expected primary-expression before ‘<<’ token
+                         << " hat sein FlowBindingUpdate bestätigt bekommen von: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:479:25: error: expected primary-expression before ‘<<’ token
+                         << " sends " << "FlowBindingUpdate to HA" << endl;
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:553:25: error: expected primary-expression before ‘<<’ token
+                         << " hat nun auch das Flow-Binding-Update bekommen und aktualisiert damit seine Tabelle"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:601:25: error: expected primary-expression before ‘<<’ token
+                         << humanReadableName << " eingegangen. Absender war: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:626:25: error: expected primary-expression before ‘<<’ token
+                         << " hat seine SetAddressActive Nachricht acknowledget bekommen vom HA"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:623:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+                                       ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:639:25: error: expected primary-expression before ‘<<’ token
+                         << " hat seine SetAddressActive Nachricht acknowledget bekommen vom "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:673:25: error: expected primary-expression before ‘<<’ token
+                         << " hat Signalstärke Update erhalten und aktualisiert sich selbst: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:698:25: error: expected primary-expression before ‘<<’ token
+                         << " hat Signalstärke update erhalten und aktualisiert sich selbst"
+                         ^
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:710:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:716:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:720:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::sendChangeDataFlowMessage(int)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:742:13: error: expected primary-expression before ‘<<’ token
+             << " zur Zeit: " << simTime() << endl;
+             ^
+make[1]: *** [../out/gcc-debug/src/applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.o] Fehler 1
+make: *** [all] Fehler 2
+11:27:51 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:27:52 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:28:17 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:449:34: warning: unused variable ‘messageACKfromCN’ [-Wunused-variable]
+                 ACK_FlowBinding* messageACKfromCN = check_and_cast<
+                                  ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:466:25: error: expected primary-expression before ‘<<’ token
+                         << " hat sein FlowBindingUpdate bestätigt bekommen von: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:479:25: error: expected primary-expression before ‘<<’ token
+                         << " sends " << "FlowBindingUpdate to HA" << endl;
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:553:25: error: expected primary-expression before ‘<<’ token
+                         << " hat nun auch das Flow-Binding-Update bekommen und aktualisiert damit seine Tabelle"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:601:25: error: expected primary-expression before ‘<<’ token
+                         << humanReadableName << " eingegangen. Absender war: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:626:25: error: expected primary-expression before ‘<<’ token
+                         << " hat seine SetAddressActive Nachricht acknowledget bekommen vom HA"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:623:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+                                       ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:639:25: error: expected primary-expression before ‘<<’ token
+                         << " hat seine SetAddressActive Nachricht acknowledget bekommen vom "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:673:25: error: expected primary-expression before ‘<<’ token
+                         << " hat Signalstärke Update erhalten und aktualisiert sich selbst: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:698:25: error: expected primary-expression before ‘<<’ token
+                         << " hat Signalstärke update erhalten und aktualisiert sich selbst"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:710:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:716:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:720:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::sendChangeDataFlowMessage(int)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:742:13: error: expected primary-expression before ‘<<’ token
+             << " zur Zeit: " << simTime() << endl;
+             ^
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make[1]: *** [../out/gcc-debug/src/applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.o] Fehler 1
+make: *** [all] Fehler 2
+11:28:18 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:28:19 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:28:42 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:449:34: warning: unused variable ‘messageACKfromCN’ [-Wunused-variable]
+                 ACK_FlowBinding* messageACKfromCN = check_and_cast<
+                                  ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:462:34: warning: unused variable ‘messageACKfromCN’ [-Wunused-variable]
+                 ACK_FlowBinding* messageACKfromCN = check_and_cast<
+                                  ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:623:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+                                       ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:639:25: error: expected primary-expression before ‘<<’ token
+                         << " hat seine SetAddressActive Nachricht acknowledget bekommen vom "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:673:25: error: expected primary-expression before ‘<<’ token
+                         << " hat Signalstärke Update erhalten und aktualisiert sich selbst: "
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:698:25: error: expected primary-expression before ‘<<’ token
+                         << " hat Signalstärke update erhalten und aktualisiert sich selbst"
+                         ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:710:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:716:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:720:21: error: expected primary-expression before ‘<<’ token
+                     << " hat folgende unbekannte Nachricht erhalten:"
+                     ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::sendChangeDataFlowMessage(int)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:742:13: error: expected primary-expression before ‘<<’ token
+             << " zur Zeit: " << simTime() << endl;
+             ^
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make[1]: *** [../out/gcc-debug/src/applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.o] Fehler 1
+make: *** [all] Fehler 2
+11:28:43 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:28:43 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:29:16 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:449:34: warning: unused variable ‘messageACKfromCN’ [-Wunused-variable]
+                 ACK_FlowBinding* messageACKfromCN = check_and_cast<
+                                  ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:462:34: warning: unused variable ‘messageACKfromCN’ [-Wunused-variable]
+                 ACK_FlowBinding* messageACKfromCN = check_and_cast<
+                                  ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:623:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+                                       ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:636:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+                                       ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::sendChangeDataFlowMessage(int)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:742:13: error: expected primary-expression before ‘<<’ token
+             << " zur Zeit: " << simTime() << endl;
+             ^
+make[1]: *** [../out/gcc-debug/src/applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:29:17 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:29:17 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:29:26 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:449:34: warning: unused variable ‘messageACKfromCN’ [-Wunused-variable]
+                 ACK_FlowBinding* messageACKfromCN = check_and_cast<
+                                  ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:462:34: warning: unused variable ‘messageACKfromCN’ [-Wunused-variable]
+                 ACK_FlowBinding* messageACKfromCN = check_and_cast<
+                                  ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:623:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+                                       ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:636:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+                                       ^
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc
+In file included from applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:16:0:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc: In member function ‘virtual const char* FlowBindingTable::getCorrectDestinationAddressForConnection(int&, int&, const char*, const char*)’:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:241:21: error: expected primary-expression before ‘<<’ token
+                     << it->destAddress << " SourceAddress: " << it->srcAddress
+                     ^
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:266:13: error: expected primary-expression before ‘<<’ token
+             << " DestAddress:" << destAddress << " SourceAddress: "
+             ^
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc: In member function ‘virtual void FlowBindingTable::updateExistingFlowBindingEntry(FlowBindingUpdate*)’:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:275:13: error: expected primary-expression before ‘<<’ token
+             << "CN/HA updatet sich selbst für HomeAddress:"
+             ^
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:300:21: error: expected primary-expression before ‘<<’ token
+                     << " srcPort: " << it->srcPort << " Src-Address: "
+                     ^
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc: In member function ‘virtual void FlowBindingTable::setIPAddressActive(SetAddressActive*)’:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:435:13: error: expected primary-expression before ‘<<’ token
+             << fromHA->getAddressToBeSetActive() << endl;
+             ^
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc: In member function ‘virtual void FlowBindingTable::printoutContentOftable()’:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:466:17: error: expected primary-expression before ‘<<’ token
+                 << "] Tabelleneintrag  DestAddress:" << it->destAddress
+                 ^
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc: In member function ‘virtual void FlowBindingTable::setChannelActive(SetChannelActive*)’:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:523:13: error: expected primary-expression before ‘<<’ token
+             << " with channel: " << fromHA->getChannelNumber() << endl;
+             ^
+make[1]: *** [../out/gcc-debug/src/applications/mcoa/proxy_enhanced/modules/FlowBindingTable.o] Fehler 1
+make: *** [all] Fehler 2
+11:29:27 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:29:27 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:30:13 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc
+In file included from applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:16:0:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+applications/mcoa/udpbase/MCoAUDPBase.cc
+applications/mcoa/udpbase/MCoAUDPBase.cc:233:7: warning: "/*" within comment [-Wcomment]
+       /*
+ ^
+applications/mcoa/udpbase/MCoAUDPBase.cc:244:6: warning: "/*" within comment [-Wcomment]
+      /*
+ ^
+applications/mcoa/udpbase/MCoAUDPBase.cc:254:8: warning: "/*" within comment [-Wcomment]
+        /*
+ ^
+applications/mcoa/udpbase/MCoAUDPBase.cc: In member function ‘virtual void MCoAUDPBase::sendToUDPMCOA(cPacket*, int, const IPvXAddress&, int, bool)’:
+applications/mcoa/udpbase/MCoAUDPBase.cc:210:17: warning: unused variable ‘msg1’ [-Wunused-variable]
+        cPacket *msg1 = msg->dup();
+                 ^
+applications/pingapp/PingApp.cc
+applications/pingapp/PingApp.cc: In member function ‘virtual void PingApp::processPingResponse(PingPayload*)’:
+applications/pingapp/PingApp.cc:183:9: warning: variable ‘msgHopCount’ set but not used [-Wunused-but-set-variable]
+     int msgHopCount = -1;
+         ^
+applications/pingapp/PingApp.cc: In member function ‘virtual void PingApp::finish()’:
+applications/pingapp/PingApp.cc:278:10: error: expected primary-expression before ‘<<’ token
+          << "   drop rate (%): " << (100 * dropCount / (double)sendSeqNo) << endl;
+          ^
+applications/pingapp/PingApp.cc:280:10: error: expected primary-expression before ‘<<’ token
+          << (delayStat.getMin()*1000.0) << "/"
+          ^
+applications/pingapp/PingApp.cc:284:10: error: expected primary-expression before ‘<<’ token
+          << "   variance:" << delayStat.getVariance() << endl;
+          ^
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make[1]: *** [../out/gcc-debug/src/applications/pingapp/PingApp.o] Fehler 1
+make: *** [all] Fehler 2
+11:30:15 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:30:15 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:30:37 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/pingapp/PingApp.cc
+applications/pingapp/PingApp.cc: In member function ‘virtual void PingApp::processPingResponse(PingPayload*)’:
+applications/pingapp/PingApp.cc:183:9: warning: variable ‘msgHopCount’ set but not used [-Wunused-but-set-variable]
+     int msgHopCount = -1;
+         ^
+linklayer/ext/ExtInterface.cc
+linklayer/ext/ExtInterface.cc: In member function ‘virtual void ExtInterface::finish()’:
+linklayer/ext/ExtInterface.cc:206:5: error: ‘numRcvd’ is not a member of ‘std’
+     std:: //cout << getFullPath() << ": " << numSent << " packets sent, " <<
+     ^
+make[1]: *** [../out/gcc-debug/src/linklayer/ext/ExtInterface.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:30:38 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:30:39 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:30:53 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+linklayer/ext/ExtInterface.cc
+linklayer/ieee80211/mac/Ieee80211Mac.cc
+linklayer/radio/Ieee80211Radio.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelAccess.h:26,
+                 from linklayer/radio/AbstractRadio.h:22,
+                 from linklayer/radio/Ieee80211Radio.h:22,
+                 from linklayer/radio/Ieee80211Radio.cc:19:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+linklayer/radio/AbstractRadioExtended.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelAccessExtended.h:26,
+                 from linklayer/radio/AbstractRadioExtended.h:22,
+                 from linklayer/radio/AbstractRadioExtended.cc:22:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc
+In file included from networklayer/xmipv6/xMIPv6Access.h:29:0,
+                 from networklayer/icmpv6/IPv6NeighbourDiscovery.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘const MACAddress& IPv6NeighbourDiscovery::resolveNeighbour_MCoA(const IPv6Address&, int)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:370:13: warning: reference to local variable ‘nce’ returned [-Wreturn-local-addr]
+   Neighbour nce = it->second;
+             ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processARTimeout(cMessage*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:739:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (nce->numOfARNSSent < ie->ipv6Data()->_getMaxMulticastSolicit())
+                                                                      ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processDADTimeout(cMessage*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:919:9: error: ‘std::std’ has not been declared
+         std::cout.flush();
+         ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRDTimeout(cMessage*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1213:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (rdEntry->numRSSent < ie->ipv6Data()->_getMaxRtrSolicitations())
+                                                                      ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1219:75: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if (rdEntry->numRSSent == ie->ipv6Data()->_getMaxRtrSolicitations())
+                                                                           ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRAPacket(IPv6RouterAdvertisement*, IPv6ControlInfo*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1503:14: warning: unused variable ‘mtu’ [-Wunused-variable]
+         uint mtu = ra->getMTU();
+              ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRAPrefixInfo(IPv6RouterAdvertisement*, InterfaceEntry*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1766:14: warning: unused variable ‘preferredLifetime’ [-Wunused-variable]
+         uint preferredLifetime = prefixInfo.getPreferredLifetime();
+              ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::sendPeriodicRA(cMessage*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2031:81: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if(advIfEntry->numRASent <= ie->ipv6Data()->_getMaxInitialRtrAdvertisements())
+                                                                                 ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processNSForNonTentativeAddress(IPv6NeighbourSolicitation*, IPv6ControlInfo*, InterfaceEntry*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2266:9: warning: unused variable ‘ifID’ [-Wunused-variable]
+     int ifID = ie->getInterfaceId();
+         ^
+make[1]: *** [../out/gcc-debug/src/networklayer/icmpv6/IPv6NeighbourDiscovery.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:30:57 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:30:58 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:31:18 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc
+In file included from networklayer/xmipv6/xMIPv6Access.h:29:0,
+                 from networklayer/icmpv6/IPv6NeighbourDiscovery.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘const MACAddress& IPv6NeighbourDiscovery::resolveNeighbour_MCoA(const IPv6Address&, int)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:370:13: warning: reference to local variable ‘nce’ returned [-Wreturn-local-addr]
+   Neighbour nce = it->second;
+             ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processARTimeout(cMessage*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:739:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (nce->numOfARNSSent < ie->ipv6Data()->_getMaxMulticastSolicit())
+                                                                      ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRDTimeout(cMessage*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1213:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (rdEntry->numRSSent < ie->ipv6Data()->_getMaxRtrSolicitations())
+                                                                      ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1219:75: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if (rdEntry->numRSSent == ie->ipv6Data()->_getMaxRtrSolicitations())
+                                                                           ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRSPacket(IPv6RouterSolicitation*, IPv6ControlInfo*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1262:20: warning: variable ‘macAddr’ set but not used [-Wunused-but-set-variable]
+         MACAddress macAddr = rs->getSourceLinkLayerAddress();
+                    ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRAPacket(IPv6RouterAdvertisement*, IPv6ControlInfo*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1502:20: warning: variable ‘macAddress’ set but not used [-Wunused-but-set-variable]
+         MACAddress macAddress = ra->getSourceLinkLayerAddress();
+                    ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1503:14: warning: unused variable ‘mtu’ [-Wunused-variable]
+         uint mtu = ra->getMTU();
+              ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRAPrefixInfo(IPv6RouterAdvertisement*, InterfaceEntry*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:1766:14: warning: unused variable ‘preferredLifetime’ [-Wunused-variable]
+         uint preferredLifetime = prefixInfo.getPreferredLifetime();
+              ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::sendPeriodicRA(cMessage*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2031:81: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if(advIfEntry->numRASent <= ie->ipv6Data()->_getMaxInitialRtrAdvertisements())
+                                                                                 ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processNSForNonTentativeAddress(IPv6NeighbourSolicitation*, IPv6ControlInfo*, InterfaceEntry*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2264:16: warning: variable ‘nsMacAddr’ set but not used [-Wunused-but-set-variable]
+     MACAddress nsMacAddr = ns->getSourceLinkLayerAddress();
+                ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2266:9: warning: unused variable ‘ifID’ [-Wunused-variable]
+     int ifID = ie->getInterfaceId();
+         ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc: In member function ‘virtual void IPv6NeighbourDiscovery::processRedirectPacket(IPv6Redirect*, IPv6ControlInfo*)’:
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2747:17: warning: variable ‘targetAddr’ set but not used [-Wunused-but-set-variable]
+     IPv6Address targetAddr = redirect->getTargetAddress();//Addressed to me
+                 ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2748:17: warning: variable ‘destAddr’ set but not used [-Wunused-but-set-variable]
+     IPv6Address destAddr = redirect->getDestinationAddress();//new dest addr
+                 ^
+networklayer/icmpv6/IPv6NeighbourDiscovery.cc:2751:16: warning: variable ‘macAddr’ set but not used [-Wunused-but-set-variable]
+     MACAddress macAddr = redirect->getTargetLinkLayerAddress();
+                ^
+networklayer/ipv6/IPv6.cc
+In file included from networklayer/ipv6/IPv6.h:38:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTableAccess.h:23:16: warning: extra tokens at end of #ifndef directive [enabled by default]
+ #ifndef __FLOW BINDING TABLE ACCESS_H__
+                ^
+In file included from networklayer/ipv6/IPv6.h:31:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+In file included from networklayer/ipv6/IPv6.h:37:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+networklayer/ipv6/IPv6.cc: In member function ‘virtual void IPv6::endService(cPacket*)’:
+networklayer/ipv6/IPv6.cc:115:17: error: expected primary-expression before ‘<<’ token
+                 << " inserts a new entry into it's FlowBindingTable" << endl;
+                 ^
+networklayer/ipv6/IPv6.cc:130:17: error: expected primary-expression before ‘<<’ token
+                 << " aktualisiert jetzt die FlowBindingTable" << endl;
+                 ^
+networklayer/ipv6/IPv6.cc:139:21: error: expected primary-expression before ‘<<’ token
+                     << endl;
+                     ^
+networklayer/ipv6/IPv6.cc:153:25: error: expected primary-expression before ‘<<’ token
+                         << it->destAddress << endl;
+                         ^
+networklayer/ipv6/IPv6.cc:164:17: error: expected primary-expression before ‘<<’ token
+                 << " updates its FlowBindingTable with a new capable CN"
+                 ^
+networklayer/ipv6/IPv6.cc:179:21: error: expected primary-expression before ‘<<’ token
+                     << " sets a new active IP Adress for a MN" << endl;
+                     ^
+networklayer/ipv6/IPv6.cc: In member function ‘virtual void IPv6::isLocalAddress(IPv6Datagram*, bool)’:
+networklayer/ipv6/IPv6.cc:728:17: error: expected primary-expression before ‘<<’ token
+                 << endl;
+                 ^
+networklayer/ipv6/IPv6.cc: In member function ‘virtual void IPv6::replaceFlowSourceAddress(IPv6Datagram*)’:
+networklayer/ipv6/IPv6.cc:951:21: error: expected primary-expression before ‘<<’ token
+                     << " für das Datagram mit Namen: " << datagram->getName()
+                     ^
+networklayer/ipv6/IPv6.cc:955:21: error: expected primary-expression before ‘<<’ token
+                     << " Transport Daten vor der Ersetzung: dport: " << dport
+                     ^
+networklayer/ipv6/IPv6.cc:976:25: error: expected primary-expression before ‘<<’ token
+                         << " Transport Layer ersetzt nun Absender-Daten des MN durch die in seiner Tabelle eingestellten gewünschten."
+                         ^
+networklayer/ipv6/IPv6.cc:981:21: error: expected primary-expression before ‘<<’ token
+                     << " Transport Daten nach der Ersetzung: dport: " << dport
+                     ^
+networklayer/ipv6/IPv6.cc: In member function ‘virtual void IPv6::calculateFlowSourceAddress(IPv6Datagram*)’:
+networklayer/ipv6/IPv6.cc:1028:21: error: expected primary-expression before ‘<<’ token
+                     << endl;
+                     ^
+networklayer/ipv6/IPv6.cc:1030:21: error: expected primary-expression before ‘<<’ token
+                     << " und SRC ADDR: " << datagram->getSrcAddress() << endl;
+                     ^
+networklayer/ipv6/IPv6.cc:1045:25: error: expected primary-expression before ‘<<’ token
+                         << myHumanReadableName
+                         ^
+networklayer/ipv6/IPv6.cc: In member function ‘virtual void IPv6::replaceDestAddresseWithHaAddress(IPv6Datagram*)’:
+networklayer/ipv6/IPv6.cc:1110:21: error: expected primary-expression before ‘<<’ token
+                     << datagram->getDestAddress().str().c_str() << endl;
+                     ^
+networklayer/ipv6/IPv6.cc:1121:21: error: expected primary-expression before ‘<<’ token
+                     << datagram->getDestAddress().str().c_str() << endl;
+                     ^
+make[1]: *** [../out/gcc-debug/src/networklayer/ipv6/IPv6.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:31:20 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:31:21 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:32:09 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+networklayer/ipv6/IPv6.cc
+In file included from networklayer/ipv6/IPv6.h:38:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTableAccess.h:23:16: warning: extra tokens at end of #ifndef directive [enabled by default]
+ #ifndef __FLOW BINDING TABLE ACCESS_H__
+                ^
+In file included from networklayer/ipv6/IPv6.h:31:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+In file included from networklayer/ipv6/IPv6.h:37:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+networklayer/ipv6/IPv6.cc: In member function ‘virtual void IPv6::replaceFlowSourceAddress(IPv6Datagram*)’:
+networklayer/ipv6/IPv6.cc:976:25: error: expected primary-expression before ‘<<’ token
+                         << " Transport Layer ersetzt nun Absender-Daten des MN durch die in seiner Tabelle eingestellten gewünschten."
+                         ^
+networklayer/ipv6/IPv6.cc:981:21: error: expected primary-expression before ‘<<’ token
+                     << " Transport Daten nach der Ersetzung: dport: " << dport
+                     ^
+networklayer/ipv6/IPv6.cc: In member function ‘virtual void IPv6::calculateFlowSourceAddress(IPv6Datagram*)’:
+networklayer/ipv6/IPv6.cc:1028:21: error: expected primary-expression before ‘<<’ token
+                     << endl;
+                     ^
+networklayer/ipv6/IPv6.cc:1030:21: error: expected primary-expression before ‘<<’ token
+                     << " und SRC ADDR: " << datagram->getSrcAddress() << endl;
+                     ^
+networklayer/ipv6/IPv6.cc:1045:25: error: expected primary-expression before ‘<<’ token
+                         << myHumanReadableName
+                         ^
+networklayer/ipv6/IPv6.cc: In member function ‘virtual void IPv6::replaceDestAddresseWithHaAddress(IPv6Datagram*)’:
+networklayer/ipv6/IPv6.cc:1110:21: error: expected primary-expression before ‘<<’ token
+                     << datagram->getDestAddress().str().c_str() << endl;
+                     ^
+networklayer/ipv6/IPv6.cc:1121:21: error: expected primary-expression before ‘<<’ token
+                     << datagram->getDestAddress().str().c_str() << endl;
+                     ^
+make[1]: *** [../out/gcc-debug/src/networklayer/ipv6/IPv6.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:32:10 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:32:10 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:32:45 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+networklayer/ipv6/IPv6.cc
+In file included from networklayer/ipv6/IPv6.h:38:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTableAccess.h:23:16: warning: extra tokens at end of #ifndef directive [enabled by default]
+ #ifndef __FLOW BINDING TABLE ACCESS_H__
+                ^
+In file included from networklayer/ipv6/IPv6.h:31:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+In file included from networklayer/ipv6/IPv6.h:37:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+networklayer/ipv6/IPv6.cc: In member function ‘virtual void IPv6::calculateFlowSourceAddress(IPv6Datagram*)’:
+networklayer/ipv6/IPv6.cc:1030:21: error: expected primary-expression before ‘<<’ token
+                     << " und SRC ADDR: " << datagram->getSrcAddress() << endl;
+                     ^
+make[1]: *** [../out/gcc-debug/src/networklayer/ipv6/IPv6.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:32:45 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:32:46 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:32:54 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+networklayer/ipv6/IPv6.cc
+In file included from networklayer/ipv6/IPv6.h:38:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTableAccess.h:23:16: warning: extra tokens at end of #ifndef directive [enabled by default]
+ #ifndef __FLOW BINDING TABLE ACCESS_H__
+                ^
+In file included from networklayer/ipv6/IPv6.h:31:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+In file included from networklayer/ipv6/IPv6.h:37:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+networklayer/ipv6/RoutingTable6.cc
+networklayer/ipv6/RoutingTable6.cc: In member function ‘virtual void RoutingTable6::updateDisplayString()’:
+networklayer/ipv6/RoutingTable6.cc:188:85: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘std::map<IPv6Address, RoutingTable6::DestCacheEntry>::size_type {aka long unsigned int}’ [-Wformat=]
+     sprintf(buf, "%d routes\n%d destcache entries", getNumRoutes(), destCache.size());
+                                                                                     ^
+networklayer/xmipv6/ProxyUnloadingxMIPv6.cc
+In file included from networklayer/xmipv6/ProxyUnloadingxMIPv6.h:19:0,
+                 from networklayer/xmipv6/ProxyUnloadingxMIPv6.cc:16:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/xMIPv6.cc
+In file included from networklayer/xmipv6/xMIPv6.cc:23:0:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘void xMIPv6::createBUTimer(KeyMCoABind&, const IPv6Address&, InterfaceEntry*, uint, bool)’:
+networklayer/xmipv6/xMIPv6.cc:874:5: error: expected primary-expression before ‘<<’ token
+     << " at simtime " << simTime() << " with lifetime " << lifeTime  << " and in BuIfEntry " << buIfEntry->lifeTime
+     ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateBUMessage(BindingUpdate*, IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:2398:10: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+      NULL);
+          ^
+networklayer/xmipv6/xMIPv6.cc:2476:12: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+       NULL );
+            ^
+networklayer/xmipv6/xMIPv6.cc:2512:10: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+     NULL );
+          ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateBAck(const BindingAcknowledgement&, const IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:3193:18: warning: unused variable ‘ie’ [-Wunused-variable]
+  InterfaceEntry *ie = ift->getInterfaceById( ctrlInfo->getInterfaceId() );
+                  ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateHoTMessage(const HomeTest&, const IPv6ControlInfo*, InterfaceEntry*)’:
+networklayer/xmipv6/xMIPv6.cc:4325:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if ( bulEntry->cookieHoTI != HoT.getHomeInitCookie() )
+                                                     ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::cancelTimerIfEntry2(std::map<xMIPv6::KeyTimer, xMIPv6::TimerIfEntry*>::iterator&)’:
+networklayer/xmipv6/xMIPv6.cc:4823:24: warning: unused variable ‘buIfEntry’ [-Wunused-variable]
+     BUTransmitIfEntry *buIfEntry = (BUTransmitIfEntry*) entry;
+                        ^
+networklayer/xmipv6/xMIPv6.cc:4828:25: warning: unused variable ‘tokEntry’ [-Wunused-variable]
+     TokenExpiryIfEntry *tokEntry = (TokenExpiryIfEntry*) entry;
+                         ^
+networklayer/xmipv6/xMIPv6.cc:4819:14: warning: unused variable ‘aux’ [-Wunused-variable]
+    cMessage* aux = cancelEvent(entry->timer);
+              ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘void xMIPv6::cancelEntries(int, IPv6Address&, int)’:
+networklayer/xmipv6/xMIPv6.cc:5149:18: warning: unused variable ‘ie’ [-Wunused-variable]
+  InterfaceEntry* ie = ift->getInterfaceById(interfaceId);
+                  ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘std::map<xMIPv6::KeyTimer, xMIPv6::TimerIfEntry*>::iterator xMIPv6::ftimer(xMIPv6::KeyTimer)’:
+networklayer/xmipv6/xMIPv6.cc:6177:10: warning: statement has no effect [-Wunused-value]
+  for (pos; pos != transmitIfList.end(); pos++){
+          ^
+make[1]: *** [../out/gcc-debug/src/networklayer/xmipv6/xMIPv6.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:32:57 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+opp_makedep: warning: no input files
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:32:58 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:33:17 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+networklayer/xmipv6/xMIPv6.cc
+In file included from networklayer/xmipv6/xMIPv6.cc:23:0:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘virtual void xMIPv6::processBUMessage(BindingUpdate*, IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:1720:8: warning: variable ‘buBID’ set but not used [-Wunused-but-set-variable]
+    int buBID;
+        ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateBUMessage(BindingUpdate*, IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:2398:10: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+      NULL);
+          ^
+networklayer/xmipv6/xMIPv6.cc:2476:12: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+       NULL );
+            ^
+networklayer/xmipv6/xMIPv6.cc:2512:10: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+     NULL );
+          ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateBAck(const BindingAcknowledgement&, const IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:3192:14: warning: variable ‘destAddress’ set but not used [-Wunused-but-set-variable]
+  IPv6Address destAddress  = ctrlInfo->getDestAddr();
+              ^
+networklayer/xmipv6/xMIPv6.cc:3193:18: warning: unused variable ‘ie’ [-Wunused-variable]
+  InterfaceEntry *ie = ift->getInterfaceById( ctrlInfo->getInterfaceId() );
+                  ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateHoTMessage(const HomeTest&, const IPv6ControlInfo*, InterfaceEntry*)’:
+networklayer/xmipv6/xMIPv6.cc:4325:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if ( bulEntry->cookieHoTI != HoT.getHomeInitCookie() )
+                                                     ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::cancelTimerIfEntry2(std::map<xMIPv6::KeyTimer, xMIPv6::TimerIfEntry*>::iterator&)’:
+networklayer/xmipv6/xMIPv6.cc:4823:24: warning: unused variable ‘buIfEntry’ [-Wunused-variable]
+     BUTransmitIfEntry *buIfEntry = (BUTransmitIfEntry*) entry;
+                        ^
+networklayer/xmipv6/xMIPv6.cc:4828:25: warning: unused variable ‘tokEntry’ [-Wunused-variable]
+     TokenExpiryIfEntry *tokEntry = (TokenExpiryIfEntry*) entry;
+                         ^
+networklayer/xmipv6/xMIPv6.cc:4817:13: warning: variable ‘key’ set but not used [-Wunused-but-set-variable]
+    KeyTimer key = pos->first;
+             ^
+networklayer/xmipv6/xMIPv6.cc:4819:14: warning: unused variable ‘aux’ [-Wunused-variable]
+    cMessage* aux = cancelEvent(entry->timer);
+              ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘void xMIPv6::cancelEntries(int, IPv6Address&, int)’:
+networklayer/xmipv6/xMIPv6.cc:5149:18: warning: unused variable ‘ie’ [-Wunused-variable]
+  InterfaceEntry* ie = ift->getInterfaceById(interfaceId);
+                  ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘std::map<xMIPv6::KeyTimer, xMIPv6::TimerIfEntry*>::iterator xMIPv6::ftimer(xMIPv6::KeyTimer)’:
+networklayer/xmipv6/xMIPv6.cc:6177:10: warning: statement has no effect [-Wunused-value]
+  for (pos; pos != transmitIfList.end(); pos++){
+          ^
+networklayer/xmipv6/ProxyEnhancedxMIPv6ForMobileNode.cc
+In file included from networklayer/xmipv6/ProxyEnhancedxMIPv6ForMobileNode.h:19:0,
+                 from networklayer/xmipv6/ProxyEnhancedxMIPv6ForMobileNode.cc:16:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/ProxyEnhancedxMIPv6.cc
+In file included from networklayer/xmipv6/ProxyEnhancedxMIPv6.h:19:0,
+                 from networklayer/xmipv6/ProxyEnhancedxMIPv6.cc:16:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/ProxyEnhancedxMIPv6ForHomeAgent.cc
+In file included from networklayer/xmipv6/ProxyEnhancedxMIPv6ForHomeAgent.h:19:0,
+                 from networklayer/xmipv6/ProxyEnhancedxMIPv6ForHomeAgent.cc:16:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/ProxyEnhancedxMIPv6ForCorrespondentNode.cc
+In file included from networklayer/xmipv6/ProxyEnhancedxMIPv6ForCorrespondentNode.h:19:0,
+                 from networklayer/xmipv6/ProxyEnhancedxMIPv6ForCorrespondentNode.cc:16:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+transport/rtp/RTPReceiverInfo.cc
+transport/sctp/SCTPAssociationUtil.cc
+transport/sctp/SCTPAssociationUtil.cc: In member function ‘bool SCTPAssociation::makeRoomForTsn(uint32_t, uint32_t, bool)’:
+transport/sctp/SCTPAssociationUtil.cc:1210:14: warning: variable ‘delQ’ set but not used [-Wunused-but-set-variable]
+     bool     delQ = false;
+              ^
+transport/udp/UDP.cc
+Creating shared library: ../out/gcc-debug/src/libinet.so
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+11:33:26 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:33:27 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:35:07 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+networklayer/ipv6/IPv6.cc
+In file included from networklayer/ipv6/IPv6.h:38:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTableAccess.h:23:16: warning: extra tokens at end of #ifndef directive [enabled by default]
+ #ifndef __FLOW BINDING TABLE ACCESS_H__
+                ^
+In file included from networklayer/ipv6/IPv6.h:31:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+In file included from networklayer/ipv6/IPv6.h:37:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+Creating shared library: ../out/gcc-debug/src/libinet.so
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+11:35:11 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:35:11 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:36:26 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/evaluation/MyFileWriter.cc
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoProxy.cc
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc: In member function ‘virtual void Proxy_Enhanced_MCoAVideoCli::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:125:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                         difference.str().c_str());
+                                                 ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:138:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                         simTime().str().c_str());
+                                                ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc: In member function ‘virtual void Proxy_Enhanced_MCoAVideoCli::sendControlData(cMessage*)’:
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoCli.cc:197:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             packagesReceivedCounter, simTime().str().c_str());
+                                                             ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoSrv.cc
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoSrv.cc: In member function ‘virtual void Proxy_Enhanced_MCoAVideoSrv::initialize()’:
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoSrv.cc:59:9: warning: unused variable ‘correspondentNodeNumber’ [-Wunused-variable]
+     int correspondentNodeNumber = par("correspondentNodeNumber");
+         ^
+applications/mcoa/proxy_enhanced/apps/Proxy_Enhanced_MCoAVideoSrv.cc:61:15: warning: variable ‘startTime’ set but not used [-Wunused-but-set-variable]
+     simtime_t startTime = par("startTime");
+               ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc: In member function ‘virtual void Proxy_Unloading_Control_App::handleMessage(cMessage*)’:
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:449:34: warning: unused variable ‘messageACKfromCN’ [-Wunused-variable]
+                 ACK_FlowBinding* messageACKfromCN = check_and_cast<
+                                  ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:462:34: warning: unused variable ‘messageACKfromCN’ [-Wunused-variable]
+                 ACK_FlowBinding* messageACKfromCN = check_and_cast<
+                                  ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:623:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+                                       ^
+applications/mcoa/proxy_enhanced/control/Proxy_Unloading_Control_App.cc:636:39: warning: unused variable ‘response’ [-Wunused-variable]
+                 ACK_SetAddressActive* response = check_and_cast<
+                                       ^
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc
+In file included from applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:16:0:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+applications/mcoa/udpbase/MCoAUDPBase.cc
+applications/mcoa/udpbase/MCoAUDPBase.cc:233:7: warning: "/*" within comment [-Wcomment]
+       /*
+ ^
+applications/mcoa/udpbase/MCoAUDPBase.cc:244:6: warning: "/*" within comment [-Wcomment]
+      /*
+ ^
+applications/mcoa/udpbase/MCoAUDPBase.cc:254:8: warning: "/*" within comment [-Wcomment]
+        /*
+ ^
+applications/mcoa/udpbase/MCoAUDPBase.cc: In member function ‘virtual void MCoAUDPBase::sendToUDPMCOA(cPacket*, int, const IPvXAddress&, int, bool)’:
+applications/mcoa/udpbase/MCoAUDPBase.cc:210:17: warning: unused variable ‘msg1’ [-Wunused-variable]
+        cPacket *msg1 = msg->dup();
+                 ^
+linklayer/radio/Ieee80211Radio.cc
+In file included from base/Coord.h:26:0,
+                 from linklayer/mfcore/AirFrame_m.h:18,
+                 from world/ChannelAccess.h:26,
+                 from linklayer/radio/AbstractRadio.h:22,
+                 from linklayer/radio/Ieee80211Radio.h:22,
+                 from linklayer/radio/Ieee80211Radio.cc:19:
+util/FWMath.h: In static member function ‘static double FWMath::div(double, double)’:
+util/FWMath.h:69:14: warning: variable ‘f’ set but not used [-Wunused-but-set-variable]
+       double f;
+              ^
+networklayer/ipv6/IPv6.cc
+In file included from networklayer/ipv6/IPv6.h:38:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTableAccess.h:23:16: warning: extra tokens at end of #ifndef directive [enabled by default]
+ #ifndef __FLOW BINDING TABLE ACCESS_H__
+                ^
+In file included from networklayer/ipv6/IPv6.h:31:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+In file included from networklayer/ipv6/IPv6.h:37:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+networklayer/xmipv6/xMIPv6.cc
+In file included from networklayer/xmipv6/xMIPv6.cc:23:0:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘virtual void xMIPv6::createAndSendBUMessage(const IPv6Address&, InterfaceEntry*, uint, uint, int, MobOption_Binding_AuthorizationData*, MobilityBIDOptions*, int)’:
+networklayer/xmipv6/xMIPv6.cc:1448:7: error: expected primary-expression before ‘<<’ token
+       << " for CoA "<< keyMCoA.getAddr() << " and sequenceNumber " << bu->getSequence()   <<  endl;
+       ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateBUMessage(BindingUpdate*, IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:2398:10: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+      NULL);
+          ^
+networklayer/xmipv6/xMIPv6.cc:2476:12: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+       NULL );
+            ^
+networklayer/xmipv6/xMIPv6.cc:2512:10: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+     NULL );
+          ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateBAck(const BindingAcknowledgement&, const IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:3193:18: warning: unused variable ‘ie’ [-Wunused-variable]
+  InterfaceEntry *ie = ift->getInterfaceById( ctrlInfo->getInterfaceId() );
+                  ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateHoTMessage(const HomeTest&, const IPv6ControlInfo*, InterfaceEntry*)’:
+networklayer/xmipv6/xMIPv6.cc:4325:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if ( bulEntry->cookieHoTI != HoT.getHomeInitCookie() )
+                                                     ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::cancelTimerIfEntry2(std::map<xMIPv6::KeyTimer, xMIPv6::TimerIfEntry*>::iterator&)’:
+networklayer/xmipv6/xMIPv6.cc:4823:24: warning: unused variable ‘buIfEntry’ [-Wunused-variable]
+     BUTransmitIfEntry *buIfEntry = (BUTransmitIfEntry*) entry;
+                        ^
+networklayer/xmipv6/xMIPv6.cc:4828:25: warning: unused variable ‘tokEntry’ [-Wunused-variable]
+     TokenExpiryIfEntry *tokEntry = (TokenExpiryIfEntry*) entry;
+                         ^
+networklayer/xmipv6/xMIPv6.cc:4819:14: warning: unused variable ‘aux’ [-Wunused-variable]
+    cMessage* aux = cancelEvent(entry->timer);
+              ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘void xMIPv6::cancelEntries(int, IPv6Address&, int)’:
+networklayer/xmipv6/xMIPv6.cc:5149:18: warning: unused variable ‘ie’ [-Wunused-variable]
+  InterfaceEntry* ie = ift->getInterfaceById(interfaceId);
+                  ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘std::map<xMIPv6::KeyTimer, xMIPv6::TimerIfEntry*>::iterator xMIPv6::ftimer(xMIPv6::KeyTimer)’:
+networklayer/xmipv6/xMIPv6.cc:6177:10: warning: statement has no effect [-Wunused-value]
+  for (pos; pos != transmitIfList.end(); pos++){
+          ^
+make[1]: *** [../out/gcc-debug/src/networklayer/xmipv6/xMIPv6.o] Fehler 1
+make: *** [all] Fehler 2
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+11:36:33 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:36:33 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:36:47 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+networklayer/xmipv6/xMIPv6.cc
+In file included from networklayer/xmipv6/xMIPv6.cc:23:0:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘virtual void xMIPv6::processBUMessage(BindingUpdate*, IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:1720:8: warning: variable ‘buBID’ set but not used [-Wunused-but-set-variable]
+    int buBID;
+        ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateBUMessage(BindingUpdate*, IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:2398:10: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+      NULL);
+          ^
+networklayer/xmipv6/xMIPv6.cc:2476:12: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+       NULL );
+            ^
+networklayer/xmipv6/xMIPv6.cc:2512:10: warning: passing NULL to non-pointer argument 1 of ‘SimTime::SimTime(double)’ [-Wconversion-null]
+     NULL );
+          ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateBAck(const BindingAcknowledgement&, const IPv6ControlInfo*)’:
+networklayer/xmipv6/xMIPv6.cc:3192:14: warning: variable ‘destAddress’ set but not used [-Wunused-but-set-variable]
+  IPv6Address destAddress  = ctrlInfo->getDestAddr();
+              ^
+networklayer/xmipv6/xMIPv6.cc:3193:18: warning: unused variable ‘ie’ [-Wunused-variable]
+  InterfaceEntry *ie = ift->getInterfaceById( ctrlInfo->getInterfaceId() );
+                  ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::validateHoTMessage(const HomeTest&, const IPv6ControlInfo*, InterfaceEntry*)’:
+networklayer/xmipv6/xMIPv6.cc:4325:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  if ( bulEntry->cookieHoTI != HoT.getHomeInitCookie() )
+                                                     ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘bool xMIPv6::cancelTimerIfEntry2(std::map<xMIPv6::KeyTimer, xMIPv6::TimerIfEntry*>::iterator&)’:
+networklayer/xmipv6/xMIPv6.cc:4823:24: warning: unused variable ‘buIfEntry’ [-Wunused-variable]
+     BUTransmitIfEntry *buIfEntry = (BUTransmitIfEntry*) entry;
+                        ^
+networklayer/xmipv6/xMIPv6.cc:4828:25: warning: unused variable ‘tokEntry’ [-Wunused-variable]
+     TokenExpiryIfEntry *tokEntry = (TokenExpiryIfEntry*) entry;
+                         ^
+networklayer/xmipv6/xMIPv6.cc:4817:13: warning: variable ‘key’ set but not used [-Wunused-but-set-variable]
+    KeyTimer key = pos->first;
+             ^
+networklayer/xmipv6/xMIPv6.cc:4819:14: warning: unused variable ‘aux’ [-Wunused-variable]
+    cMessage* aux = cancelEvent(entry->timer);
+              ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘void xMIPv6::cancelEntries(int, IPv6Address&, int)’:
+networklayer/xmipv6/xMIPv6.cc:5149:18: warning: unused variable ‘ie’ [-Wunused-variable]
+  InterfaceEntry* ie = ift->getInterfaceById(interfaceId);
+                  ^
+networklayer/xmipv6/xMIPv6.cc: In member function ‘std::map<xMIPv6::KeyTimer, xMIPv6::TimerIfEntry*>::iterator xMIPv6::ftimer(xMIPv6::KeyTimer)’:
+networklayer/xmipv6/xMIPv6.cc:6177:10: warning: statement has no effect [-Wunused-value]
+  for (pos; pos != transmitIfList.end(); pos++){
+          ^
+transport/sctp/SCTP.cc
+transport/sctp/SCTP.cc: In member function ‘virtual void SCTP::handleMessage(cMessage*)’:
+transport/sctp/SCTP.cc:183:17: error: ‘UDPControlInfo’ is not a member of ‘std’
+                 std:: //cout <<" Laenge SCTPMSG="<<sctpmsg->getByteLength()<<"\n";
+                 ^
+transport/sctp/SCTP.cc:183:17: note: suggested alternative:
+In file included from transport/contract/UDPSocket.h:23:0,
+                 from transport/sctp/SCTP.h:29,
+                 from transport/sctp/SCTP.cc:20:
+transport/contract/UDPControlInfo_m.h:73:7: note:   ‘UDPControlInfo’
+ class UDPControlInfo : public ::cObject
+       ^
+transport/sctp/SCTP.cc:184:33: error: ‘ctrl’ was not declared in this scope
+                 UDPControlInfo *ctrl = check_and_cast<UDPControlInfo *>(msg->removeControlInfo());
+                                 ^
+transport/sctp/SCTP.cc:188:17: error: ‘std::std’ has not been declared
+                 std:: //cout <<" VTag="<<sctpmsg->getTag()<<"\n";
+                 ^
+transport/sctp/SCTP.cc:189:13: error: expected unqualified-id before ‘}’ token
+             }
+             ^
+transport/sctp/SCTP.cc:189:13: error: expected ‘;’ before ‘}’ token
+transport/sctp/SCTP.cc: In member function ‘void SCTP::sendAbortFromMain(SCTPMessage*, IPvXAddress, IPvXAddress)’:
+transport/sctp/SCTP.cc:350:9: error: ‘UDPControlInfo’ is not a member of ‘std’
+         std:: //cout <<" VTag="<<msg->getTag()<<"\n";
+         ^
+transport/sctp/SCTP.cc:350:9: note: suggested alternative:
+In file included from transport/contract/UDPSocket.h:23:0,
+                 from transport/sctp/SCTP.h:29,
+                 from transport/sctp/SCTP.cc:20:
+transport/contract/UDPControlInfo_m.h:73:7: note:   ‘UDPControlInfo’
+ class UDPControlInfo : public ::cObject
+       ^
+transport/sctp/SCTP.cc:351:25: error: ‘ctrl’ was not declared in this scope
+         UDPControlInfo *ctrl = new UDPControlInfo();
+                         ^
+make[1]: *** [../out/gcc-debug/src/transport/sctp/SCTP.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:36:50 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:36:50 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:37:15 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+transport/sctp/SCTP.cc
+transport/sctp/SCTP.cc: In member function ‘void SCTP::sendAbortFromMain(SCTPMessage*, IPvXAddress, IPvXAddress)’:
+transport/sctp/SCTP.cc:350:9: error: ‘UDPControlInfo’ is not a member of ‘std’
+         std:: //cout <<" VTag="<<msg->getTag()<<"\n";
+         ^
+transport/sctp/SCTP.cc:350:9: note: suggested alternative:
+In file included from transport/contract/UDPSocket.h:23:0,
+                 from transport/sctp/SCTP.h:29,
+                 from transport/sctp/SCTP.cc:20:
+transport/contract/UDPControlInfo_m.h:73:7: note:   ‘UDPControlInfo’
+ class UDPControlInfo : public ::cObject
+       ^
+transport/sctp/SCTP.cc:351:25: error: ‘ctrl’ was not declared in this scope
+         UDPControlInfo *ctrl = new UDPControlInfo();
+                         ^
+make[1]: *** [../out/gcc-debug/src/transport/sctp/SCTP.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:37:15 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:37:16 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:37:28 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+transport/sctp/SCTP.cc
+transport/udp/UDP.cc
+util/TCPDump.cc
+util/TCPDump.cc: In member function ‘void TCPDumper::sctpDump(const char*, SCTPMessage*, const string&, const string&, const char*)’:
+util/TCPDump.cc:302:34: warning: variable ‘parameterType’ set but not used [-Wunused-but-set-variable]
+                           uint32 parameterType;
+                                  ^
+util/TCPDump.cc: In member function ‘virtual void TCPDump::handleMessage(cMessage*)’:
+util/TCPDump.cc:625:9: error: expected unqualified-id before ‘}’ token
+         }
+         ^
+util/TCPDump.cc:625:9: error: expected ‘;’ before ‘}’ token
+make[1]: *** [../out/gcc-debug/src/util/TCPDump.o] Fehler 1
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make: *** [all] Fehler 2
+11:37:31 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:37:31 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:37:44 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+util/TCPDump.cc
+util/TCPDump.cc: In member function ‘void TCPDumper::sctpDump(const char*, SCTPMessage*, const string&, const string&, const char*)’:
+util/TCPDump.cc:302:34: warning: variable ‘parameterType’ set but not used [-Wunused-but-set-variable]
+                           uint32 parameterType;
+                                  ^
+Creating shared library: ../out/gcc-debug/src/libinet.so
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+11:37:48 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:37:48 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:38:46 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc
+In file included from applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:16:0:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+networklayer/ipv6/IPv6.cc
+In file included from networklayer/ipv6/IPv6.h:38:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTableAccess.h:23:16: warning: extra tokens at end of #ifndef directive [enabled by default]
+ #ifndef __FLOW BINDING TABLE ACCESS_H__
+                ^
+In file included from networklayer/ipv6/IPv6.h:31:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+In file included from networklayer/ipv6/IPv6.h:37:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+Creating shared library: ../out/gcc-debug/src/libinet.so
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+11:38:50 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:38:51 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+opp_makedep: warning: no input files
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:40:02 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc
+In file included from applications/mcoa/proxy_enhanced/modules/FlowBindingTable.cc:16:0:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+networklayer/ipv6/IPv6.cc
+In file included from networklayer/ipv6/IPv6.h:38:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTableAccess.h:23:16: warning: extra tokens at end of #ifndef directive [enabled by default]
+ #ifndef __FLOW BINDING TABLE ACCESS_H__
+                ^
+In file included from networklayer/ipv6/IPv6.h:31:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+networklayer/xmipv6/xMIPv6.h:136:45: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+  std::string lastSendToFlowBindingAddress = "0:0:0:0:0:0:0:0";//just for the beginning
+                                             ^
+In file included from networklayer/ipv6/IPv6.h:37:0,
+                 from networklayer/ipv6/IPv6.cc:20:
+applications/mcoa/proxy_enhanced/modules/FlowBindingTable.h:42:28: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+     int localHostCounter = 0;
+                            ^
+Creating shared library: ../out/gcc-debug/src/libinet.so
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+11:40:06 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:40:06 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:48:33 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+11:48:34 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:48:35 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+11:49:44 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+11:49:44 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+11:49:45 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+12:07:42 **** Incremental Build of configuration gcc-debug for project mCoAplus_v02_2011_with_Statistics ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/src'
+12:07:43 **** Incremental Build of configuration gcc-debug for project testMCoA_v2_2011 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+Creating executable: ../out/gcc-debug//src/testMCoA_v2_2011
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/testMCoA_v2_2011/src'
+12:07:46 **** Incremental Build of configuration gcc-debug for project test_zum_Anpassen_der_App ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && opp_makemake -f --deep
+Creating Makefile in /home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src...
+Makefile created, running "make depend" to add dependencies...
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating dependencies...
+opp_makedep: warning: no input files
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+cd src && make
+make[1]: Betrete Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'
+Creating executable: ../out/gcc-debug//src/test_zum_Anpassen_der_App
+make[1]: Verlasse Verzeichnis '/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src'

@@ -37,7 +37,7 @@ Define_Module(Proxy_Enhanced_MCoAVideoCli);
 
 void Proxy_Enhanced_MCoAVideoCli::initialize() {
     //PROXY UNLOADING FJ
-    cout << "Initializing Proxy_Enhanced_MCoAVideoCli module" << endl;
+     //cout << "Initializing Proxy_Enhanced_MCoAVideoCli module" << endl;
     startTime = par("startTime");
     seq_number_counter = 0;
     waitInterval = &par("waitInterval");
@@ -85,7 +85,7 @@ void Proxy_Enhanced_MCoAVideoCli::handleMessage(cMessage* msg) {
             return; // and that's it!
         }
         if (msg->getKind() == PROXY_CONTEXT_START) {
-            cout << "!! Proxying Context Started !!" << endl;
+             //cout << "!! Proxying Context Started !!" << endl;
             sendControlData(msg);
 
         }
@@ -100,15 +100,15 @@ void Proxy_Enhanced_MCoAVideoCli::handleMessage(cMessage* msg) {
         if (dynamic_cast<VideoMessage*>(msg)) {
 
             VideoMessage* currentVideoMessage = dynamic_cast<VideoMessage*>(msg);
-            cout << "MCoAClient " << MCoAUDPBase::getHumanReadabelName()
-                    << ": Video Message from Server ist eingegangen mit sequence number: "
-                    << currentVideoMessage->getSequenceNumber() << endl;
+             //cout << "MCoAClient " << MCoAUDPBase::getHumanReadabelName()
+                   // << ": Video Message from Server ist eingegangen mit sequence number: "
+                  //  << currentVideoMessage->getSequenceNumber() << endl;
 
             UDPControlInfo* myControllInfo = check_and_cast<UDPControlInfo*>(
                     msg->getControlInfo());
             IPvXAddress srcIPAdresse = myControllInfo->getSrcAddr();
-            cout << "MCoAClient: Absender des Pakets war: " << srcIPAdresse
-                    << endl;
+             //cout << "MCoAClient: Absender des Pakets war: " << srcIPAdresse
+                    //<< endl;
 
             if (currentVideoMessage->getSequenceNumber()
                     >= seq_number_counter) {
@@ -143,14 +143,14 @@ void Proxy_Enhanced_MCoAVideoCli::handleMessage(cMessage* msg) {
                 return;
             }
 
-            cout << "Sequenz Nummer war bereits zu klein" << endl;
+             //cout << "Sequenz Nummer war bereits zu klein" << endl;
             delete msg;
 
         }
 
         else {
-            cout << "MCoAClient of " << MCoAUDPBase::getHumanReadabelName()
-                    << " received unkown message: " << msg->getName() << endl;
+             //cout << "MCoAClient of " << MCoAUDPBase::getHumanReadabelName()
+                    //<< " received unkown message: " << msg->getName() << endl;
 
         }
     }
@@ -162,7 +162,7 @@ void Proxy_Enhanced_MCoAVideoCli::sendControlData(cMessage* msg) {
     //MNs are distributed evenly over all the available CNs
     IPvXAddress cn;
     int addressNumber = mobileNodeNumber % amountOfCareOfNodes;
-cout<<"Mobile Node Number: "<<mobileNodeNumber<<"% amountOfCareOfNodes: "<<amountOfCareOfNodes<<" = "<<addressNumber<<endl;
+ //cout <<" Mobile Node Number: "<<mobileNodeNumber<<"% amountOfCareOfNodes: "<<amountOfCareOfNodes<<" = "<<addressNumber<<endl;
     std::stringstream address;
     address << "CN[" << addressNumber << "]";
 

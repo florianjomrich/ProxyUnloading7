@@ -113,7 +113,7 @@ void RTPReceiverInfo::processRTPPacket(RTPPacket *packet,int id, simtime_t arriv
             _packetLostOutVector.record(packet->getSequenceNumber() - _highestSequenceNumber -1);
             for (int i = _highestSequenceNumber+1; i< packet->getSequenceNumber(); i++ )
             {
-                //std::cout << "id = "<< id <<" SequeceNumber loss = "<<i<<endl;
+                //std:: //cout << "id = "<< id <<" SequeceNumber loss = "<<i<<endl;
                 packetSequenceLostLogFile = fopen ("PacketLossLog.log","+w");
                 if (packetSequenceLostLogFile != NULL)
                 {

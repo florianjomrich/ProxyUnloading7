@@ -1,0 +1,182 @@
+//
+// Copyright (C) 2010 Bruno Sousa
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program; if not, see <http://www.gnu.org/licenses/>.
+//
+
+#include "Proxy_Enhanced_MCoAVideoSrv.h"
+#include "UDPControlInfo_m.h"
+#include "IPAddressResolver.h"
+#include "RequestVideoStream_m.h"
+#include "VideoMessage_m.h"
+
+#define CN_APP_MESSAGE 50
+#define PROXY_MESSAGE_FROM_CN_TO_MN 51
+#define SEND_VIDEO_NOW 148
+
+using std::cout;
+
+Define_Module(Proxy_Enhanced_MCoAVideoSrv);
+
+inline std::ostream& operator<<(std::ostream& out, const Proxy_Enhanced_MCoAVideoSrv::VideoStreamData& d) {
+    out << "client=" << d.clientAddr << ":" << d.clientPort
+        << "  size=" << d.videoSize << "  pksent=" << d.numPkSent << "  bytesleft=" << d.bytesLeft;
+    return out;
+}
+Proxy_Enhanced_MCoAVideoSrv::Proxy_Enhanced_MCoAVideoSrv() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Proxy_Enhanced_MCoAVideoSrv::~Proxy_Enhanced_MCoAVideoSrv() {
+	// TODO Auto-generated destructor stub
+	for (unsigned int i=0; i<streamVector.size(); i++)
+	        delete streamVector[i];
+}
+
+void Proxy_Enhanced_MCoAVideoSrv::initialize()
+{
+    cout<<"Initializing Proxy_Enhanced_MCoAVideoSrv module"<<endl;
+
+	MCoAUDPBase::startMCoAUDPBase();
+
+    waitInterval = &par("waitInterval");
+    packetLen = &par("packetLen");
+    videoSize = &par("videoSize");
+    localPort = par("localPort");
+    int destPort = par("destPort");
+    int correspondentNodeNumber = par("correspondentNodeNumber");
+    //PROXY UNLOADING
+    simtime_t startTime = par("startTime");
+    seq_number_counter = 0;
+
+
+    const char *address = par("destAddresses");
+	IPvXAddress cliAddr = IPAddressResolver().resolve(address);
+	if (cliAddr.isUnspecified())
+	{
+		EV << "Client address is unspecified, skip sending video stream request\n";
+		return;
+	}
+
+    WATCH_PTRVECTOR(streamVector);
+
+    bindToPort(localPort);
+
+    PktSent.setName("MCOA VIDEO Packet Sent");
+
+
+
+    //Support only for one client... extend if needed
+    //FIXME:
+    VideoStreamData *d = new VideoStreamData;
+	d->clientAddr = cliAddr;
+	d->clientPort = destPort;
+	d->videoSize = (*videoSize);
+	d->bytesLeft = d->videoSize;
+	d->numPkSent = 0;
+	d->seqTx = 0; //First Request
+	streamVector.push_back(d);
+
+
+   /* if (startTime>=0){
+    	cMessage *timer = new cMessage("UDPVideoStart");
+    	timer->setName("Proxy_Context_Message");
+		//timer->setContextPointer(d);
+		scheduleAt(startTime, timer);
+    } */
+
+   // cMessage *hurz = new cMessage("HURZ");
+   // hurz->setKind(PROXY_CN_MESSAGE_TO_MOBILE_NODE);
+   // scheduleAt(hurzTime,hurz);
+}
+
+void Proxy_Enhanced_MCoAVideoSrv::finish()
+{
+    //recordScalar("streams served", numStreams);
+    //recordScalar("packets sent", numPkSent);
+}
+
+void Proxy_Enhanced_MCoAVideoSrv::handleMessage(cMessage *msg)
+{
+    if (msg->isSelfMessage())
+    {
+    	if (msg->getKind() == MK_REMOVE_ADDRESS_PAIR ){
+			MCoAUDPBase::treatMessage(msg);
+
+			return; // and that's it!
+		}
+
+    	if (msg->getKind() == SEND_VIDEO_NOW){
+    	    sendStreamData(msg);
+    	}
+
+
+
+
+    }
+
+    else{
+
+        if(dynamic_cast<RequestVideoStream*>(msg)){
+            cout<<"MCoASrv of" << MCoAUDPBase::getHumanReadabelName()<<": Request for sending Video received"<<endl;
+
+            RequestVideoStream* requestForVideoStream =  dynamic_cast<RequestVideoStream*>(msg);
+
+            //Auslesen der Controll-Informationen - SRC und DEST IP usw. usf. zum Umsetzen des FlowSource_IP-Adressen-Konzeptes
+            UDPControlInfo* myControllInfo = check_and_cast<UDPControlInfo*>(msg->getControlInfo());
+            IPvXAddress srcIPAdresse = myControllInfo->getSrcAddr();
+            cout<<"MCoASrv received Video-Request from SRC-IP-Adress: "<<srcIPAdresse<<" with sequence number:"<<requestForVideoStream->getSequenceNumber()<<endl;
+            //TODO das hier noch mal fixen, das korrekt Daten gesendet werden dann
+
+
+
+            //Delay the sending process, because of the control flow app having to work as well
+              requestForVideoStream->setKind(SEND_VIDEO_NOW);
+              simtime_t interval = (*waitInterval);
+              scheduleAt(simTime()+interval, requestForVideoStream);
+
+
+
+
+
+        }
+
+    }
+
+
+}
+
+void Proxy_Enhanced_MCoAVideoSrv::sendStreamData(cMessage *msg)
+{
+    RequestVideoStream* requestForVideoStream =  dynamic_cast<RequestVideoStream*>(msg);
+
+    UDPControlInfo* myControllInfo = check_and_cast<UDPControlInfo*>(msg->getControlInfo());
+                IPvXAddress srcIPAdresse = myControllInfo->getSrcAddr();
+
+		cout<<"MCoASrv of " << MCoAUDPBase::getHumanReadabelName()<<": Src Adresse, an die Video geschickt wird: "<<myControllInfo->getSrcAddr()<<" mit SourcePort: "<<myControllInfo->getSrcPort()<<endl;
+
+		VideoMessage* newVideoData = new VideoMessage();
+		newVideoData->setName("Video Datei vom VideoSrv");
+		newVideoData->setSequenceNumber(requestForVideoStream->getSequenceNumber());
+
+		cout<<"MCoASrv-SimTime: "<<simTime()<<endl;
+		sendToUDPMCOA(newVideoData, localPort,  myControllInfo->getSrcAddr() ,myControllInfo->getSrcPort(), true); //HIER GIBT ES PROBLEME !!!
+
+
+
+		delete msg;
+
+}
+

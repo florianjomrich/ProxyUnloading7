@@ -317,7 +317,7 @@ void Ieee80211Mac::handleCommand(cMessage *msg)
 
 void Ieee80211Mac::handleLowerMsg(cPacket *msg)
 {
-  //  cout << "received message from lower layer: " << msg << endl;
+  //   //cout << "received message from lower layer: " << msg << endl;
 
     nb->fireChangeNotification(NF_LINK_FULL_PROMISCUOUS, msg);
     if (msg->getControlInfo())

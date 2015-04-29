@@ -300,7 +300,7 @@ void AbstractRadioExtended::sendUp(AirFrameExtended *airframe) {
 
 
     delete airframe;
-    //cout << "sending up frame " << frame->getName() << endl;
+    // //cout << "sending up frame " << frame->getName() << endl;
     send(frame, uppergateOut);
 }
 

@@ -47,7 +47,7 @@ Proxy_Enhanced_MCoAVideoSrv::~Proxy_Enhanced_MCoAVideoSrv() {
 
 void Proxy_Enhanced_MCoAVideoSrv::initialize()
 {
-    cout<<"Initializing Proxy_Enhanced_MCoAVideoSrv module"<<endl;
+     //cout <<" Initializing Proxy_Enhanced_MCoAVideoSrv module"<<endl;
 
 	MCoAUDPBase::startMCoAUDPBase();
 
@@ -130,14 +130,14 @@ void Proxy_Enhanced_MCoAVideoSrv::handleMessage(cMessage *msg)
     else{
 
         if(dynamic_cast<RequestVideoStream*>(msg)){
-            cout<<"MCoASrv of" << MCoAUDPBase::getHumanReadabelName()<<": Request for sending Video received"<<endl;
+             //cout <<" MCoASrv of" << MCoAUDPBase::getHumanReadabelName()<<": Request for sending Video received"<<endl;
 
             RequestVideoStream* requestForVideoStream =  dynamic_cast<RequestVideoStream*>(msg);
 
             //Auslesen der Controll-Informationen - SRC und DEST IP usw. usf. zum Umsetzen des FlowSource_IP-Adressen-Konzeptes
             UDPControlInfo* myControllInfo = check_and_cast<UDPControlInfo*>(msg->getControlInfo());
             IPvXAddress srcIPAdresse = myControllInfo->getSrcAddr();
-            cout<<"MCoASrv received Video-Request from SRC-IP-Adress: "<<srcIPAdresse<<" with sequence number:"<<requestForVideoStream->getSequenceNumber()<<endl;
+             //cout <<" MCoASrv received Video-Request from SRC-IP-Adress: "<<srcIPAdresse<<" with sequence number:"<<requestForVideoStream->getSequenceNumber()<<endl;
             //TODO das hier noch mal fixen, das korrekt Daten gesendet werden dann
 
 
@@ -165,13 +165,13 @@ void Proxy_Enhanced_MCoAVideoSrv::sendStreamData(cMessage *msg)
     UDPControlInfo* myControllInfo = check_and_cast<UDPControlInfo*>(msg->getControlInfo());
                 IPvXAddress srcIPAdresse = myControllInfo->getSrcAddr();
 
-		cout<<"MCoASrv of " << MCoAUDPBase::getHumanReadabelName()<<": Src Adresse, an die Video geschickt wird: "<<myControllInfo->getSrcAddr()<<" mit SourcePort: "<<myControllInfo->getSrcPort()<<endl;
+		// //cout <<" MCoASrv of " << MCoAUDPBase::getHumanReadabelName()<<": Src Adresse, an die Video geschickt wird: "<<myControllInfo->getSrcAddr()<<" mit SourcePort: "<<myControllInfo->getSrcPort()<<endl;
 
 		VideoMessage* newVideoData = new VideoMessage();
 		newVideoData->setName("Video Datei vom VideoSrv");
 		newVideoData->setSequenceNumber(requestForVideoStream->getSequenceNumber());
 
-		cout<<"MCoASrv-SimTime: "<<simTime()<<endl;
+		// //cout <<" MCoASrv-SimTime: "<<simTime()<<endl;
 		sendToUDPMCOA(newVideoData, localPort,  myControllInfo->getSrcAddr() ,myControllInfo->getSrcPort(), true); //HIER GIBT ES PROBLEME !!!
 
 

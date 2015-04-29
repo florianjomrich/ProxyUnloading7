@@ -2074,7 +2074,7 @@ void SCTPAssociation::pmRttMeasurement(SCTPPathVariables* path,
                                           (double)sctpMain->par("rtoMin"));
             }
 /*
-            std::cout << simTime() << ": Updating timer values for path " << path->remoteAddress << ":"
+            std:: //cout << simTime() << ": Updating timer values for path " << path->remoteAddress << ":"
                       << " RTO="              << path->pathRto
                       << " rttEstimation=" << rttEstimation
                       << " SRTT="             << path->srtt

@@ -43,7 +43,7 @@ Define_Module(Proxy_Unloading_Control_App);
 
 void Proxy_Unloading_Control_App::initialize() {
     //PROXY UNLOADING FJ
-    cout << "Initializing Proxy_Unloading_Control_App module" << endl;
+     //cout << "Initializing Proxy_Unloading_Control_App module" << endl;
     isMN = par("isMN");
     isHA = par("isHA");
     isCN = par("isCN");
@@ -130,7 +130,7 @@ void Proxy_Unloading_Control_App::finish() {
 }
 
 void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
-    // cout << "PROXY CONTROL APP of " << humanReadableName
+    //  //cout << "PROXY CONTROL APP of " << humanReadableName
     //    << " received a message" << endl;
 
     if (msg->isSelfMessage()) {
@@ -143,9 +143,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
                         requestForConnectionToSend.front();
 
                 IPvXAddress ha = IPAddressResolver().resolve("HA");
-                cout << humanReadableName
-                        << ": RequetConnectionToLegacyServer Liste war nicht leer - zu sendender Request an: "
-                        << nextRequestToSend->getDestAddress() << endl;
+                 //cout << humanReadableName
+                       // << ": RequetConnectionToLegacyServer Liste war nicht leer - zu sendender Request an: "
+                       // << nextRequestToSend->getDestAddress() << endl;
                 sendToUDPMCOA(nextRequestToSend->dup(), localPort, ha, 2000,
                         true);
 
@@ -174,10 +174,10 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
                     FlowBindingUpdate* nextToSendFlowBindingUpdate =
                             flowBindingUpdatesToSend.front();
 
-                    cout << humanReadableName
-                            << ": FlowBindingUpdate Liste war nicht leer - zu sendende CoA:"
-                            << nextToSendFlowBindingUpdate->getNewCoAdress()
-                            << endl;
+                     //cout << humanReadableName
+                          //  << ": FlowBindingUpdate Liste war nicht leer - zu sendende CoA:"
+                          //  << nextToSendFlowBindingUpdate->getNewCoAdress()
+                           // << endl;
 
                     //get Home Agents correct address:
                     RoutingTable6* rt6 = RoutingTable6Access().get();
@@ -189,10 +189,10 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
                     FlowBindingUpdate* nextToSendFlowBindingUpdate =
                             flowBindingUpdatesToSend.front();
 
-                    cout << humanReadableName
-                            << ": FlowBindingUpdate Liste war nicht leer - zu sendende CoA:"
-                            << nextToSendFlowBindingUpdate->getNewCoAdress()
-                            << endl;
+                     //cout << humanReadableName
+                          //  << ": FlowBindingUpdate Liste war nicht leer - zu sendende CoA:"
+                          //  << nextToSendFlowBindingUpdate->getNewCoAdress()
+                          //  << endl;
 
                     IPvXAddress dest = IPvXAddress();
                     dest.set(nextToSendFlowBindingUpdate->getCNDestAddress());
@@ -215,9 +215,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
 
             if (isMN) {
 
-                cout << humanReadableName
-                        << ": new SetAddressActive Message to be scheduled."
-                        << endl;
+                 //cout << humanReadableName
+                      //  << ": new SetAddressActive Message to be scheduled."
+                      //  << endl;
 
                 //insert into waiting queue
 
@@ -249,9 +249,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
                     //send the Message again
                     RoutingTable6* rt6 = RoutingTable6Access().get();
 
-                    cout << "SetAddressActive Nachricht gesendet von "
-                            << humanReadableName << " zur Zeit: " << simTime()
-                            << endl;
+                     //cout << "SetAddressActive Nachricht gesendet von "
+                           // << humanReadableName << " zur Zeit: " << simTime()
+                           // << endl;
                     sendToUDPMCOA(setAddressActiveMessageToSend->dup(),
                             localPort, rt6->getHomeNetHA_adr(), 2000, true);
 
@@ -314,12 +314,12 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
                         rt6->getHomeNetHA_adr(), 2000, true);
                 }
 
-                cout << humanReadableName
-                        << ": sends new Strongest Signal Info For the HA and the CN to update their Flow Binding Tables."
-                        << " HomeAddressOfMN: "
-                        << newChannelToSetActive->getHomeAddressOfMN()
-                        << " ChannelNumber: "
-                        << newChannelToSetActive->getChannelNumber() << endl;
+                 //cout << humanReadableName
+                      //  << ": sends new Strongest Signal Info For the HA and the CN to update their Flow Binding Tables."
+                     //   << " HomeAddressOfMN: "
+                     //   << newChannelToSetActive->getHomeAddressOfMN()
+                      //  << " ChannelNumber: "
+                      //  << newChannelToSetActive->getChannelNumber() << endl;
 
                 //reset for next signal update to be send
                 AccessPointWithGreatestReceivedSignalStrengthSoFar = "";
@@ -338,9 +338,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
 
             if (isMN) {
 
-                cout << "Netzwerkschicht des " << humanReadableName
-                        << " meldet ein Paket, dessen Server noch nicht auf ProxyUnloading-Funktionalität hin überprüft wurde"
-                        << endl;
+                 //cout << "Netzwerkschicht des " << humanReadableName
+                       // << " meldet ein Paket, dessen Server noch nicht auf ProxyUnloading-Funktionalität hin überprüft wurde"
+                     //   << endl;
 
                 RequetConnectionToLegacyServer* messageAnHA = check_and_cast<
                         RequetConnectionToLegacyServer *>(msg);
@@ -378,13 +378,13 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
 
                 RequetConnectionToLegacyServer* messageFromHA = check_and_cast<
                         RequetConnectionToLegacyServer *>(msg);
-                cout << "Nun hat auch " << humanReadableName
-                        << " mit der Adresse: "
-                        << messageFromHA->getDestAddress()
-                        << " die RequestConnectionToLegacyServer-Nachricht erhalten"
-                        << endl;
-                cout << "Ursprünglicher Absender war: "
-                        << messageFromHA->getSrcAddress() << endl;
+                 //cout << "Nun hat auch " << humanReadableName
+                      //  << " mit der Adresse: "
+                      //  << messageFromHA->getDestAddress()
+                      //  << " die RequestConnectionToLegacyServer-Nachricht erhalten"
+                      //  << endl;
+                 //cout << "Ursprünglicher Absender war: "
+                      //  << messageFromHA->getSrcAddress() << endl;
 
                 //update the FlowBindingTable with this Information now for later Processing - If CN is capable of dealing with the ProxyUnloading-Protocol
                 if (isCapableCN) {
@@ -420,9 +420,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
                 ACK_Request* messageACKfromCN = check_and_cast<ACK_Request *>(
                         msg);
 
-                cout << humanReadableName
-                        << " hat ein ACK_Request empfangen vom CN mit Absender Addresse: "
-                        << messageACKfromCN->getDestAddress() << endl;
+                 //cout << humanReadableName
+                      //  << " hat ein ACK_Request empfangen vom CN mit Absender Addresse: "
+                      //  << messageACKfromCN->getDestAddress() << endl;
 
                 //Update own table of the MN
                 send(messageACKfromCN->dup(), "uDPControllAppConnection$o");
@@ -449,9 +449,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
                 ACK_FlowBinding* messageACKfromCN = check_and_cast<
                         ACK_FlowBinding *>(msg);
 
-                cout << humanReadableName
-                        << " hat sein FlowBindingUpdate bestätigt bekommen von: "
-                        << messageACKfromCN->getSourceName() << endl;
+                 //cout << humanReadableName
+                       // << " hat sein FlowBindingUpdate bestätigt bekommen von: "
+                      //  << messageACKfromCN->getSourceName() << endl;
             }
             if (isHA) {
                 //remove the entry from the queue for no furthe
@@ -462,9 +462,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
                 ACK_FlowBinding* messageACKfromCN = check_and_cast<
                         ACK_FlowBinding *>(msg);
 
-                cout << humanReadableName
-                        << " hat sein FlowBindingUpdate bestätigt bekommen von: "
-                        << messageACKfromCN->getSourceName() << endl;
+                 //cout << humanReadableName
+                       // << " hat sein FlowBindingUpdate bestätigt bekommen von: "
+                       // << messageACKfromCN->getSourceName() << endl;
             }
             return;
         }
@@ -475,8 +475,8 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
             if (isMN) {
 
                 //New Binding Update message
-                cout << "Proxy Unloading Control App of " << humanReadableName
-                        << " sends " << "FlowBindingUpdate to HA" << endl;
+                 //cout << "Proxy Unloading Control App of " << humanReadableName
+                       // << " sends " << "FlowBindingUpdate to HA" << endl;
                 FlowBindingUpdate* messageFromIPLayer = check_and_cast<
                         FlowBindingUpdate *>(msg);
 
@@ -549,9 +549,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
 
                 FlowBindingUpdate* messageFromHA = check_and_cast<
                         FlowBindingUpdate *>(msg);
-                cout << humanReadableName
-                        << " hat nun auch das Flow-Binding-Update bekommen und aktualisiert damit seine Tabelle"
-                        << endl;
+                 //cout << humanReadableName
+                        //<< " hat nun auch das Flow-Binding-Update bekommen und aktualisiert damit seine Tabelle"
+                       // << endl;
 
                 //update of the own table of CN
                 send(messageFromHA, "uDPControllAppConnection$o");
@@ -597,9 +597,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
             if (isCN) {
                 SetAddressActive* messageFromHA = check_and_cast<
                         SetAddressActive*>(msg);
-                cout << "SetAddressActive Message ist beim "
-                        << humanReadableName << " eingegangen. Absender war: "
-                        << messageFromHA->getName() << endl;
+                 //cout << "SetAddressActive Message ist beim "
+                        //<< humanReadableName << " eingegangen. Absender war: "
+                        //<< messageFromHA->getName() << endl;
                 send(messageFromHA, "uDPControllAppConnection$o");
 
                 //acknowledge the received SetAddressActive Message
@@ -622,9 +622,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
 
                 ACK_SetAddressActive* response = check_and_cast<
                         ACK_SetAddressActive*>(msg);
-                cout << humanReadableName
-                        << " hat seine SetAddressActive Nachricht acknowledget bekommen vom HA"
-                        << endl;
+                 //cout << humanReadableName
+                       // << " hat seine SetAddressActive Nachricht acknowledget bekommen vom HA"
+                       // << endl;
                 if (!addresseToBeSetActive.empty()) {
                     addresseToBeSetActive.erase(addresseToBeSetActive.begin());
                 }
@@ -635,9 +635,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
 
                 ACK_SetAddressActive* response = check_and_cast<
                         ACK_SetAddressActive*>(msg);
-                cout << humanReadableName
-                        << " hat seine SetAddressActive Nachricht acknowledget bekommen vom "
-                        << response->getSourceName() << endl;
+                 //cout << humanReadableName
+                       // << " hat seine SetAddressActive Nachricht acknowledget bekommen vom "
+                       // << response->getSourceName() << endl;
                 if (!addresseToBeSetActive.empty()) {
                     addresseToBeSetActive.erase(addresseToBeSetActive.begin());
                 }
@@ -650,7 +650,7 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
         if (dynamic_cast<SignalUpdate*>(msg)) {
             if (isMN) {
                 SignalUpdate* signalUpdate = check_and_cast<SignalUpdate*>(msg);
-                // cout<<"Signal Update recieved !!! Access Point: "<<signalUpdate->getAccessPoint()<<" SignalStrength: "<<signalUpdate->getValueOfSNR() <<endl;
+                //  //cout <<" Signal Update recieved !!! Access Point: "<<signalUpdate->getAccessPoint()<<" SignalStrength: "<<signalUpdate->getValueOfSNR() <<endl;
 
                 if (greatestReceivedSignalStrengthSoFar
                         < signalUpdate->getValueOfSNR()) {
@@ -669,9 +669,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
             SetChannelActive* newChannelToSetActive = check_and_cast<
                     SetChannelActive*>(msg);
             if (isHA) {
-                cout << humanReadableName
-                        << " hat Signalstärke Update erhalten und aktualisiert sich selbst: "
-                        << newChannelToSetActive->getHomeAddressOfMN() << endl;
+                 //cout << humanReadableName
+                      //  << " hat Signalstärke Update erhalten und aktualisiert sich selbst: "
+                       // << newChannelToSetActive->getHomeAddressOfMN() << endl;
 
                 //update of the own table of CN
                 send(newChannelToSetActive->dup(),
@@ -694,9 +694,9 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
                 send(newChannelToSetActive->dup(),
                         "uDPControllAppConnection$o");
 
-                cout << humanReadableName
-                        << " hat Signalstärke update erhalten und aktualisiert sich selbst"
-                        << endl;
+                 //cout << humanReadableName
+                       // << " hat Signalstärke update erhalten und aktualisiert sich selbst"
+                       // << endl;
             }
 
             return;
@@ -706,19 +706,19 @@ void Proxy_Unloading_Control_App::handleMessage(cMessage* msg) {
 
         //otherwise the message is unkown and will only be outputed for debugging reasons
         if (isHA) {
-            cout << humanReadableName
-                    << " hat folgende unbekannte Nachricht erhalten:"
-                    << msg->getName() << endl;
+             //cout << humanReadableName
+                  //  << " hat folgende unbekannte Nachricht erhalten:"
+                  //  << msg->getName() << endl;
         }
 
         if (isCN)
-            cout << humanReadableName
-                    << " hat folgende unbekannte Nachricht erhalten:"
-                    << msg->getName() << endl;
+             //cout << humanReadableName
+                  //  << " hat folgende unbekannte Nachricht erhalten:"
+                  //  << msg->getName() << endl;
         if (isMN)
-            cout << humanReadableName
-                    << " hat folgende unbekannte Nachricht erhalten:"
-                    << msg->getName() << endl;
+             //cout << humanReadableName
+                   // << " hat folgende unbekannte Nachricht erhalten:"
+                  //  << msg->getName() << endl;
         return;
 
     }
@@ -738,8 +738,8 @@ void Proxy_Unloading_Control_App::sendChangeDataFlowMessage(
     //IPvXAddress ha = IPvXAddress();
     ha.set("2001:db8::2aa:1a2");
     //for(int i=0;i<1;i++){
-    cout << "SetAddressActive Nachricht gesendet von " << humanReadableName
-            << " zur Zeit: " << simTime() << endl;
+     //cout << "SetAddressActive Nachricht gesendet von " << humanReadableName
+           // << " zur Zeit: " << simTime() << endl;
     sendToUDPMCOA(addressToBeSetActive->dup(), localPort, ha, 2000, true);
     // }
 

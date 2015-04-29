@@ -164,7 +164,7 @@ void RoutingTable6::parseXMLConfigFile()
             if (opp_strcmp(ifTag->getTagName(),"interface")==0)
 				//	continue;
             {
-                    //std::cout << "Getting attribute: name" << endl;
+                    //std:: //cout << "Getting attribute: name" << endl;
                     const char *ifname = ifTag->getAttribute("name");
                     if (!ifname)
                         error("<interface> without name attribute at %s", child->getSourceLocation());

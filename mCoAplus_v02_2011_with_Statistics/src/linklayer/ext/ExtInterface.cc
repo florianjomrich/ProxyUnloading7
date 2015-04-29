@@ -203,7 +203,7 @@ void ExtInterface::updateDisplayString()
 
 void ExtInterface::finish()
 {
-    std::cout << getFullPath() << ": " << numSent << " packets sent, " <<
-            numRcvd << " packets received, " << numDropped <<" packets dropped.\n";
+    // std:: cout << getFullPath() << ": " << numSent << " packets sent, " <<
+    //      numRcvd << " packets received, " << numDropped <<" packets dropped.\n";
 }
 

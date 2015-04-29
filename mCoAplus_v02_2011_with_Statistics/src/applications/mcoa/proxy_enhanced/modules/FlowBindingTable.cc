@@ -141,7 +141,7 @@ void FlowBindingTable::insertNewFlowBindingEntry(
     newEntryToInsert.setSrcAddress(newRequest->getSrcAddress());
     newEntryToInsert.setDestPort(newRequest->getDestPort());
     newEntryToInsert.setSrcPort(newRequest->getSrcPort());
-    //cout << "war noch hier" << endl;
+    // //cout << "war noch hier" << endl;
 
     newEntryToInsert.setLocalHostIdentifier(localHostCounter);
     newEntryToInsert.setForThisConncectionCNisCapable(false);
@@ -223,9 +223,9 @@ const char* FlowBindingTable::getCorrectDestinationAddressForConnection(
         int& dport, int& sport, const char* destAddress,
         const char* sourceAddress) {
 
-    cout
-            << "Home Agent or capable CN is replacing the Dest-Address with the current set CoA Address of the MN"
-            << endl;
+    //cout
+          //  << "Home Agent or capable CN is replacing the Dest-Address with the current set CoA Address of the MN"
+          //  << endl;
 
     std::vector<FlowBindingEntry>::iterator it;
 
@@ -237,11 +237,11 @@ const char* FlowBindingTable::getCorrectDestinationAddressForConnection(
         if (it->destPort == dport && it->srcPort == sport
                 && !strcmp(it->destAddress, sourceAddress)
                 && !strcmp(it->srcAddress, destAddress)) {
-            cout << "GetCorrectDestination-Function:\n  DestinationAddress: "
-                    << it->destAddress << " SourceAddress: " << it->srcAddress
-                    << "Local Host Identifier: " << it->localHostIdentifier
-                    << "  DPort: " << it->destPort << " SPort: " << it->srcPort
-                    << "\n\n" << endl;
+             //cout << "GetCorrectDestination-Function:\n  DestinationAddress: "
+              //     << it->destAddress << " SourceAddress: " << it->srcAddress
+                  //  << "Local Host Identifier: " << it->localHostIdentifier
+                 //   << "  DPort: " << it->destPort << " SPort: " << it->srcPort
+                 //   << "\n\n" << endl;
 
             localHostIdentifier = it->localHostIdentifier;
 
@@ -262,19 +262,19 @@ const char* FlowBindingTable::getCorrectDestinationAddressForConnection(
 
     }
 
-    cout << "Eintrag mit den Werten: Dport:" << dport << " Sport:" << sport
-            << " DestAddress:" << destAddress << " SourceAddress: "
-            << sourceAddress << " wurde nicht gefunden.";
+     //cout << "Eintrag mit den Werten: Dport:" << dport << " Sport:" << sport
+          //  << " DestAddress:" << destAddress << " SourceAddress: "
+         //   << sourceAddress << " wurde nicht gefunden.";
     return NULL;
 }
 
 void FlowBindingTable::updateExistingFlowBindingEntry(
         FlowBindingUpdate* update) {
 
-    cout << "FlowBindingTable des "
-            << "CN/HA updatet sich selbst für HomeAddress:"
-            << update->getHomeAddress() << " und New Care of Address: "
-            << update->getNewCoAdress() << endl;
+     //cout << "FlowBindingTable des "
+          //  << "CN/HA updatet sich selbst für HomeAddress:"
+          //  << update->getHomeAddress() << " und New Care of Address: "
+          //  << update->getNewCoAdress() << endl;
 
     std::vector<FlowBindingEntry>::iterator it;
     std::vector<FlowBindingEntry> updatedEntries; //hier werden die neuen Einträge gespeichert.
@@ -296,11 +296,11 @@ void FlowBindingTable::updateExistingFlowBindingEntry(
     for (it = existingFlowBindingEntries.begin();
             it < existingFlowBindingEntries.end(); it++) {
         if (!strcmp(update->getHomeAddress(), it->srcAddress)) {
-            cout << "Übereinstimmung gefunden" << " destPort: " << it->destPort
-                    << " srcPort: " << it->srcPort << " Src-Address: "
-                    << it->srcAddress << " DestAddress: " << it->destAddress
-                    << " CN is capable: " << it->forThisConncectionCNisCapable
-                    << endl;
+             //cout << "Übereinstimmung gefunden" << " destPort: " << it->destPort
+                   // << " srcPort: " << it->srcPort << " Src-Address: "
+                   // << it->srcAddress << " DestAddress: " << it->destAddress
+                   // << " CN is capable: " << it->forThisConncectionCNisCapable
+                  //  << endl;
             newEntryToInsert = FlowBindingEntry();
             newEntryToInsert.setDestAddress(it->getDestAddress());
             newEntryToInsert.setSrcAddress(update->getNewCoAdress());
@@ -341,7 +341,7 @@ void FlowBindingTable::updateExistingFlowBindingEntry(
                     && newEntryToInsert.srcPort == it->srcPort
                     && !strcmp(newEntryToInsert.destAddress, it->destAddress)
                     && !strcmp(newEntryToInsert.srcAddress, it->srcAddress)) {
-                //cout<<"SETZE AKTIV"<<endl;
+                // //cout <<" SETZE AKTIV"<<endl;
                 it->isActive = true;
             }
         }
@@ -366,7 +366,7 @@ void FlowBindingTable::setEntryActive(const char* ipAddressThatShouldBeActive) {
             it < existingFlowBindingEntries.end(); it++) {
 
         if (!strcmp(it->srcAddress, ipAddressThatShouldBeActive)) {
-            cout << "AKTIV gesetzt" << endl;
+             //cout << "AKTIV gesetzt" << endl;
             it->isActive = true;
             localHostIdentifierToCareAboutNow = it->localHostIdentifier;
 
@@ -394,7 +394,7 @@ void FlowBindingTable::updateEntriesWithNewCapableCN(const char* addressOfCN) {
     std::vector<FlowBindingEntry>::iterator it;
     std::vector<FlowBindingEntry> updatedEntries; //hier werden die neuen Einträge gespeichert.
 
-    cout << "ADDRESSES OF CN: " << addressOfCN << endl;
+     //cout << "ADDRESSES OF CN: " << addressOfCN << endl;
     for (it = existingFlowBindingEntries.begin();
             it < existingFlowBindingEntries.end(); it++) {
         if (!strcmp(it->destAddress, addressOfCN)) {
@@ -407,7 +407,7 @@ void FlowBindingTable::updateEntriesWithNewCapableCN(const char* addressOfCN) {
     existingFlowBindingEntries = updatedEntries;
 
     //just for Control
-    cout << "Show new capable CN's in list of MN now: " << endl;
+     //cout << "Show new capable CN's in list of MN now: " << endl;
     this->printoutContentOftable();
 
 }
@@ -431,8 +431,8 @@ std::vector<FlowBindingEntry> FlowBindingTable::getCNsToBeInformed(
 void FlowBindingTable::setIPAddressActive(SetAddressActive* fromHA) {
     std::vector<FlowBindingEntry>::iterator it;
 
-    cout << "Flow Binding Table will aktive Adresse ändern zu: "
-            << fromHA->getAddressToBeSetActive() << endl;
+     //cout << "Flow Binding Table will aktive Adresse ändern zu: "
+          //  << fromHA->getAddressToBeSetActive() << endl;
     //activate given IP Address
     int localHostIdentifier;
     for (it = existingFlowBindingEntries.begin();
@@ -440,7 +440,7 @@ void FlowBindingTable::setIPAddressActive(SetAddressActive* fromHA) {
         if (!strcmp(it->getSrcAddress(), fromHA->getAddressToBeSetActive())) {
             localHostIdentifier = it->getLocalHostIdentifier();
             it->setIsActive(true);
-            cout << "Übereinstimmung gefunden" << endl;
+             //cout << "Übereinstimmung gefunden" << endl;
         }
     }
 
@@ -462,13 +462,13 @@ void FlowBindingTable::printoutContentOftable() {
 
     for (it = existingFlowBindingEntries.begin();
             it < existingFlowBindingEntries.end(); it++) {
-        cout << "MN[" << it->localHostIdentifier
-                << "] Tabelleneintrag  DestAddress:" << it->destAddress
-                << " SrcAddress: " << it->srcAddress << "  DPort: "
-                << it->destPort << " SPort: " << it->srcPort << " isActive: "
-                << it->isActive << " CN is capable: "
-                << it->forThisConncectionCNisCapable << " channel Number: "
-                << it->channelNumber << endl;
+         //cout << "MN[" << it->localHostIdentifier
+               // << "] Tabelleneintrag  DestAddress:" << it->destAddress
+               // << " SrcAddress: " << it->srcAddress << "  DPort: "
+              //  << it->destPort << " SPort: " << it->srcPort << " isActive: "
+              //  << it->isActive << " CN is capable: "
+              //  << it->forThisConncectionCNisCapable << " channel Number: "
+              //  << it->channelNumber << endl;
 
     }
 }
@@ -503,9 +503,9 @@ int FlowBindingTable::getTheNeededChannelNumber(const char* NewCoAdress) {
 
 void FlowBindingTable::setChannelActive(SetChannelActive* fromHA) {
 
-    cout
-            << "Flow Binding Table aktualisiert sich aufgrund von Signalstärke Änderungen"
-            << endl;
+    //cout
+         //   << "Flow Binding Table aktualisiert sich aufgrund von Signalstärke Änderungen"
+          //  << endl;
     std::vector<FlowBindingEntry>::iterator it;
 
     int localHostIdentifier;
@@ -519,8 +519,8 @@ void FlowBindingTable::setChannelActive(SetChannelActive* fromHA) {
 
     }
 
-    cout << "Signal-Strength-Update for HoA: " << fromHA->getHomeAddressOfMN()
-            << " with channel: " << fromHA->getChannelNumber() << endl;
+     //cout << "Signal-Strength-Update for HoA: " << fromHA->getHomeAddressOfMN()
+           // << " with channel: " << fromHA->getChannelNumber() << endl;
 
     //activate the wanted channel
     bool channelActivated = false;

@@ -208,7 +208,7 @@ void UDP::handleMessage(cMessage *msg)
     else // received from application layer
     {
         if (msg->getKind()==UDP_C_DATA){
-           // cout<<"UDP Nachricht wird über das UDP-Transport-Layer gesendet."<<endl;
+           //  //cout <<" UDP Nachricht wird über das UDP-Transport-Layer gesendet."<<endl;
             processMsgFromApp(PK(msg));}
         else
             processCommandFromApp(msg);
@@ -438,7 +438,7 @@ void UDP::processUDPPacket(UDPPacket *udpPacket)
     SocketsByPortMap::iterator it = socketsByPortMap.find(destPort);
     if (it==socketsByPortMap.end())
     {
-        cout << "No socket registered on port " << destPort << "\n";
+         //cout << "No socket registered on port " << destPort << "\n";
         processUndeliverablePacket(udpPacket, ctrl);
         return;
     }

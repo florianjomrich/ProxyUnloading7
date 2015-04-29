@@ -621,7 +621,7 @@ void TCPDump::handleMessage(cMessage *msg)
                 delete msg;
                 return;
             }
-            std::cout<<"ICMPMessage\n";
+            std::cout <<" ICMPMessage\n";
         }
         else
         {

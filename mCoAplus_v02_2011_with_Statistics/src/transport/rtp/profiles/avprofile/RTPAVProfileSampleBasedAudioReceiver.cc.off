@@ -41,7 +41,7 @@ void RTPAVProfileSampleBasedAudioReceiver::activity() {
 
         // this checks for packets in wrong order
         if (packet->timeStamp() < timeStamp) {
-            cout << "packet too late" << endl;
+             //cout << "packet too late" << endl;
         }
         else {
             timeStamp = packet->timeStamp();
