@@ -15,7 +15,7 @@
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/rtg"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/results"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/NOT CAPABLE"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/NOT CAPABLE" removed="true"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Messreihe 800s Laufzeit" removed="true"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Messreihe 800s Laufzeit/NOT CAPABLE 800s Laufzeit" removed="true"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Messreihe 800s Laufzeit/CAPABLE 800s Laufzeit" removed="true"/>
@@ -366,6 +366,10 @@
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/15MNs - 1CN - 200 sec"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/15MNs - 1CN - 200 sec/capable"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/15MNs - 1CN - 200 sec/NOT"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/verwendete Config"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 1CN - 200sec"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 1CN - 200sec/capable"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 1CN - 200sec/NOT"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>

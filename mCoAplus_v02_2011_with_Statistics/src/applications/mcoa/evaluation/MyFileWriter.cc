@@ -24,8 +24,8 @@ using std::cout;
 MyFileWriter::MyFileWriter() {
     // TODO Auto-generated constructor stub
     //delete the old data sets:
-    std::remove("SendingAndRecevingTimesAlleKnotenZusammen.csv");
-    std::remove("PackageLossAllTogether.csv");
+    //std::remove("SendingAndRecevingTimesAlleKnotenZusammen.csv");
+   // std::remove("PackageLossAllTogether.csv");
 }
 
 MyFileWriter::~MyFileWriter() {
