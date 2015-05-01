@@ -16,14 +16,14 @@
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/rtg"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/results"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/NOT CAPABLE"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Messreihe 800s Laufzeit"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Messreihe 800s Laufzeit/NOT CAPABLE 800s Laufzeit"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Messreihe 800s Laufzeit/CAPABLE 800s Laufzeit"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Capable vs Not Capable"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/CAPABLE"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/1. ideales Testergebnis"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/1. ideales Testergebnis/true 800s - ideale Abdeckung"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/1. ideales Testergebnis/false 800s- ideale Abdeckung"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Messreihe 800s Laufzeit" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Messreihe 800s Laufzeit/NOT CAPABLE 800s Laufzeit" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Messreihe 800s Laufzeit/CAPABLE 800s Laufzeit" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Capable vs Not Capable" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/CAPABLE" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/1. ideales Testergebnis" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/1. ideales Testergebnis/true 800s - ideale Abdeckung" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/1. ideales Testergebnis/false 800s- ideale Abdeckung" removed="true"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/src"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/tests"/>
@@ -323,17 +323,49 @@
 <includePath path="/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/_scripts"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/_scripts/xsd2html"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/mCoAplus_v02_2011_with_Statistics/_scripts/xmlschema"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. AP_HA wird nicht mehr empfohlen"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. AP_HA wird nicht mehr empfohlen/Energie Nachführung 5MN - 2 CN - alle capable"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. AP_HA wird nicht mehr empfohlen/Energie Nachführung 5MN - 2 CN - alle NOT capable"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. jetzt mit 5 MNs 5CNs - NOT"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2.  10MNs - 10CNs - 200 sec"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 7MNs - 7CNs -200sec"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 7MNs - 7CNs -200sec/not capable"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 7MNs - 7CNs -200sec/capable "/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 5MNs - 2CNs 105sec "/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 5MNs - 2CNs 105sec /capable"/>
-<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 5MNs - 2CNs 105sec /NOT "/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. AP_HA wird nicht mehr empfohlen" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. AP_HA wird nicht mehr empfohlen/Energie Nachführung 5MN - 2 CN - alle capable" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. AP_HA wird nicht mehr empfohlen/Energie Nachführung 5MN - 2 CN - alle NOT capable" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. jetzt mit 5 MNs 5CNs - NOT" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2.  10MNs - 10CNs - 200 sec" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 7MNs - 7CNs -200sec" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 7MNs - 7CNs -200sec/not capable" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 7MNs - 7CNs -200sec/capable " removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 5MNs - 2CNs 105sec " removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 5MNs - 2CNs 105sec /capable" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 5MNs - 2CNs 105sec /NOT " removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 10 MNs - 2CNs - 200 sec" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 10 MNs - 2CNs - 200 sec/capable" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/2. 10 MNs - 2CNs - 200 sec/NOT capable" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/Unbenannter Ordner"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/10MNs - 2CNs - 200sec" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/10MNs - 2CNs - 200sec/capable" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/10MNs - 2CNs - 200sec/NOT" removed="true"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 2CNs - 200sec"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 2CNs - 200sec/capable"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 2CNs - 200sec/NOT"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs - 2CNs - 200sec"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs - 2CNs - 200sec/capable"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs - 2CNs - 200sec/NOT"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 5CNs- 200sec"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 5CNs- 200sec/capable"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 5CNs- 200sec/NOT"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/2MNs - 2CNs - 200sec"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/2MNs - 2CNs - 200sec/capable"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/2MNs - 2CNs - 200sec/NOT"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/1MN - 1CN - 200sec"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/1MN - 1CN - 200sec/capable"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/1MN - 1CN - 200sec/NOT"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs - 8CNs"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs - 8CNs/capable"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs - 8CNs/NOT"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs - 1CNs - 200sec"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs - 1CNs - 200sec/capable"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs - 1CNs - 200sec/NOT"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/15MNs - 1CN - 200 sec"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/15MNs - 1CN - 200 sec/capable"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/15MNs - 1CN - 200 sec/NOT"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
