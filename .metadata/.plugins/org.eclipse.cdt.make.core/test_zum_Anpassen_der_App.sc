@@ -370,6 +370,9 @@
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 1CN - 200sec"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 1CN - 200sec/capable"/>
 <includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/5MNs - 1CN - 200sec/NOT"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs-10CNs -200sec"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs-10CNs -200sec/not"/>
+<includePath path="/home/ubuntu/ProxyUnloading7/test_zum_Anpassen_der_App/simulations/testMCoAv2/fertige Messreihen/10MNs-10CNs -200sec/capable"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
