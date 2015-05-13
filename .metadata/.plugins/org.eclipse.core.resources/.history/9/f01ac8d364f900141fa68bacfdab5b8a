@@ -130,8 +130,8 @@ network VoIPMCoAMulti
                          //Home_Agent.ethIn++ <-- ethernetline <-- R_1.ethOut++;
 
         for i=0..total_cn-1 {
-            CN[i].ethOut++ --> ethernetline --> hub[i].ethg$i++;
-            CN[i].ethIn++ <-- ethernetline <-- hub[i].ethg$o++;
+            CN[i].ethOut++ --> ethernetline --> hub.ethg$i++;
+            CN[i].ethIn++ <-- ethernetline <-- hub.ethg$o++;
             hub[i].ethg++ <--> ethernetline <--> Rb.ethg++;
         }
 
@@ -148,7 +148,7 @@ network VoIPMCoAMulti
         R1.ethg++ <--> ethernetline <--> AP_2.ethg++;
 
         Rb.ethg++ <--> internetline <--> Ra.ethg++;
-       
+        hub.ethg++ <--> ethernetline <--> Rb.ethg++;
 
 
 }

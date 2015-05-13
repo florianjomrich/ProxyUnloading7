@@ -132,7 +132,6 @@ network VoIPMCoAMulti
         for i=0..total_cn-1 {
             CN[i].ethOut++ --> ethernetline --> hub[i].ethg$i++;
             CN[i].ethIn++ <-- ethernetline <-- hub[i].ethg$o++;
-            hub[i].ethg++ <--> ethernetline <--> Rb.ethg++;
         }
 
         HA.ethOut++ --> ethernetline --> Ra.ethg$i++;
@@ -148,7 +147,7 @@ network VoIPMCoAMulti
         R1.ethg++ <--> ethernetline <--> AP_2.ethg++;
 
         Rb.ethg++ <--> internetline <--> Ra.ethg++;
-       
+        hub.ethg++ <--> ethernetline <--> Rb.ethg++;
 
 
 }

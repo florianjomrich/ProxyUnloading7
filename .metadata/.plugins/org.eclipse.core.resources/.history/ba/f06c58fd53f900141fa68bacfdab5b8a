@@ -22,20 +22,23 @@ debug-on-errors=true
 
 ########################################################################
 
+
 #amount of Mobile Nodes and Correspondent Nodes
+
+
 *.total_mn= 5 #90 #2
 **.MN[*].flowBindingTable.amountOfMobileNodes = 5 # has to be the same as *.total_mn
 **.HA.flowBindingTable.amountOfMobileNodes = 5 # has to be the same as *.total_mn
 **.CN[*].flowBindingTable.amountOfMobileNodes = 5 # has to be the same as *.total_mn
 
-*.total_cn = 2
-**.MN[*].udpApp[0].amountOfCareOfNodes = 2#total_CNs # has to be the same as *.total_cn
-**.HA.proxyUnloadingControlApp.amountOfCareOfNodes = 2#total_CNs # has to be the same as *.total_cn
-**.MN[*].proxyUnloadingControlApp.amountOfCareOfNodes = 2#total_CNs # has to be the same as *.total_cn
-**.CN[*].proxyUnloadingControlApp.amountOfCareOfNodes = 2#total_CNs # has to be the same as *.total_cn
-**.HA.flowBindingTable.amountOfCareOfNodes = 2#total_CNs # has to be the same as *.total_cn
-**.MN[*].flowBindingTable.amountOfCareOfNodes = 2#total_CNs # has to be the same as *.total_cn
-**.CN[*].flowBindingTable.amountOfCareOfNodes = 2#total_CNs # has to be the same as *.total_cn
+*.total_cn = 1
+**.MN[*].udpApp[0].amountOfCareOfNodes = 1 # has to be the same as *.total_cn
+**.HA.proxyUnloadingControlApp.amountOfCareOfNodes = 1 # has to be the same as *.total_cn
+**.MN[*].proxyUnloadingControlApp.amountOfCareOfNodes = 1# has to be the same as *.total_cn
+**.CN[*].proxyUnloadingControlApp.amountOfCareOfNodes = 1 # has to be the same as *.total_cn
+**.HA.flowBindingTable.amountOfCareOfNodes = 1 # has to be the same as *.total_cn
+**.MN[*].flowBindingTable.amountOfCareOfNodes = 1 # has to be the same as *.total_cn
+**.CN[*].flowBindingTable.amountOfCareOfNodes = 1 # has to be the same as *.total_cn
 
 ########################################################################
 

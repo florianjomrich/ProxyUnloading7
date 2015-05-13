@@ -148,7 +148,7 @@ network VoIPMCoAMulti
         R1.ethg++ <--> ethernetline <--> AP_2.ethg++;
 
         Rb.ethg++ <--> internetline <--> Ra.ethg++;
-       
+        hub.ethg++ <--> ethernetline <--> Rb.ethg++;
 
 
 }

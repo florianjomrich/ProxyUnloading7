@@ -6793,3 +6793,6 @@ java.lang.Exception
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.omnetpp.launch 4 139 2015-05-13 13:43:03.961
+!MESSAGE Run #0: Finished with Error
